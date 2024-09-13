@@ -10,6 +10,11 @@
 		DC0D9B892C930E2900AD91DC /* ProblemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0D9B882C930E2900AD91DC /* ProblemListView.swift */; };
 		DC0D9B8C2C93127900AD91DC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DC0D9B8B2C93127900AD91DC /* .gitignore */; };
 		DC0D9B8E2C93129300AD91DC /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0D9B8D2C93129300AD91DC /* APIKey.swift */; };
+		DC0D9B922C931AE400AD91DC /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = DC0D9B912C931AE400AD91DC /* FSCalendar */; };
+		DC0D9B942C931B3E00AD91DC /* DiaryCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0D9B932C931B3E00AD91DC /* DiaryCalendarView.swift */; };
+		DC0D9B962C9323AB00AD91DC /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0D9B952C9323AB00AD91DC /* CalendarView.swift */; };
+		DC0D9B982C93F67800AD91DC /* CalendarView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0D9B972C93F67800AD91DC /* CalendarView+Extension.swift */; };
+		DC0D9B9A2C94106B00AD91DC /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0D9B992C94106B00AD91DC /* Date+.swift */; };
 		DC5DBB992C9069F8001687FC /* EasyEnglishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DBB982C9069F8001687FC /* EasyEnglishApp.swift */; };
 		DC5DBB9B2C9069F8001687FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DBB9A2C9069F8001687FC /* ContentView.swift */; };
 		DC5DBB9D2C9069F9001687FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5DBB9C2C9069F9001687FC /* Assets.xcassets */; };
@@ -21,6 +26,10 @@
 		DC0D9B882C930E2900AD91DC /* ProblemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemListView.swift; sourceTree = "<group>"; };
 		DC0D9B8B2C93127900AD91DC /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DC0D9B8D2C93129300AD91DC /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		DC0D9B932C931B3E00AD91DC /* DiaryCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCalendarView.swift; sourceTree = "<group>"; };
+		DC0D9B952C9323AB00AD91DC /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		DC0D9B972C93F67800AD91DC /* CalendarView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalendarView+Extension.swift"; sourceTree = "<group>"; };
+		DC0D9B992C94106B00AD91DC /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		DC5DBB952C9069F8001687FC /* EasyEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5DBB982C9069F8001687FC /* EasyEnglishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyEnglishApp.swift; sourceTree = "<group>"; };
 		DC5DBB9A2C9069F8001687FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC0D9B922C931AE400AD91DC /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +71,9 @@
 		DC0D9B862C930DEE00AD91DC /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				DC0D9B932C931B3E00AD91DC /* DiaryCalendarView.swift */,
+				DC0D9B952C9323AB00AD91DC /* CalendarView.swift */,
+				DC0D9B972C93F67800AD91DC /* CalendarView+Extension.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -78,6 +91,14 @@
 				DC0D9B8D2C93129300AD91DC /* APIKey.swift */,
 			);
 			path = Secret;
+			sourceTree = "<group>";
+		};
+		DC0D9B8F2C9312FA00AD91DC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DC0D9B992C94106B00AD91DC /* Date+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		DC5DBB8C2C9069F8001687FC = {
@@ -106,6 +127,7 @@
 				DC5DBB9E2C9069F9001687FC /* Preview Content */,
 				DC5DBBA62C906EC9001687FC /* Localizable.xcstrings */,
 				DC0D9B8A2C93125C00AD91DC /* Secret */,
+				DC0D9B8F2C9312FA00AD91DC /* Extension */,
 				DC5DBBA82C9072E9001687FC /* Protocol */,
 				DC5DBBA92C9072FB001687FC /* Network */,
 				DC5DBBAA2C9073C1001687FC /* Database */,
@@ -159,6 +181,9 @@
 			dependencies = (
 			);
 			name = EasyEnglish;
+			packageProductDependencies = (
+				DC0D9B912C931AE400AD91DC /* FSCalendar */,
+			);
 			productName = EasyEnglish;
 			productReference = DC5DBB952C9069F8001687FC /* EasyEnglish.app */;
 			productType = "com.apple.product-type.application";
@@ -188,6 +213,9 @@
 				fr,
 			);
 			mainGroup = DC5DBB8C2C9069F8001687FC;
+			packageReferences = (
+				DC0D9B902C931AE400AD91DC /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			productRefGroup = DC5DBB962C9069F8001687FC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -218,8 +246,12 @@
 			files = (
 				DC0D9B892C930E2900AD91DC /* ProblemListView.swift in Sources */,
 				DC5DBB9B2C9069F8001687FC /* ContentView.swift in Sources */,
+				DC0D9B962C9323AB00AD91DC /* CalendarView.swift in Sources */,
 				DC0D9B8E2C93129300AD91DC /* APIKey.swift in Sources */,
+				DC0D9B942C931B3E00AD91DC /* DiaryCalendarView.swift in Sources */,
 				DC5DBB992C9069F8001687FC /* EasyEnglishApp.swift in Sources */,
+				DC0D9B982C93F67800AD91DC /* CalendarView+Extension.swift in Sources */,
+				DC0D9B9A2C94106B00AD91DC /* Date+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +465,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DC0D9B902C931AE400AD91DC /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC0D9B912C931AE400AD91DC /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC0D9B902C931AE400AD91DC /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC5DBB8D2C9069F8001687FC /* Project object */;
 }
