@@ -11,6 +11,15 @@
           }
         }
       }
+    },
+    "Hello, world!" : {
+
+    },
+    "Hello, World!" : {
+
+    },
+    "Today's Diary" : {
+
     }
   },
   "version" : "1.0"

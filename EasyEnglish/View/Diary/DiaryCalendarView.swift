@@ -11,13 +11,15 @@ struct DiaryCalendarView: View {
     var body: some View {
         
         NavigationView {
-            VStack {
-                CalendarView(month: Date())
-                todayDiary
-                DiaryRowView()
-                
-                Spacer()
-                
+            ScrollView {
+                VStack {
+                    CalendarView(month: Date())
+                    todayDiary
+                    DiaryRowView()
+                    
+//                    Spacer()
+                    
+                }
             }
         }
         
@@ -40,7 +42,9 @@ struct DiaryRowView: View {
         
         Rectangle()
             .padding(.horizontal, 20)
-            .padding(.bottom, 30)
+//            .padding(.bottom, 30)
+//            .clipShape(RoundedRectangle(cornerRadius: 20))
+            
         
     }
     
