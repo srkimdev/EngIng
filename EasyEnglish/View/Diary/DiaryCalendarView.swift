@@ -6,17 +6,45 @@
 //
 
 import SwiftUI
-import FSCalendar
 
 struct DiaryCalendarView: View {
     var body: some View {
         
-        Text("Here we go")
-        
-        
-        
+        NavigationView {
+            VStack {
+                CalendarView(month: Date())
+                todayDiary
+                DiaryRowView()
+                
+                Spacer()
+                
+            }
+        }
         
     }
+    
+    private var todayDiary: some View {
+        
+        Text("Today's Diary")
+            .font(.title2.bold())
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding([.horizontal, .top], 20)
+        
+    }
+    
+}
+
+struct DiaryRowView: View {
+    
+    var body: some View {
+        
+        Rectangle()
+            .padding(.horizontal, 20)
+            .padding(.bottom, 30)
+        
+    }
+    
+    
 }
 
 

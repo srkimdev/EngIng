@@ -20,10 +20,22 @@ struct CalendarView: View {
     var body: some View {
         
         VStack {
+            yearView
             headerView
             calendarGridView
                 .padding(.horizontal)
         }
+        
+    }
+    
+    //MARK: Year
+    private var yearView: some View {
+        
+        Text(month.getYear)
+            .font(.title2)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.horizontal, 20)
+            .padding(.bottom, 10)
         
     }
     
@@ -34,7 +46,7 @@ struct CalendarView: View {
             HStack {
                 yearMonthView
             }
-            .padding()
+            .padding([.horizontal, .bottom])
             
             HStack {
                 ForEach(Self.weekdaySymbols.indices, id: \.self) { symbol in
@@ -44,7 +56,6 @@ struct CalendarView: View {
                 }
             }
             .padding(.horizontal)
-            
         }
         
     }
@@ -58,14 +69,14 @@ struct CalendarView: View {
                 changeMonth(by: -1)
             }, label: {
                 Image(systemName: "chevron.left")
-                    .font(.title)
+                    .font(.title2)
                     .foregroundStyle(.black) // change
             })
             
             Spacer()
             
             Text(month.getMonth) // change
-                .font(.title.bold())
+                .font(.title2.bold())
             
             Spacer()
             
@@ -73,7 +84,7 @@ struct CalendarView: View {
                 changeMonth(by: 1)
             }, label: {
                 Image(systemName: "chevron.right")
-                    .font(.title)
+                    .font(.title2)
                     .foregroundStyle(.black) // change
             })
             

@@ -9,6 +9,16 @@ import Foundation
 
 extension Date {
     
+    static let getYearFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy"
+        return formatter
+    }()
+      
+    var getYear: String {
+        return Date.getYearFormatter.string(from: self)
+    }
+    
     //MARK: Get MMMM string
     static let getMonthFormatter: DateFormatter = {
         let formatter = DateFormatter()
