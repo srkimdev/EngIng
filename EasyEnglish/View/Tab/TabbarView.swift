@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+enum Tab {
+    case home
+    case save
+    case diary
+}
+
 struct TabbarView: View {
     
     @State var selectedTab: Tab = .home
@@ -29,7 +35,7 @@ struct TabbarView: View {
             Spacer()
             
             CustomTabView(selectedTab: $selectedTab)
-                .padding(.bottom, 15)
+                .padding(.bottom, 20)
             
         }
         .ignoresSafeArea(.container, edges: .bottom)

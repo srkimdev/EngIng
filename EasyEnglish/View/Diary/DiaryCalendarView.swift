@@ -16,11 +16,10 @@ struct DiaryCalendarView: View {
                     CalendarView(month: Date())
                     todayDiary
                     DiaryRowView()
-                    
-//                    Spacer()
-                    
                 }
             }
+            .navigationTitle("Example")
+            .navigationBarTitleDisplayMode(.inline)
         }
         
     }
@@ -30,7 +29,7 @@ struct DiaryCalendarView: View {
         Text("Today's Diary")
             .font(.title2.bold())
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding([.horizontal, .top], 20)
+            .padding([.horizontal, .top], 25)
         
     }
     
@@ -40,14 +39,15 @@ struct DiaryRowView: View {
     
     var body: some View {
         
-        Rectangle()
-            .padding(.horizontal, 20)
-//            .padding(.bottom, 30)
-//            .clipShape(RoundedRectangle(cornerRadius: 20))
-            
+        Button(action: {
+            print("diary click")
+        }, label: {
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.black, lineWidth: 1)
+                .frame(width: Constants.screenWidth - 50, height: Constants.screenHeight / 7)
+        })
         
     }
-    
     
 }
 

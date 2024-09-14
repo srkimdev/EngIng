@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-enum Tab {
-    case home
-    case save
-    case diary
-}
-
 struct CustomTabView: View {
     
     @Binding var selectedTab: Tab
@@ -49,7 +43,7 @@ struct CustomTabView: View {
                 Image(systemName: selectedTab == .diary ? "book" : "book.fill")
                         .font(.title2)
                         .foregroundStyle(.black)
-            })
+            })/*selectedTab: <#Binding<Tab>#>*/
             
             Spacer()
             

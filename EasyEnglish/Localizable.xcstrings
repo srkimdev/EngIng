@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Example" : {
+
+    },
     "Hello" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -19,6 +22,9 @@
 
     },
     "Today's Diary" : {
+
+    },
+    "연속 7일" : {
 
     }
   },

@@ -23,7 +23,7 @@ struct CalendarView: View {
             yearView
             headerView
             calendarGridView
-                .padding(.horizontal)
+                .padding(.horizontal, 25)
         }
         
     }
@@ -31,11 +31,19 @@ struct CalendarView: View {
     //MARK: Year
     private var yearView: some View {
         
-        Text(month.getYear)
-            .font(.title2)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal, 20)
-            .padding(.bottom, 10)
+        HStack {
+            Text(month.getYear)
+                .font(.system(size: 18))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 30)
+                .padding([.top, .bottom], 5)
+            
+            Text("연속 7일")
+                .font(.system(size: 17))
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                .padding(.trailing, 30)
+                .padding([.top, .bottom], 5)
+        }
         
     }
     
@@ -55,7 +63,7 @@ struct CalendarView: View {
                         .frame(maxWidth: .infinity)
                 }
             }
-            .padding(.horizontal)
+            .padding(.horizontal, 25)
         }
         
     }
@@ -177,7 +185,7 @@ private struct CellView: View {
                 .overlay(Text(String(day)))
                 .foregroundStyle(textColor)
         }
-        .frame(height: 50)
+        .frame(height: 30)
         
     }
     

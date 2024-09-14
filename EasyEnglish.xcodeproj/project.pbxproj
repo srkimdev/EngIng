@@ -23,6 +23,7 @@
 		DC5DBB9D2C9069F9001687FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5DBB9C2C9069F9001687FC /* Assets.xcassets */; };
 		DC5DBBA02C9069F9001687FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5DBB9F2C9069F9001687FC /* Preview Assets.xcassets */; };
 		DC5DBBA72C906EC9001687FC /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = DC5DBBA62C906EC9001687FC /* Localizable.xcstrings */; };
+		DCFF76C62C959F7900D479E1 /* ProblemChapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76C52C959F7900D479E1 /* ProblemChapterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		DC5DBB9C2C9069F9001687FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC5DBB9F2C9069F9001687FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DC5DBBA62C906EC9001687FC /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		DCFF76C52C959F7900D479E1 /* ProblemChapterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemChapterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				DC0D9B882C930E2900AD91DC /* ProblemListView.swift */,
+				DCFF76C52C959F7900D479E1 /* ProblemChapterView.swift */,
 			);
 			path = Problem;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC0D9B892C930E2900AD91DC /* ProblemListView.swift in Sources */,
+				DCFF76C62C959F7900D479E1 /* ProblemChapterView.swift in Sources */,
 				DC5DBB9B2C9069F8001687FC /* ContentView.swift in Sources */,
 				DC0D9B962C9323AB00AD91DC /* CalendarView.swift in Sources */,
 				DC0D9B8E2C93129300AD91DC /* APIKey.swift in Sources */,
