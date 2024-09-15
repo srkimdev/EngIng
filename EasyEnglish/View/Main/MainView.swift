@@ -17,6 +17,7 @@ struct MainView: View {
             ZStack {
                 
                 Colors.backgroundColor
+                    .ignoresSafeArea()
                 
                 ScrollView {
                     
@@ -28,6 +29,7 @@ struct MainView: View {
                     
                 }
             }
+            .navigationTitle("오늘의 학습")
             
         }
         
@@ -39,41 +41,28 @@ struct MainView: View {
             .fill(.white)
             .frame(height: Constants.screenHeight / 5.5)
             .overlay {
-                VStack {
-                    Text("goal reached")
-                        .font(.system(size: 20).bold())
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal, 25)
-                        .padding(.bottom, 20)
-                    
-                    HStack {
+                HStack {
+                    VStack {
+                        Text("goal reached")
+                            .font(.system(size: 20).bold())
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        
                         Spacer()
-                        CircleChartView()
-                        Spacer()
-                        CircleChartView()
-                        Spacer()
-                        CircleChartView()
-                        Spacer()
+                        
+                        Text("총 7일 연속")
+                            .font(.system(size: 20))
+                            .frame(maxWidth: .infinity, alignment: .leading)
                     }
+                    .padding(.vertical, 25)
+                    
+                    CircleChartView()
                 }
+                .padding(.horizontal, 25)
+                
 
             }
             .padding(.horizontal, 16)
         
-    }
-    
-    func buttonRowView() -> some View {
-        
-        VStack {
-            RoundedRectangle(cornerRadius: 15)
-                .fill(Color.gray.opacity(0.3))
-                .frame(width: (Constants.screenWidth - 180) / 3, height: (Constants.screenWidth - 180) / 3)
-                .padding(.horizontal, 20)
-                .padding(.bottom, 5)
-            
-            Text("문제 풀기")
-        }
-    
     }
     
     func button3View() -> some View {
@@ -90,8 +79,8 @@ struct MainView: View {
                         .font(.system(size: 20).bold())
                     
                     HStack {
-                        ForEach(0..<3) { item in
-                            buttonRowView()
+                        ForEach(Sections.allCases, id: \.self) { item in
+                            buttonRowView(item.rawValue)
                         }
                     }
                 }
@@ -100,6 +89,25 @@ struct MainView: View {
             .frame(height: Constants.screenHeight / 4.5)
             .padding()
         
+    }
+    
+    func buttonRowView(_ text: String) -> some View {
+        
+        VStack {
+            
+            Button {
+                print("button click")
+            } label: {
+                RoundedRectangle(cornerRadius: 15)
+                    .fill(Color.gray.opacity(0.3))
+                    .frame(width: (Constants.screenWidth - 180) / 3, height: (Constants.screenWidth - 180) / 3)
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 5)
+            }
+            
+            Text(text)
+        }
+    
     }
     
     func recent7daysChart() -> some View {

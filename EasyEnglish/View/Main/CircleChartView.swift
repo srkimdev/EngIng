@@ -54,13 +54,18 @@ struct CircleChartView: View {
                 Circle()
                     .fill(.white)
                     .frame(
-                        width: geometry.size.width * 0.618,
-                        height: geometry.size.height * 0.618
+                        width: geometry.size.width * 0.75,
+                        height: geometry.size.height * 0.75
                     )
+                VStack {
+                    Text("14")
+                    Text("Days")
+                }
+                
             }
             .frame(width: geometry.size.width, height: geometry.size.width)
         }
-        .frame(width: 60, height: 60)
+        .frame(width: 100, height: 100)
     }
 }
 

@@ -21,3 +21,20 @@ enum Colors {
     static let backgroundColor = Color(red: 0.9812712073, green: 0.976305306, blue: 0.9936047196)
     
 }
+
+enum Sections: String, CaseIterable {
+    case solveProblem = "학습 하기"
+    case savedProblem = "복습 하기"
+    case writeDiary = "일기 쓰기"
+    
+    var images: String {
+        switch self {
+        case .solveProblem:
+            return ""
+        case .savedProblem:
+            return ""
+        case .writeDiary:
+            return ""
+        }
+    }
+}
