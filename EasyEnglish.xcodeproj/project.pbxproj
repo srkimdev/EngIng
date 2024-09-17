@@ -27,6 +27,8 @@
 		DCFF76C92C96C36700D479E1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76C82C96C36700D479E1 /* MainView.swift */; };
 		DCFF76CB2C96C7C800D479E1 /* WeekChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76CA2C96C7C800D479E1 /* WeekChartView.swift */; };
 		DCFF76CD2C96D20D00D479E1 /* CircleChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76CC2C96D20D00D479E1 /* CircleChartView.swift */; };
+		DCFF76CF2C996C9100D479E1 /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76CE2C996C9100D479E1 /* CustomBackButton.swift */; };
+		DCFF76D22C997A5400D479E1 /* DiaryWriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76D12C997A5400D479E1 /* DiaryWriteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		DCFF76C82C96C36700D479E1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DCFF76CA2C96C7C800D479E1 /* WeekChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekChartView.swift; sourceTree = "<group>"; };
 		DCFF76CC2C96D20D00D479E1 /* CircleChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleChartView.swift; sourceTree = "<group>"; };
+		DCFF76CE2C996C9100D479E1 /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
+		DCFF76D12C997A5400D479E1 /* DiaryWriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryWriteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +75,8 @@
 				DCFF76C72C96C35300D479E1 /* Main */,
 				DC0D9B852C930DE800AD91DC /* Problem */,
 				DC0D9B872C930DF600AD91DC /* Save */,
-				DC0D9B862C930DEE00AD91DC /* Diary */,
+				DCFF76D02C997A3D00D479E1 /* Diary */,
+				DC0D9B862C930DEE00AD91DC /* Calendar */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -85,14 +90,14 @@
 			path = Problem;
 			sourceTree = "<group>";
 		};
-		DC0D9B862C930DEE00AD91DC /* Diary */ = {
+		DC0D9B862C930DEE00AD91DC /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
 				DC0D9B932C931B3E00AD91DC /* DiaryCalendarView.swift */,
 				DC0D9B952C9323AB00AD91DC /* CalendarView.swift */,
 				DC0D9B972C93F67800AD91DC /* CalendarView+Extension.swift */,
 			);
-			path = Diary;
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		DC0D9B872C930DF600AD91DC /* Save */ = {
@@ -132,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				DC0D9BA12C94551400AD91DC /* Constants.swift */,
+				DCFF76CE2C996C9100D479E1 /* CustomBackButton.swift */,
 			);
 			path = Static;
 			sourceTree = "<group>";
@@ -209,6 +215,14 @@
 				DCFF76CA2C96C7C800D479E1 /* WeekChartView.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		DCFF76D02C997A3D00D479E1 /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				DCFF76D12C997A5400D479E1 /* DiaryWriteView.swift */,
+			);
+			path = Diary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +310,7 @@
 				DC0D9B8E2C93129300AD91DC /* APIKey.swift in Sources */,
 				DC0D9B942C931B3E00AD91DC /* DiaryCalendarView.swift in Sources */,
 				DC0D9BA42C9456E100AD91DC /* TabbarView.swift in Sources */,
+				DCFF76CF2C996C9100D479E1 /* CustomBackButton.swift in Sources */,
 				DC5DBB992C9069F8001687FC /* EasyEnglishApp.swift in Sources */,
 				DC0D9BA62C9457FA00AD91DC /* SaveProblemView.swift in Sources */,
 				DC0D9B9F2C94522C00AD91DC /* CustomTabView.swift in Sources */,
@@ -303,6 +318,7 @@
 				DC0D9BA22C94551400AD91DC /* Constants.swift in Sources */,
 				DC0D9B982C93F67800AD91DC /* CalendarView+Extension.swift in Sources */,
 				DC0D9B9A2C94106B00AD91DC /* Date+.swift in Sources */,
+				DCFF76D22C997A5400D479E1 /* DiaryWriteView.swift in Sources */,
 				DCFF76CD2C96D20D00D479E1 /* CircleChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

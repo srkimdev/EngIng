@@ -103,6 +103,12 @@ struct MainView: View {
                     .frame(width: (Constants.screenWidth - 180) / 3, height: (Constants.screenWidth - 180) / 3)
                     .padding(.horizontal, 20)
                     .padding(.bottom, 5)
+                    .overlay {
+                        Image(vc.images)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 40, height: 40)
+                    }
             }
             
             Text(vc.rawValue)

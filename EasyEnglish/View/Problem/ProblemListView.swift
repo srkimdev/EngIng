@@ -16,27 +16,31 @@ struct ProblemListView: View {
     
     var body: some View {
         
-        NavigationView {
-            ScrollView {
+        ScrollView {
+            
+            Text("카테고리")
+                .font(.system(size: 20).bold())
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+            
+            LazyVGrid(columns: columns, spacing: 15){
                 
-                Text("카테고리")
-                    .font(.system(size: 20).bold())
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding()
-                
-                LazyVGrid(columns: columns, spacing: 15){
-                    
-                    ForEach(0..<10) { item in
-                        categoryRowView()
-                    }
-                    
+                ForEach(0..<10) { item in
+                    categoryRowView()
                 }
+                
             }
-            .navigationTitle("둘러보기")
+            
+        }
+        .navigationTitle("둘러보기")
+//        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+//                CustomBackButton().backButton()
+            }
         }
         
     }
-    
     
     private func categoryRowView() -> some View {
         
@@ -60,7 +64,6 @@ struct ProblemListView: View {
             .padding()
         
         }
-            
         
     }
     

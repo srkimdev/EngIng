@@ -1,7 +1,16 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "14" : {
+
+    },
+    "Days" : {
+
+    },
     "Example" : {
+
+    },
+    "goal reached" : {
 
     },
     "Hello" : {
@@ -21,10 +30,49 @@
     "Hello, World!" : {
 
     },
+    "Name" : {
+
+    },
+    "Posting" : {
+
+    },
+    "Story" : {
+
+    },
+    "Submit" : {
+
+    },
+    "Title" : {
+
+    },
     "Today's Diary" : {
 
     },
+    "Write" : {
+
+    },
+    "Your Section" : {
+
+    },
+    "둘러보기" : {
+
+    },
     "연속 7일" : {
+
+    },
+    "영화" : {
+
+    },
+    "오늘의 학습" : {
+
+    },
+    "총 7일 연속" : {
+
+    },
+    "최근 7일간 학습 진도" : {
+
+    },
+    "카테고리" : {
 
     }
   },
