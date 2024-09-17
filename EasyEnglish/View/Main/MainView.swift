@@ -80,7 +80,7 @@ struct MainView: View {
                     
                     HStack {
                         ForEach(Sections.allCases, id: \.self) { item in
-                            buttonRowView(item.rawValue)
+                            buttonRowView(item)
                         }
                     }
                 }
@@ -91,12 +91,12 @@ struct MainView: View {
         
     }
     
-    func buttonRowView(_ text: String) -> some View {
+    func buttonRowView(_ vc: Sections) -> some View {
         
         VStack {
             
-            Button {
-                print("button click")
+            NavigationLink {
+                vc.showVC
             } label: {
                 RoundedRectangle(cornerRadius: 15)
                     .fill(Color.gray.opacity(0.3))
@@ -105,7 +105,8 @@ struct MainView: View {
                     .padding(.bottom, 5)
             }
             
-            Text(text)
+            Text(vc.rawValue)
+            
         }
     
     }
@@ -128,7 +129,6 @@ struct MainView: View {
                         .padding(.horizontal, 25)
                     
                 }
-                
                 
             }
             .frame(height: Constants.screenHeight / 3)

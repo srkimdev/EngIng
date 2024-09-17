@@ -37,4 +37,17 @@ enum Sections: String, CaseIterable {
             return ""
         }
     }
+    
+    @ViewBuilder
+    var showVC: some View {
+        switch self {
+        case .solveProblem:
+            ProblemListView()
+        case .savedProblem:
+            SaveProblemView()
+        case .writeDiary:
+            DiaryCalendarView()
+        }
+    }
+    
 }
