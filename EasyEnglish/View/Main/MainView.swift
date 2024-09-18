@@ -15,7 +15,6 @@ struct MainView: View {
         NavigationView {
         
             ZStack {
-                
                 Colors.backgroundColor
                     .ignoresSafeArea()
                 
@@ -30,6 +29,16 @@ struct MainView: View {
                 }
             }
             .navigationTitle("오늘의 학습")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    NavigationLink{
+                        DiaryCalendarView()
+                    } label: {
+                        Image(systemName: "calendar")
+                            .foregroundStyle(.black)
+                    }
+                }
+            }
             
         }
         
@@ -138,7 +147,7 @@ struct MainView: View {
                 
             }
             .frame(height: Constants.screenHeight / 3)
-            .padding(.horizontal, 16)
+            .padding(.horizontal)
         
     }
     

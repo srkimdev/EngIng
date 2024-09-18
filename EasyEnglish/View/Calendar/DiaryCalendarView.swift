@@ -10,17 +10,15 @@ import SwiftUI
 struct DiaryCalendarView: View {
     var body: some View {
         
-        NavigationView {
-            ScrollView {
-                VStack {
-                    CalendarView(month: Date())
-                    todayDiary
-                    DiaryRowView()
-                }
+        ScrollView {
+            VStack {
+                CalendarView(month: Date())
+                todayDiary
+                DiaryRowView()
             }
-            .navigationTitle("Example")
-            .navigationBarTitleDisplayMode(.inline)
         }
+        .navigationTitle("Calendar")
+        .navigationBarTitleDisplayMode(.inline)
         
     }
     
@@ -44,7 +42,25 @@ struct DiaryRowView: View {
         }, label: {
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.black, lineWidth: 1)
-                .frame(width: Constants.screenWidth - 50, height: Constants.screenHeight / 7)
+                .frame(width: Constants.screenWidth - 50, height: 100)
+                .overlay {
+                    
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("Subject")
+                            Spacer()
+                            Text("Today i went to watch a game...")
+                        }
+                        .padding(.vertical, 30)
+                        
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(width: 80, height: 80)
+                            
+                    }
+                    .padding(.horizontal, 10)
+                    
+                }
+            
         })
         
     }

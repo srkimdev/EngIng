@@ -9,8 +9,8 @@ import SwiftUI
 
 struct DiaryWriteView: View {
     
-    @State var titleText: String = "제목을 입력해주세요."
-    @State var storyText: String = "내용을 입력해주세요."
+    @State var titleText: String = ""
+    @State var storyText: String = ""
     
     var body: some View {
         
@@ -21,44 +21,83 @@ struct DiaryWriteView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             TextEditor(text: $titleText)
-                .frame(height: 100)
+//                .frame(height: 50)
+                .overlay(alignment: .topLeading) {
+                    Text("제목을 입력해주세요.")
+                        .padding(.vertical, 8)
+                        .foregroundStyle(titleText.isEmpty ? .gray : .clear)
+                }
             
             Text("Story")
                 .font(.system(size: 24).bold())
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             TextEditor(text: $storyText)
+//                .frame(height: 250)
+                .overlay(alignment: .topLeading) {
+                    Text("내용을 입력해주세요.")
+                        .padding(.vertical, 8)
+                        .foregroundStyle(storyText.isEmpty ? .gray : .clear)
+                }
             
             Spacer()
             
             HStack {
                 
-                Image(systemName: "star")
-                Image(systemName: "camera")
+                Button(action: {
+                    print("translate")
+                }, label: {
+                    
+                    Circle()
+                        .fill(.cyan)
+                        .frame(width: 50, height: 50)
+                        .overlay {
+                            Image(systemName: "translate")
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                                .foregroundStyle(.black)
+                        }
+                    
+                })
                 
                 Spacer()
                 
                 Button(action: {
-                    print("back")
+                    print("camera")
                 }, label: {
-                    RoundedRectangle(cornerRadius: 25)
-                        .frame(width: Constants.screenWidth / 3, height: 50)
+                    
+                    Circle()
+                        .fill(.cyan)
+                        .frame(width: 50, height: 50)
                         .overlay {
-                            Text("Submit")
-                                .font(.title2)
-                                .foregroundStyle(.white)
+                            Image(systemName: "camera")
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                                .foregroundStyle(.black)
                         }
+        
                 })
                 
             }
-            .navigationTitle("Write")
-            .navigationBarTitleDisplayMode(.inline)
             
-                
         }
         .padding(25)
+        .navigationTitle("Write")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    print("Save")
+                } label: {
+                    Text("저장")
+                        .foregroundStyle(.black)
+                }
+
+            }
+        }
         
     }
+    
 }
 
 #Preview {

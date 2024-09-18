@@ -30,7 +30,8 @@ enum Sections: String, CaseIterable {
     var images: String {
         switch self {
         case .solveProblem:
-            return "UserSpeakLinear"
+            return ""
+//            "UserSpeakLinear"
         case .savedProblem:
             return ""
         case .writeDiary:
