@@ -37,9 +37,9 @@ struct DiaryRowView: View {
     
     var body: some View {
         
-        Button(action: {
-            print("diary click")
-        }, label: {
+        NavigationLink {
+            DiaryReviseView()
+        } label: {
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.black, lineWidth: 1)
                 .frame(width: Constants.screenWidth - 50, height: 100)
@@ -61,7 +61,7 @@ struct DiaryRowView: View {
                     
                 }
             
-        })
+        }
         
     }
     
