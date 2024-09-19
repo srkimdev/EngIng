@@ -17,13 +17,37 @@ final class TranslateViewModel: ObservableObject {
     struct Input {
         let inputText = PassthroughSubject<String, Never>()
     }
-    
+
     struct Output {
         var translatedText: String = ""
     }
     
-    func translate() {
+    init() {
         
+        input
+            .inputText
+            .sink { value in
+                print(value)
+                Task {
+                    await self.translate(text: value)
+                }
+            }
+            .store(in: &cancellables)
+        
+    }
+    
+    func translate(text: String) async {
+        let query = TranslateQuery(text: [text], target_lang: "EN")
+        let result = await NetworkManager.shared.requestAPI(router: Router.translate(query: query), type: TranslateResponse.self)
+        
+        switch result {
+        case .success(let value):
+            DispatchQueue.main.async {
+                self.output.translatedText = value.translations.first?.text ?? ""
+            }
+        case .failure(let error):
+            print(error)
+        }
     }
     
 }

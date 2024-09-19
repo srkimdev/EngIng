@@ -14,20 +14,26 @@ final class NetworkManager {
     
     private init() { }
     
-    func requestAPI<T: Decodable>(req: Router, type: T.Type) async -> Result<T, Error> {
-        let response = await AF.request(req.path,
-                                        method: req.method)
-            .validate()
-            .serializingDecodable(type)
-            .response
+    func requestAPI<T: Decodable>(router: Router, type: T.Type) async -> Result<T, Error> {
         
-        switch response.result {
-        case .success(let data):
-            return .success(data)
-        case .failure(let error):
+        do {
+            let request = try router.asURLRequest()
+            
+            let response = await AF.request(request)
+                .validate()
+                .serializingDecodable(type)
+                .response
+            
+            switch response.result {
+            case .success(let data):
+                return .success(data)
+            case .failure(let error):
+                return .failure(error)
+            }
+        } catch {
             return .failure(error)
         }
-        
+    
     }
     
 }

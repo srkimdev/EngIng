@@ -12,6 +12,8 @@ struct TranslateView: View {
     @State private var previousText: String = "ddd"
     @State private var afterText: String = "aaa"
     
+    @StateObject private var viewModel = TranslateViewModel()
+    
     var body: some View {
         
         VStack {
@@ -47,10 +49,11 @@ struct TranslateView: View {
             }
             
             TextEditor(text: $previousText)
-            TextEditor(text: $afterText)
+            TextEditor(text: $viewModel.output.translatedText)
             
             Button {
-                
+                print("button click")
+                viewModel.input.inputText.send(previousText)
             } label: {
                 RoundedRectangle(cornerRadius: 10)
                     .frame(height: 70)
@@ -62,8 +65,7 @@ struct TranslateView: View {
             
         }
         .padding(25)
-        
-        
+  
     }
 }
 

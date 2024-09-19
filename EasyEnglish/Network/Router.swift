@@ -22,7 +22,7 @@ enum Router: TargetType {
     var path: String {
         switch self {
         case .translate:
-            return baseURL + "v2/translate"
+            return "v2/translate"
         }
     }
     
