@@ -13,41 +13,88 @@ struct MainView: View {
     var body: some View {
         
         NavigationView {
-        
+            
             ZStack {
-                Colors.backgroundColor
-                    .ignoresSafeArea()
+                VStack(spacing: 0) {
+                    Rectangle()
+                        .fill(.orange.opacity(0.2))
+                    Rectangle()
+                        .fill(.white)
+                }
                 
-                ScrollView {
-                    
-                    Text("Example")
-                    
-                    circle3ChartView()
-                    button3View()
-                    recent7daysChart()
-                    
-                }
-            }
-            .navigationTitle("오늘의 학습")
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    NavigationLink{
-                        DiaryCalendarView()
-                    } label: {
-                        Image(systemName: "calendar")
-                            .foregroundStyle(.black)
-                    }
-                }
+                mainView()
+                
             }
             
+        
+//            ZStack {
+//                Colors.backgroundColor
+//                    .ignoresSafeArea()
+//                
+//                ScrollView {
+//                    
+//                    Text("Example")
+//                    
+//                    circle3ChartView()
+//                    button3View()
+//                    recent7daysChart()
+//                    
+//                }
+//            }
+//            .navigationTitle("오늘의 학습")
+//            .toolbar {
+//                ToolbarItem(placement: .topBarTrailing) {
+//                    NavigationLink{
+//                        DiaryCalendarView()
+//                    } label: {
+//                        Image(systemName: "calendar")
+//                            .foregroundStyle(.black)
+//                    }
+//                }
+//            }
+//            
         }
         
+    }
+
+    func mainView() -> some View {
+        
+        GeometryReader { geometry in
+            VStack(alignment: .leading) {
+                
+                Text("Hi Octavia, \nthis is your study")
+                    .font(.title)
+    //                .foregroundStyle(.white)
+                
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(.white.opacity(0.7))
+                    .frame(height: geometry.size.height / 10)
+                
+                Spacer()
+                    .frame(height: geometry.size.height / 5)
+                
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(.black.opacity(0.2))
+                    .frame(height: geometry.size.height / 4, alignment: .center)
+                    
+                
+                Spacer()
+//                
+//                Text("Popular Plan")
+//                
+//                Spacer()
+                    
+            }
+        }
+        .padding(25)
+        .frame(maxHeight: .infinity)
+ 
     }
     
     func circle3ChartView() -> some View {
         
         RoundedRectangle(cornerRadius: 15)
-            .fill(.white)
+//            .fill(.black)
             .frame(height: Constants.screenHeight / 5.5)
             .overlay {
                 HStack {
@@ -77,7 +124,7 @@ struct MainView: View {
     func button3View() -> some View {
         
         RoundedRectangle(cornerRadius: 15)
-            .fill(.white)
+//            .fill(.white)
             .overlay {
                 
                 VStack {
@@ -113,10 +160,10 @@ struct MainView: View {
                     .padding(.horizontal, 20)
                     .padding(.bottom, 5)
                     .overlay {
-                        Image(vc.images)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 40, height: 40)
+//                        Image(vc.images)
+//                            .resizable()
+//                            .aspectRatio(contentMode: .fit)
+//                            .frame(width: 40, height: 40)
                     }
             }
             

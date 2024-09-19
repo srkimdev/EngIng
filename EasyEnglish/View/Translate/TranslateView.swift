@@ -17,67 +17,75 @@ struct TranslateView: View {
     var body: some View {
 
         ZStack {
+            
             VStack(spacing: 0) {
+                
                 Rectangle()
-                    .fill(.blue.opacity(0.3))
+                    .fill(.blue.opacity(0.05))
                     .overlay {
                         CustomTextEditor(text: $previousText, placeholder: "Enter some text")
                             .padding([.top, .horizontal], 25)
-                            .padding(.bottom, 70)
+                            .padding(.bottom, 80)
                     }
+                
+                Rectangle()
+                    .fill(.gray.opacity(0.5))
+                    .frame(height: 1)
                 
                 Rectangle()
                     .fill(.white)
                     .overlay {
                         TextEditor(text: $viewModel.output.translatedText)
                             .padding([.bottom, .horizontal], 25)
-                            .padding(.top, 70)
+                            .padding(.top, 80)
                     }
             }
             
+            middleItemView()
+            
+        }
+        .navigationTitle("Translate")
+            
+    }
+    
+    func middleItemView() -> some View {
+        
+        HStack {
             VStack {
                 Text("한국어")
-                    .foregroundStyle(.white)
+                    .foregroundStyle(.blue)
                 Button(action: {
                     viewModel.input.inputText.send(previousText) //
                 }, label: {
                     Circle()
-                        .fill(.white)
+                        .fill(.blue)
                         .frame(width: 40, height: 40)
                         .overlay {
                             Image(systemName: "star")
                         }
                 })
-                .padding()
+                .padding(.vertical, 10)
+                .padding(.horizontal, 16)
+                
                 Text("English")
                     .foregroundStyle(.blue)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(20)
             
-        }
-        .navigationTitle("Translate")
+            Spacer()
             
-//            TextEditor(text: $previousText)
-//                
-//            
-//            Rectangle()
-//                .frame(height: 1)
-//            TextEditor(text: $viewModel.output.translatedText)
-//            
-//            Button {
-//
-//                viewModel.input.inputText.send(previousText)
-//            } label: {
-//                RoundedRectangle(cornerRadius: 10)
-//                    .frame(height: 70)
-//                    .overlay {
-//                        Text("번역하기")
-//                    }
-//            }
+            Button(action: {
+                
+            }, label: {
+                Image(systemName: "speaker.wave.2")
+            })
+            .padding(.top, 100)
 
-            
+        
         }
+        .padding(.horizontal, 20)
+        
+    }
 
 }
 

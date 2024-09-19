@@ -49,7 +49,7 @@ struct DiaryWriteView: View {
                 } label: {
                     
                     Circle()
-                        .fill(.cyan)
+                        .fill(.blue.opacity(0.3))
                         .frame(width: 50, height: 50)
                         .overlay {
                             Image(systemName: "translate")
@@ -67,7 +67,7 @@ struct DiaryWriteView: View {
                 }, label: {
                     
                     Circle()
-                        .fill(.cyan)
+                        .fill(.blue.opacity(0.3))
                         .frame(width: 50, height: 50)
                         .overlay {
                             Image(systemName: "camera")

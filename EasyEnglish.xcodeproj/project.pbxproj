@@ -34,6 +34,7 @@
 		DC6666E32C9BF3A500251F82 /* TranslateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6666E22C9BF3A500251F82 /* TranslateViewModel.swift */; };
 		DC6666E52C9BF5B400251F82 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6666E42C9BF5B400251F82 /* NetworkManager.swift */; };
 		DC6666EC2C9C3C7500251F82 /* CustomTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6666EB2C9C3C7500251F82 /* CustomTextEditor.swift */; };
+		DC6666EE2C9C5AF000251F82 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6666ED2C9C5AF000251F82 /* View+.swift */; };
 		DCFF76C62C959F7900D479E1 /* ProblemChapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76C52C959F7900D479E1 /* ProblemChapterView.swift */; };
 		DCFF76C92C96C36700D479E1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76C82C96C36700D479E1 /* MainView.swift */; };
 		DCFF76CB2C96C7C800D479E1 /* WeekChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76CA2C96C7C800D479E1 /* WeekChartView.swift */; };
@@ -70,6 +71,7 @@
 		DC6666E22C9BF3A500251F82 /* TranslateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewModel.swift; sourceTree = "<group>"; };
 		DC6666E42C9BF5B400251F82 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DC6666EB2C9C3C7500251F82 /* CustomTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextEditor.swift; sourceTree = "<group>"; };
+		DC6666ED2C9C5AF000251F82 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		DCFF76C52C959F7900D479E1 /* ProblemChapterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemChapterView.swift; sourceTree = "<group>"; };
 		DCFF76C82C96C36700D479E1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DCFF76CA2C96C7C800D479E1 /* WeekChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekChartView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				DC0D9B992C94106B00AD91DC /* Date+.swift */,
+				DC6666ED2C9C5AF000251F82 /* View+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				DC0D9B8E2C93129300AD91DC /* APIKey.swift in Sources */,
 				DC0D9B942C931B3E00AD91DC /* DiaryCalendarView.swift in Sources */,
 				DC0D9BA42C9456E100AD91DC /* TabbarView.swift in Sources */,
+				DC6666EE2C9C5AF000251F82 /* View+.swift in Sources */,
 				DCFF76CF2C996C9100D479E1 /* CustomBackButton.swift in Sources */,
 				DC5DBB992C9069F8001687FC /* EasyEnglishApp.swift in Sources */,
 				DC6666E32C9BF3A500251F82 /* TranslateViewModel.swift in Sources */,

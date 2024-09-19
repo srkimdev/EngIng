@@ -41,19 +41,22 @@ struct DiaryRowView: View {
             DiaryReviseView()
         } label: {
             RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.black, lineWidth: 1)
+                .fill(.orange.opacity(0.2))
                 .frame(width: Constants.screenWidth - 50, height: 100)
                 .overlay {
                     
                     HStack {
                         VStack(alignment: .leading) {
                             Text("Subject")
+                                .foregroundStyle(.black)
                             Spacer()
                             Text("Today i went to watch a game...")
+                                .foregroundStyle(.black)
                         }
                         .padding(.vertical, 30)
                         
                         RoundedRectangle(cornerRadius: 10)
+                            .fill(.white)
                             .frame(width: 80, height: 80)
                             
                     }

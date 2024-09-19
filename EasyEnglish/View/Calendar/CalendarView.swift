@@ -20,7 +20,7 @@ struct CalendarView: View {
     var body: some View {
         
         VStack {
-            yearView
+//            yearView
             headerView
             calendarGridView
                 .padding(.horizontal, 25)
@@ -136,7 +136,7 @@ struct CalendarView: View {
                         clickedCurrentMonthDates = date
                     }
                 }
-                
+            
             }
             
         }
@@ -162,9 +162,9 @@ private struct CellView: View {
     }
     private var backgroundColor: Color {
         if clicked {
-            return Color.black
+            return Color.orange.opacity(0.7)
         } else if isToday {
-            return Color.gray
+            return Color.blue.opacity(0.2)
         } else {
             return Color.white
         }
@@ -185,13 +185,11 @@ private struct CellView: View {
                 .overlay(Text(String(day)))
                 .foregroundStyle(textColor)
         }
-        .frame(height: 30)
+        .frame(height: 40)
         
     }
     
 }
-
-
 
 #Preview {
     CalendarView(month: Date())

@@ -17,10 +17,9 @@ struct CustomTextEditor: View {
         
         ZStack {
             
-            Color.blue.opacity(0.3)
-            
             TextEditor(text: $text)
                 .padding(4)
+                .scrollContentBackground(.hidden)
             
             if text.isEmpty {
                 Text(placeholder)
@@ -28,6 +27,7 @@ struct CustomTextEditor: View {
                     .padding(.horizontal, 5)
                     .padding(.vertical, 8)
             }
+            
         }
         
     }
