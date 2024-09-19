@@ -9,64 +9,76 @@ import SwiftUI
 
 struct TranslateView: View {
     
-    @State private var previousText: String = "ddd"
-    @State private var afterText: String = "aaa"
+    @State private var previousText: String = ""
+    @State private var afterText: String = ""
     
     @StateObject private var viewModel = TranslateViewModel()
     
     var body: some View {
-        
-        VStack {
-            
-            ZStack {
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(.gray)
-                    .frame(height: 55)
-                
-                
-                HStack {
-                    
-                    Spacer()
-                    
-                    Text("한국어")
-                    
-                    Spacer()
-                    
-                    Circle()
-                        .fill(.red)
-                        .frame(width: 75, height: 80)
-                        .overlay {
-    //                        Image(systemName: <#T##String#>)
-                    }
-                    
-                    Spacer()
-                    
-                    Text("English")
-                    
-                    Spacer()
-                    
-                }
-            }
-            
-            TextEditor(text: $previousText)
-            TextEditor(text: $viewModel.output.translatedText)
-            
-            Button {
-                print("button click")
-                viewModel.input.inputText.send(previousText)
-            } label: {
-                RoundedRectangle(cornerRadius: 10)
-                    .frame(height: 70)
+
+        ZStack {
+            VStack(spacing: 0) {
+                Rectangle()
+                    .fill(.blue.opacity(0.3))
                     .overlay {
-                        Text("번역하기")
+                        CustomTextEditor(text: $previousText, placeholder: "Enter some text")
+                            .padding([.top, .horizontal], 25)
+                            .padding(.bottom, 70)
+                    }
+                
+                Rectangle()
+                    .fill(.white)
+                    .overlay {
+                        TextEditor(text: $viewModel.output.translatedText)
+                            .padding([.bottom, .horizontal], 25)
+                            .padding(.top, 70)
                     }
             }
+            
+            VStack {
+                Text("한국어")
+                    .foregroundStyle(.white)
+                Button(action: {
+                    viewModel.input.inputText.send(previousText) //
+                }, label: {
+                    Circle()
+                        .fill(.white)
+                        .frame(width: 40, height: 40)
+                        .overlay {
+                            Image(systemName: "star")
+                        }
+                })
+                .padding()
+                Text("English")
+                    .foregroundStyle(.blue)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(20)
+            
+        }
+        .navigationTitle("Translate")
+            
+//            TextEditor(text: $previousText)
+//                
+//            
+//            Rectangle()
+//                .frame(height: 1)
+//            TextEditor(text: $viewModel.output.translatedText)
+//            
+//            Button {
+//
+//                viewModel.input.inputText.send(previousText)
+//            } label: {
+//                RoundedRectangle(cornerRadius: 10)
+//                    .frame(height: 70)
+//                    .overlay {
+//                        Text("번역하기")
+//                    }
+//            }
 
             
         }
-        .padding(25)
-  
-    }
+
 }
 
 #Preview {

@@ -33,6 +33,7 @@
 		DC6666E12C9BEA8100251F82 /* TranslateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6666E02C9BEA8100251F82 /* TranslateResponse.swift */; };
 		DC6666E32C9BF3A500251F82 /* TranslateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6666E22C9BF3A500251F82 /* TranslateViewModel.swift */; };
 		DC6666E52C9BF5B400251F82 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6666E42C9BF5B400251F82 /* NetworkManager.swift */; };
+		DC6666EC2C9C3C7500251F82 /* CustomTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6666EB2C9C3C7500251F82 /* CustomTextEditor.swift */; };
 		DCFF76C62C959F7900D479E1 /* ProblemChapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76C52C959F7900D479E1 /* ProblemChapterView.swift */; };
 		DCFF76C92C96C36700D479E1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76C82C96C36700D479E1 /* MainView.swift */; };
 		DCFF76CB2C96C7C800D479E1 /* WeekChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76CA2C96C7C800D479E1 /* WeekChartView.swift */; };
@@ -68,6 +69,7 @@
 		DC6666E02C9BEA8100251F82 /* TranslateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateResponse.swift; sourceTree = "<group>"; };
 		DC6666E22C9BF3A500251F82 /* TranslateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewModel.swift; sourceTree = "<group>"; };
 		DC6666E42C9BF5B400251F82 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DC6666EB2C9C3C7500251F82 /* CustomTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextEditor.swift; sourceTree = "<group>"; };
 		DCFF76C52C959F7900D479E1 /* ProblemChapterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemChapterView.swift; sourceTree = "<group>"; };
 		DCFF76C82C96C36700D479E1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DCFF76CA2C96C7C800D479E1 /* WeekChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekChartView.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			children = (
 				DC6666D52C9BE03C00251F82 /* TranslateView.swift */,
 				DC6666E22C9BF3A500251F82 /* TranslateViewModel.swift */,
+				DC6666EB2C9C3C7500251F82 /* CustomTextEditor.swift */,
 			);
 			path = Translate;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				DC5DBB992C9069F8001687FC /* EasyEnglishApp.swift in Sources */,
 				DC6666E32C9BF3A500251F82 /* TranslateViewModel.swift in Sources */,
 				DC6666D32C9AC9B400251F82 /* Header.swift in Sources */,
+				DC6666EC2C9C3C7500251F82 /* CustomTextEditor.swift in Sources */,
 				DC0D9BA62C9457FA00AD91DC /* SaveProblemView.swift in Sources */,
 				DC0D9B9F2C94522C00AD91DC /* CustomTabView.swift in Sources */,
 				DC6666D12C9AC5B300251F82 /* Router.swift in Sources */,

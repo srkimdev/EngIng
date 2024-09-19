@@ -27,7 +27,6 @@ final class TranslateViewModel: ObservableObject {
         input
             .inputText
             .sink { value in
-                print(value)
                 Task {
                     await self.translate(text: value)
                 }
