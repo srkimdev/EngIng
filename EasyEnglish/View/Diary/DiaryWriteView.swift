@@ -44,9 +44,9 @@ struct DiaryWriteView: View {
             
             HStack {
                 
-                Button(action: {
-                    print("translate")
-                }, label: {
+                NavigationLink {
+                    TranslateView()
+                } label: {
                     
                     Circle()
                         .fill(.cyan)
@@ -58,7 +58,7 @@ struct DiaryWriteView: View {
                                 .foregroundStyle(.black)
                         }
                     
-                })
+                }
                 
                 Spacer()
                 
