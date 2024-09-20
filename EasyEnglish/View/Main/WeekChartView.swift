@@ -16,9 +16,13 @@ struct Posting: Identifiable {
 }
 
 let postings: [Posting] = [
-  .init(name: "Green", count: 250),
-  .init(name: "James", count: 100),
-  .init(name: "Tony", count: 70)
+  .init(name: "MON", count: 20),
+  .init(name: "TUE", count: 18),
+  .init(name: "WED", count: 40),
+  .init(name: "THU", count: 50),
+  .init(name: "FRI", count: 20),
+  .init(name: "SAT", count: 10),
+  .init(name: "SUN", count: 30)
 ]
 
 struct WeekChartView: View {

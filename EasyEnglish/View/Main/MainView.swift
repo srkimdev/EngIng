@@ -12,78 +12,73 @@ struct MainView: View {
     
     var body: some View {
         
-        NavigationView {
+        GeometryReader { geometry in
             
-            ZStack {
-                
-                VStack(spacing: 0) {
-                    Rectangle()
-                        .fill(.orange.opacity(0.2))
-                    Rectangle()
-                        .fill(Colors.backgroundColor)
-                }
-                
-                mainView()
-                
+            //MARK: Profile
+            Rectangle()
+                .fill(.orange.opacity(0.2))
+                .frame(height: geometry.size.height / 3)
+                .overlay {
+                    VStack {
+                        profileView(geometry: geometry)
+                        Spacer()
+                    }
+                    .padding(25)
             }
             
+            //MARK: Main
+            VStack {
+
+                Spacer()
+
+                RoundedRectangle(cornerRadius: 25)
+                    .fill(Colors.backgroundColor)
+                    .frame(height: geometry.size.height * 3 / 4)
+                    .overlay {
+                        ScrollView {
+                            mainView(geometry: geometry)
+                        }
+                    }
+                
+            }
+                
+        }
+
+    }
+    
+    //MARK: Profile
+    func profileView(geometry: GeometryProxy) -> some View {
         
-//            ZStack {
-//                Colors.backgroundColor
-//                    .ignoresSafeArea()
-//                
-//                ScrollView {
-//                    
-//                    Text("Example")
-//                    
-//                    circle3ChartView()
-//                    button3View()
-//                    recent7daysChart()
-//                    
-//                }
-//            }
-//            .navigationTitle("오늘의 학습")
-//            .toolbar {
-//                ToolbarItem(placement: .topBarTrailing) {
-//                    NavigationLink{
-//                        DiaryCalendarView()
-//                    } label: {
-//                        Image(systemName: "calendar")
-//                            .foregroundStyle(.black)
-//                    }
-//                }
-//            }
-//            
+        VStack {
+            Text("Hi Octavia, \nthis is your study")
+                .padding(.bottom)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            RoundedRectangle(cornerRadius: 20)
+                .fill(.white.opacity(0.7))
+                .frame(height: geometry.size.height / 15)
         }
         
     }
 
-    func mainView() -> some View {
+    //MARK: Main
+    func mainView(geometry: GeometryProxy) -> some View {
         
-        GeometryReader { geometry in
-            VStack(alignment: .leading) {
-                
-                Text("Hi Octavia, \nthis is your study")
-                    .font(.title)
-    //                .foregroundStyle(.white)
-                
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(.white.opacity(0.7))
-                    .frame(height: geometry.size.height / 10)
-                
-                Spacer()
-                    .frame(height: geometry.size.height / 5)
-                
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(.black.opacity(0.2))
-                    .frame(height: geometry.size.height / 4, alignment: .center)
-                    
-                Spacer()
-                    
-            }
+        VStack {
+            Text("mainView")
+            
+            RoundedRectangle(cornerRadius: 20)
+                .fill(.white)
+                .frame(height: geometry.size.height / 4)
+                .padding(.bottom, 20)
+            
+            Text("Recent 7 days study")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .font(.title2)
+            
+            recent7daysChart()
+                .frame(height: geometry.size.height / 3)
         }
         .padding(25)
-//        .frame(maxHeight: .infinity)
  
     }
     
@@ -177,20 +172,14 @@ struct MainView: View {
                 
                 VStack {
                     Text("최근 7일간 학습 진도")
-                        .font(.system(size: 20).bold())
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal, 25)
-                        .padding(.bottom, 20)
+                        .padding(.bottom)
                     
                     WeekChartView()
-                        .frame(height: 180)
-                        .padding(.horizontal, 25)
-                    
                 }
+                .padding(20)
                 
             }
-            .frame(height: Constants.screenHeight / 3)
-            .padding(.horizontal)
         
     }
     
@@ -201,3 +190,30 @@ struct MainView: View {
 #Preview {
     MainView()
 }
+
+//            ZStack {
+//                Colors.backgroundColor
+//                    .ignoresSafeArea()
+//
+//                ScrollView {
+//
+//                    Text("Example")
+//
+//                    circle3ChartView()
+//                    button3View()
+//                    recent7daysChart()
+//
+//                }
+//            }
+//            .navigationTitle("오늘의 학습")
+//            .toolbar {
+//                ToolbarItem(placement: .topBarTrailing) {
+//                    NavigationLink{
+//                        DiaryCalendarView()
+//                    } label: {
+//                        Image(systemName: "calendar")
+//                            .foregroundStyle(.black)
+//                    }
+//                }
+//            }
+//
