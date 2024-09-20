@@ -8,39 +8,47 @@
 import SwiftUI
 
 enum Tab {
-    case home
-    case save
+    case main
+    case problem
     case diary
 }
 
 struct TabbarView: View {
     
-    @State var selectedTab: Tab = .home
+    @State private var selected: Tab = .main
     
     var body: some View {
         
-        VStack {
-            
-            Spacer()
-            
-            switch selectedTab {
-            case .home:
-                ProblemListView()
-            case .save:
-                SaveProblemView()
-            case .diary:
-                DiaryCalendarView()
+        ZStack {
+            TabView(selection: $selected) {
+                Group {
+                    NavigationStack {
+                        MainView()
+                    }
+                    .tag(Tab.main)
+                    
+                    NavigationStack {
+                        ProblemListView()
+                    }
+                    .tag(Tab.problem)
+                    
+                    NavigationStack {
+                        DiaryCalendarView()
+                    }
+                    .tag(Tab.diary)
+                }
+                .toolbar(.hidden, for: .tabBar)
+                
             }
             
-            Spacer()
-            
-            CustomTabView(selectedTab: $selectedTab)
-                .padding(.bottom, 20)
-            
+            VStack {
+                Spacer()
+                CustomTabView(selected: $selected)
+            }
         }
-        .ignoresSafeArea(.container, edges: .bottom)
         
     }
+    
 }
 
 #Preview {

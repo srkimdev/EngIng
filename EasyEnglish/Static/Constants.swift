@@ -18,7 +18,7 @@ struct Constants {
 enum Colors {
     
 //    static let backgroundColor = #colorLiteral(red: 0.9812712073, green: 0.976305306, blue: 0.9936047196, alpha: 1)
-    static let backgroundColor = Color(red: 0.9812712073, green: 0.976305306, blue: 0.9936047196)
+    static let backgroundColor = Color(red: 0.9647058845, green: 0.9647058845, blue: 0.9647058845)
     
 }
 

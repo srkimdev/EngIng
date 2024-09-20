@@ -15,11 +15,12 @@ struct MainView: View {
         NavigationView {
             
             ZStack {
+                
                 VStack(spacing: 0) {
                     Rectangle()
                         .fill(.orange.opacity(0.2))
                     Rectangle()
-                        .fill(.white)
+                        .fill(Colors.backgroundColor)
                 }
                 
                 mainView()
@@ -77,17 +78,12 @@ struct MainView: View {
                     .fill(.black.opacity(0.2))
                     .frame(height: geometry.size.height / 4, alignment: .center)
                     
-                
                 Spacer()
-//                
-//                Text("Popular Plan")
-//                
-//                Spacer()
                     
             }
         }
         .padding(25)
-        .frame(maxHeight: .infinity)
+//        .frame(maxHeight: .infinity)
  
     }
     
@@ -97,6 +93,7 @@ struct MainView: View {
 //            .fill(.black)
             .frame(height: Constants.screenHeight / 5.5)
             .overlay {
+                
                 HStack {
                     VStack {
                         Text("goal reached")
@@ -114,7 +111,6 @@ struct MainView: View {
                     CircleChartView()
                 }
                 .padding(.horizontal, 25)
-                
 
             }
             .padding(.horizontal, 16)
