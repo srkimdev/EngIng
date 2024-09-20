@@ -33,12 +33,7 @@ struct ProblemListView: View {
             
         }
         .navigationTitle("둘러보기")
-//        .navigationBarBackButtonHidden(true)
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-//                CustomBackButton().backButton()
-            }
-        }
+        .toolbar(.hidden, for: .tabBar)
         
     }
     

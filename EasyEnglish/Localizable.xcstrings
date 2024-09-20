@@ -22,9 +22,6 @@
     "Full-day Hike in the Moun" : {
 
     },
-    "goal reached" : {
-
-    },
     "Hello" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -54,6 +51,9 @@
     "Posting" : {
 
     },
+    "Recent 7 days study" : {
+
+    },
     "Review" : {
 
     },
@@ -81,9 +81,6 @@
     "Write" : {
 
     },
-    "Your Section" : {
-
-    },
     "내용을 입력해주세요." : {
 
     },
@@ -100,12 +97,6 @@
 
     },
     "제목을 입력해주세요." : {
-
-    },
-    "총 7일 연속" : {
-
-    },
-    "최근 7일간 학습 진도" : {
 
     },
     "카테고리" : {

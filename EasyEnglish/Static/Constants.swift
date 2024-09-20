@@ -17,7 +17,6 @@ struct Constants {
 
 enum Colors {
     
-//    static let backgroundColor = #colorLiteral(red: 0.9812712073, green: 0.976305306, blue: 0.9936047196, alpha: 1)
     static let backgroundColor = Color(red: 0.9647058845, green: 0.9647058845, blue: 0.9647058845)
     
 }
@@ -25,17 +24,16 @@ enum Colors {
 enum Sections: String, CaseIterable {
     case solveProblem = "학습 하기"
     case savedProblem = "복습 하기"
-    case writeDiary = "일기 쓰기"
+    case dictionary = "영어 사전"
     
     var images: String {
         switch self {
         case .solveProblem:
-            return ""
-//            "UserSpeakLinear"
+            return "UserSpeakLinear"
         case .savedProblem:
-            return ""
-        case .writeDiary:
-            return ""
+            return "book.pages"
+        case .dictionary:
+            return "magnifyingglass"
         }
     }
     
@@ -46,7 +44,7 @@ enum Sections: String, CaseIterable {
             ProblemListView()
         case .savedProblem:
             SaveProblemView()
-        case .writeDiary:
+        case .dictionary:
             DiaryWriteView()
         }
     }

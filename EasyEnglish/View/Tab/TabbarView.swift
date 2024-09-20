@@ -11,6 +11,7 @@ enum Tab {
     case main
     case problem
     case diary
+    case user
 }
 
 struct TabbarView: View {
@@ -19,32 +20,29 @@ struct TabbarView: View {
     
     var body: some View {
         
-        ZStack {
-            TabView(selection: $selected) {
-                Group {
-                    NavigationStack {
+        NavigationStack {
+            ZStack {
+                TabView(selection: $selected) {
+                    Group {
                         MainView()
-                    }
-                    .tag(Tab.main)
-                    
-                    NavigationStack {
+                            .tag(Tab.main)
+                        
                         ProblemListView()
-                    }
-                    .tag(Tab.problem)
+                            .tag(Tab.problem)
                     
-                    NavigationStack {
                         DiaryCalendarView()
+                            .tag(Tab.diary)
+                        
+                        UserSettingView()
+                            .tag(Tab.user)
                     }
-                    .tag(Tab.diary)
+                    .toolbar(.hidden, for: .tabBar)
                 }
-                .toolbar(.hidden, for: .tabBar)
                 
-                
-            }
-            
-            VStack {
-                Spacer()
-                CustomTabView(selected: $selected)
+                VStack {
+                    Spacer()
+                    CustomTabView(selected: $selected)
+                }
             }
         }
         

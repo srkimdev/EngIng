@@ -35,6 +35,7 @@
 		DC6666E52C9BF5B400251F82 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6666E42C9BF5B400251F82 /* NetworkManager.swift */; };
 		DC6666EC2C9C3C7500251F82 /* CustomTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6666EB2C9C3C7500251F82 /* CustomTextEditor.swift */; };
 		DC6666EE2C9C5AF000251F82 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6666ED2C9C5AF000251F82 /* View+.swift */; };
+		DC6666F12C9D997700251F82 /* UserSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6666F02C9D997600251F82 /* UserSettingView.swift */; };
 		DCFF76C62C959F7900D479E1 /* ProblemChapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76C52C959F7900D479E1 /* ProblemChapterView.swift */; };
 		DCFF76C92C96C36700D479E1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76C82C96C36700D479E1 /* MainView.swift */; };
 		DCFF76CB2C96C7C800D479E1 /* WeekChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76CA2C96C7C800D479E1 /* WeekChartView.swift */; };
@@ -72,6 +73,7 @@
 		DC6666E42C9BF5B400251F82 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DC6666EB2C9C3C7500251F82 /* CustomTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextEditor.swift; sourceTree = "<group>"; };
 		DC6666ED2C9C5AF000251F82 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		DC6666F02C9D997600251F82 /* UserSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingView.swift; sourceTree = "<group>"; };
 		DCFF76C52C959F7900D479E1 /* ProblemChapterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemChapterView.swift; sourceTree = "<group>"; };
 		DCFF76C82C96C36700D479E1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DCFF76CA2C96C7C800D479E1 /* WeekChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekChartView.swift; sourceTree = "<group>"; };
@@ -96,33 +98,34 @@
 			isa = PBXGroup;
 			children = (
 				DC0D9B9B2C9433D000AD91DC /* Tab */,
-				DCFF76C72C96C35300D479E1 /* Main */,
-				DC0D9B852C930DE800AD91DC /* Problem */,
+				DCFF76C72C96C35300D479E1 /* First */,
+				DC0D9B852C930DE800AD91DC /* Second */,
+				DC0D9B862C930DEE00AD91DC /* Third */,
+				DC6666EF2C9D98E700251F82 /* Fourth */,
 				DC0D9B872C930DF600AD91DC /* Save */,
 				DCFF76D02C997A3D00D479E1 /* Diary */,
-				DC0D9B862C930DEE00AD91DC /* Calendar */,
 				DC6666D42C9BDCA200251F82 /* Translate */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		DC0D9B852C930DE800AD91DC /* Problem */ = {
+		DC0D9B852C930DE800AD91DC /* Second */ = {
 			isa = PBXGroup;
 			children = (
 				DC0D9B882C930E2900AD91DC /* ProblemListView.swift */,
 				DCFF76C52C959F7900D479E1 /* ProblemChapterView.swift */,
 			);
-			path = Problem;
+			path = Second;
 			sourceTree = "<group>";
 		};
-		DC0D9B862C930DEE00AD91DC /* Calendar */ = {
+		DC0D9B862C930DEE00AD91DC /* Third */ = {
 			isa = PBXGroup;
 			children = (
 				DC0D9B932C931B3E00AD91DC /* DiaryCalendarView.swift */,
 				DC0D9B952C9323AB00AD91DC /* CalendarView.swift */,
 				DC0D9B972C93F67800AD91DC /* CalendarView+Extension.swift */,
 			);
-			path = Calendar;
+			path = Third;
 			sourceTree = "<group>";
 		};
 		DC0D9B872C930DF600AD91DC /* Save */ = {
@@ -265,14 +268,22 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
-		DCFF76C72C96C35300D479E1 /* Main */ = {
+		DC6666EF2C9D98E700251F82 /* Fourth */ = {
+			isa = PBXGroup;
+			children = (
+				DC6666F02C9D997600251F82 /* UserSettingView.swift */,
+			);
+			path = Fourth;
+			sourceTree = "<group>";
+		};
+		DCFF76C72C96C35300D479E1 /* First */ = {
 			isa = PBXGroup;
 			children = (
 				DCFF76C82C96C36700D479E1 /* MainView.swift */,
 				DCFF76CC2C96D20D00D479E1 /* CircleChartView.swift */,
 				DCFF76CA2C96C7C800D479E1 /* WeekChartView.swift */,
 			);
-			path = Main;
+			path = First;
 			sourceTree = "<group>";
 		};
 		DCFF76D02C997A3D00D479E1 /* Diary */ = {
@@ -363,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC6666F12C9D997700251F82 /* UserSettingView.swift in Sources */,
 				DC6666E52C9BF5B400251F82 /* NetworkManager.swift in Sources */,
 				DC6666E12C9BEA8100251F82 /* TranslateResponse.swift in Sources */,
 				DC0D9B892C930E2900AD91DC /* ProblemListView.swift in Sources */,

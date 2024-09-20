@@ -45,6 +45,7 @@ struct Expense: Identifiable {
 struct CircleChartView: View {
     
     var body: some View {
+        
         GeometryReader { geometry in
             Pie(slices: [
                 (2, .red),
@@ -63,12 +64,12 @@ struct CircleChartView: View {
                 }
                 
             }
-            .frame(width: geometry.size.width, height: geometry.size.width)
         }
-        .frame(width: 100, height: 100)
+        
     }
+    
 }
 
-#Preview {
-    CircleChartView()
-}
+//#Preview {
+//    CircleChartView()
+//}

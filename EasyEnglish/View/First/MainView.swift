@@ -10,6 +10,8 @@ import Charts
 
 struct MainView: View {
     
+//    @Binding var hideTabbar: Bool
+    
     var body: some View {
         
         GeometryReader { geometry in
@@ -17,13 +19,14 @@ struct MainView: View {
             //MARK: Profile
             Rectangle()
                 .fill(.orange.opacity(0.2))
-                .frame(height: geometry.size.height / 3)
+                .frame(height: geometry.size.height / 3.7)
                 .overlay {
                     VStack {
                         profileView(geometry: geometry)
                         Spacer()
                     }
                     .padding(25)
+                    .padding(.top)
             }
             
             //MARK: Main
@@ -64,12 +67,24 @@ struct MainView: View {
     func mainView(geometry: GeometryProxy) -> some View {
         
         VStack {
-            Text("mainView")
             
             RoundedRectangle(cornerRadius: 20)
                 .fill(.white)
                 .frame(height: geometry.size.height / 4)
+                .overlay {
+                    
+                    HStack {
+                        Spacer()
+                        CircleChartView()
+                            .frame(width: geometry.size.width / 3, height: geometry.size.width / 3)
+                    }
+                    .padding(.horizontal, 25)
+                    
+                }
                 .padding(.bottom, 20)
+            
+            button3View()
+                .frame(height: geometry.size.height / 5)
             
             Text("Recent 7 days study")
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -77,64 +92,49 @@ struct MainView: View {
             
             recent7daysChart()
                 .frame(height: geometry.size.height / 3)
+                .padding(.bottom, 60)
         }
         .padding(25)
  
     }
     
-    func circle3ChartView() -> some View {
-        
-        RoundedRectangle(cornerRadius: 15)
-//            .fill(.black)
-            .frame(height: Constants.screenHeight / 5.5)
-            .overlay {
-                
-                HStack {
-                    VStack {
-                        Text("goal reached")
-                            .font(.system(size: 20).bold())
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        
-                        Spacer()
-                        
-                        Text("총 7일 연속")
-                            .font(.system(size: 20))
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                    }
-                    .padding(.vertical, 25)
-                    
-                    CircleChartView()
-                }
-                .padding(.horizontal, 25)
-
-            }
-            .padding(.horizontal, 16)
-        
-    }
+//    func circle3ChartView() -> some View {
+//        
+//        RoundedRectangle(cornerRadius: 15)
+////            .fill(.black)
+//            .frame(height: Constants.screenHeight / 5.5)
+//            .overlay {
+//                
+//                HStack {
+//                    VStack {
+//                        Text("goal reached")
+//                            .font(.system(size: 20).bold())
+//                            .frame(maxWidth: .infinity, alignment: .leading)
+//                        
+//                        Spacer()
+//                        
+//                        Text("총 7일 연속")
+//                            .font(.system(size: 20))
+//                            .frame(maxWidth: .infinity, alignment: .leading)
+//                    }
+//                    .padding(.vertical, 25)
+//                    
+//                    CircleChartView()
+//                }
+//                .padding(.horizontal, 25)
+//
+//            }
+//            .padding(.horizontal, 16)
+//        
+//    }
     
     func button3View() -> some View {
-        
-        RoundedRectangle(cornerRadius: 15)
-//            .fill(.white)
-            .overlay {
-                
-                VStack {
-                    Text("Your Section")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal, 25)
-                        .padding(.bottom, 10)
-                        .font(.system(size: 20).bold())
-                    
-                    HStack {
-                        ForEach(Sections.allCases, id: \.self) { item in
-                            buttonRowView(item)
-                        }
-                    }
-                }
-                
+    
+        HStack {
+            ForEach(Sections.allCases, id: \.self) { item in
+                buttonRowView(item)
             }
-            .frame(height: Constants.screenHeight / 4.5)
-            .padding()
+        }
         
     }
     
@@ -148,7 +148,6 @@ struct MainView: View {
                 RoundedRectangle(cornerRadius: 15)
                     .fill(Color.gray.opacity(0.3))
                     .frame(width: (Constants.screenWidth - 180) / 3, height: (Constants.screenWidth - 180) / 3)
-                    .padding(.horizontal, 20)
                     .padding(.bottom, 5)
                     .overlay {
 //                        Image(vc.images)
@@ -161,6 +160,7 @@ struct MainView: View {
             Text(vc.rawValue)
             
         }
+        .padding(.horizontal, 20)
     
     }
     
@@ -171,10 +171,6 @@ struct MainView: View {
             .overlay {
                 
                 VStack {
-                    Text("최근 7일간 학습 진도")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.bottom)
-                    
                     WeekChartView()
                 }
                 .padding(20)
@@ -185,35 +181,8 @@ struct MainView: View {
     
 }
 
-
-
 #Preview {
     MainView()
 }
 
-//            ZStack {
-//                Colors.backgroundColor
-//                    .ignoresSafeArea()
-//
-//                ScrollView {
-//
-//                    Text("Example")
-//
-//                    circle3ChartView()
-//                    button3View()
-//                    recent7daysChart()
-//
-//                }
-//            }
-//            .navigationTitle("오늘의 학습")
-//            .toolbar {
-//                ToolbarItem(placement: .topBarTrailing) {
-//                    NavigationLink{
-//                        DiaryCalendarView()
-//                    } label: {
-//                        Image(systemName: "calendar")
-//                            .foregroundStyle(.black)
-//                    }
-//                }
-//            }
-//
+
