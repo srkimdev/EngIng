@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct ProblemChapterView: View {
+    
+    var category: Categories
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    ProblemChapterView()
+    ProblemChapterView(category: Categories.business)
 }

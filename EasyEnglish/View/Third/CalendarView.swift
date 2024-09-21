@@ -23,7 +23,7 @@ struct CalendarView: View {
 //            yearView
             headerView
             calendarGridView
-                .padding(.horizontal, 25)
+//                .padding(.horizontal, 40)
         }
         
     }
@@ -54,16 +54,17 @@ struct CalendarView: View {
             HStack {
                 yearMonthView
             }
-            .padding([.horizontal, .bottom])
+            .padding(.bottom)
+//            .padding([.horizontal, .bottom])
             
             HStack {
                 ForEach(Self.weekdaySymbols.indices, id: \.self) { symbol in
                     Text(Self.weekdaySymbols[symbol].uppercased())
+                        .font(.system(size: 14))
                         .foregroundStyle(.gray)
                         .frame(maxWidth: .infinity)
                 }
             }
-            .padding(.horizontal, 25)
         }
         
     }
@@ -185,7 +186,7 @@ private struct CellView: View {
                 .overlay(Text(String(day)))
                 .foregroundStyle(textColor)
         }
-        .frame(height: 40)
+        .frame(width: 30, height: 30)
         
     }
     

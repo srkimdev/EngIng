@@ -20,7 +20,7 @@ struct CustomTabView: View {
                 selected = .main
             } label: {
                 VStack(alignment: .center) {
-                    Image(systemName: "star")
+                    Image(systemName: "house")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 22)
@@ -70,6 +70,24 @@ struct CustomTabView: View {
             
             Spacer()
             
+            Button {
+                selected = .user
+            } label: {
+                VStack(alignment: .center) {
+                    Image(systemName: "person")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 22)
+                    if selected == .user {
+                        Text("User")
+                            .font(.system(size: 11))
+                    }
+                }
+            }
+            .foregroundStyle(selected == .user ? Color.accentColor : Color.primary)
+            
+            Spacer()
+            
         }
         .padding()
         .frame(height: 72)
@@ -87,53 +105,3 @@ struct CustomTabView: View {
 //#Preview {
 //    CustomTabView(selectedTab: )
 //}
-
-
-//RoundedRectangle(cornerRadius: 30)
-//    .fill(.white)
-//    .frame(height: 60)
-//    .padding(30)
-
-
-//        ZStack {
-    
-    
-    
-//            HStack {
-//
-//                Spacer()
-//
-//                Button(action: {
-//                    selectedTab = .home
-//                }, label: {
-//                    Image(systemName: selectedTab == .home ? "eraser" : "eraser.fill")
-//                            .font(.title2)
-//                            .foregroundStyle(.black)
-//                })
-//
-//                Spacer()
-//
-//                Button(action: {
-//                    selectedTab = .save
-//                }, label: {
-//                    Image(systemName: selectedTab == .save ? "house" : "house.fill")
-//                            .font(.title2)
-//                            .foregroundStyle(.black)
-//                })
-//
-//                Spacer()
-//
-//                Button(action: {
-//                    selectedTab = .diary
-//                }, label: {
-//                    Image(systemName: selectedTab == .diary ? "book" : "book.fill")
-//                            .font(.title2)
-//                            .foregroundStyle(.black)
-//                })
-//
-//                Spacer()
-//
-//            }
-    
-//        }
-//        .padding(20)

@@ -8,17 +8,44 @@
 import SwiftUI
 
 struct DiaryCalendarView: View {
+    
     var body: some View {
         
-        ScrollView {
+        GeometryReader { geometry in
+            
+            //MARK: Background
+            Rectangle()
+                .fill(.orange.opacity(0.2))
+                .frame(height: geometry.size.height / 3.7)
+            
+            //MARK: Main
             VStack {
-                CalendarView(month: Date())
-                todayDiary
-                DiaryRowView()
+                
+                Spacer()
+                
+                RoundedRectangle(cornerRadius: 25)
+                    .fill(Colors.backgroundColor)
+                        .frame(height: geometry.size.height * 3 / 4)
+                    .overlay {
+                        ScrollView {
+                            //                            mainView(geometry: geometry)
+                        }
+                    }
+                
             }
+            
+            RoundedRectangle(cornerRadius: 20)
+                .fill(.white)
+                .overlay {
+                    CalendarView(month: Date())
+                        .padding(20)
+                }
+                .frame(height: geometry.size.height / 2.3)
+                .padding(30)
+            
+            
+            
         }
-        .navigationTitle("Calendar")
-        .navigationBarTitleDisplayMode(.inline)
         
     }
     
@@ -32,6 +59,20 @@ struct DiaryCalendarView: View {
     }
     
 }
+
+//        Spacer()
+//
+//        ScrollView {
+//            VStack {
+//                CalendarView(month: Date())
+//                todayDiary
+//                DiaryRowView()
+//            }
+//        }
+//        .navigationTitle("Calendar")
+//        .navigationBarTitleDisplayMode(.inline)
+    
+//}
 
 struct DiaryRowView: View {
     
@@ -69,7 +110,6 @@ struct DiaryRowView: View {
     }
     
 }
-
 
 #Preview {
     DiaryCalendarView()

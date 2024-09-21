@@ -21,7 +21,7 @@ struct DiaryWriteView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             TextEditor(text: $titleText)
-//                .frame(height: 50)
+                .frame(height: 50)
                 .overlay(alignment: .topLeading) {
                     Text("제목을 입력해주세요.")
                         .padding(.vertical, 8)
