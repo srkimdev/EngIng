@@ -38,6 +38,13 @@
 		DC6666F12C9D997700251F82 /* UserSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6666F02C9D997600251F82 /* UserSettingView.swift */; };
 		DCFD541D2C9EA9E50000D2EC /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFD541C2C9EA9E50000D2EC /* Categories.swift */; };
 		DCFD54202C9EB8650000D2EC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DCFD541F2C9EB8650000D2EC /* RealmSwift */; };
+		DCFD54222C9FFB960000D2EC /* ProblemSentenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFD54212C9FFB960000D2EC /* ProblemSentenceView.swift */; };
+		DCFD54252C9FFD920000D2EC /* ShuffleDeck in Frameworks */ = {isa = PBXBuildFile; productRef = DCFD54242C9FFD920000D2EC /* ShuffleDeck */; };
+		DCFD54272C9FFD920000D2EC /* ShuffleIt in Frameworks */ = {isa = PBXBuildFile; productRef = DCFD54262C9FFD920000D2EC /* ShuffleIt */; };
+		DCFD54292CA008950000D2EC /* DBTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFD54282CA008950000D2EC /* DBTable.swift */; };
+		DCFD542B2CA00C900000D2EC /* makeDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFD542A2CA00C900000D2EC /* makeDB.swift */; };
+		DCFD542D2CA0175B0000D2EC /* sentences.json in Resources */ = {isa = PBXBuildFile; fileRef = DCFD542C2CA0175B0000D2EC /* sentences.json */; };
+		DCFD542F2CA017F40000D2EC /* ReadJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFD542E2CA017F40000D2EC /* ReadJSON.swift */; };
 		DCFF76C62C959F7900D479E1 /* ProblemChapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76C52C959F7900D479E1 /* ProblemChapterView.swift */; };
 		DCFF76C92C96C36700D479E1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76C82C96C36700D479E1 /* MainView.swift */; };
 		DCFF76CB2C96C7C800D479E1 /* WeekChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76CA2C96C7C800D479E1 /* WeekChartView.swift */; };
@@ -77,6 +84,11 @@
 		DC6666ED2C9C5AF000251F82 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		DC6666F02C9D997600251F82 /* UserSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingView.swift; sourceTree = "<group>"; };
 		DCFD541C2C9EA9E50000D2EC /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		DCFD54212C9FFB960000D2EC /* ProblemSentenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemSentenceView.swift; sourceTree = "<group>"; };
+		DCFD54282CA008950000D2EC /* DBTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTable.swift; sourceTree = "<group>"; };
+		DCFD542A2CA00C900000D2EC /* makeDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeDB.swift; sourceTree = "<group>"; };
+		DCFD542C2CA0175B0000D2EC /* sentences.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sentences.json; sourceTree = "<group>"; };
+		DCFD542E2CA017F40000D2EC /* ReadJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadJSON.swift; sourceTree = "<group>"; };
 		DCFF76C52C959F7900D479E1 /* ProblemChapterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemChapterView.swift; sourceTree = "<group>"; };
 		DCFF76C82C96C36700D479E1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DCFF76CA2C96C7C800D479E1 /* WeekChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekChartView.swift; sourceTree = "<group>"; };
@@ -92,6 +104,8 @@
 			files = (
 				DCFD54202C9EB8650000D2EC /* RealmSwift in Frameworks */,
 				DC6666D92C9BE1ED00251F82 /* Alamofire in Frameworks */,
+				DCFD54252C9FFD920000D2EC /* ShuffleDeck in Frameworks */,
+				DCFD54272C9FFD920000D2EC /* ShuffleIt in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +132,7 @@
 			children = (
 				DC0D9B882C930E2900AD91DC /* ProblemListView.swift */,
 				DCFF76C52C959F7900D479E1 /* ProblemChapterView.swift */,
+				DCFD54212C9FFB960000D2EC /* ProblemSentenceView.swift */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -243,6 +258,10 @@
 		DC5DBBAA2C9073C1001687FC /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				DCFD54282CA008950000D2EC /* DBTable.swift */,
+				DCFD542A2CA00C900000D2EC /* makeDB.swift */,
+				DCFD542C2CA0175B0000D2EC /* sentences.json */,
+				DCFD542E2CA017F40000D2EC /* ReadJSON.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -319,6 +338,8 @@
 			packageProductDependencies = (
 				DC6666D82C9BE1ED00251F82 /* Alamofire */,
 				DCFD541F2C9EB8650000D2EC /* RealmSwift */,
+				DCFD54242C9FFD920000D2EC /* ShuffleDeck */,
+				DCFD54262C9FFD920000D2EC /* ShuffleIt */,
 			);
 			productName = EasyEnglish;
 			productReference = DC5DBB952C9069F8001687FC /* EasyEnglish.app */;
@@ -352,6 +373,7 @@
 			packageReferences = (
 				DC6666D72C9BE1ED00251F82 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DCFD541E2C9EB8650000D2EC /* XCRemoteSwiftPackageReference "realm-swift" */,
+				DCFD54232C9FFD920000D2EC /* XCRemoteSwiftPackageReference "ShuffleIt" */,
 			);
 			productRefGroup = DC5DBB962C9069F8001687FC /* Products */;
 			projectDirPath = "";
@@ -369,6 +391,7 @@
 			files = (
 				DC0D9B8C2C93127900AD91DC /* .gitignore in Resources */,
 				DC5DBBA02C9069F9001687FC /* Preview Assets.xcassets in Resources */,
+				DCFD542D2CA0175B0000D2EC /* sentences.json in Resources */,
 				DC5DBB9D2C9069F9001687FC /* Assets.xcassets in Resources */,
 				DC5DBBA72C906EC9001687FC /* Localizable.xcstrings in Resources */,
 			);
@@ -393,15 +416,19 @@
 				DC0D9B962C9323AB00AD91DC /* CalendarView.swift in Sources */,
 				DC0D9B8E2C93129300AD91DC /* APIKey.swift in Sources */,
 				DC0D9B942C931B3E00AD91DC /* DiaryCalendarView.swift in Sources */,
+				DCFD54292CA008950000D2EC /* DBTable.swift in Sources */,
 				DC0D9BA42C9456E100AD91DC /* TabbarView.swift in Sources */,
 				DC6666EE2C9C5AF000251F82 /* View+.swift in Sources */,
 				DCFF76CF2C996C9100D479E1 /* CustomBackButton.swift in Sources */,
 				DC5DBB992C9069F8001687FC /* EasyEnglishApp.swift in Sources */,
 				DC6666E32C9BF3A500251F82 /* TranslateViewModel.swift in Sources */,
 				DC6666D32C9AC9B400251F82 /* Header.swift in Sources */,
+				DCFD542B2CA00C900000D2EC /* makeDB.swift in Sources */,
 				DC6666EC2C9C3C7500251F82 /* CustomTextEditor.swift in Sources */,
 				DCFD541D2C9EA9E50000D2EC /* Categories.swift in Sources */,
+				DCFD542F2CA017F40000D2EC /* ReadJSON.swift in Sources */,
 				DC0D9BA62C9457FA00AD91DC /* SaveProblemView.swift in Sources */,
+				DCFD54222C9FFB960000D2EC /* ProblemSentenceView.swift in Sources */,
 				DC0D9B9F2C94522C00AD91DC /* CustomTabView.swift in Sources */,
 				DC6666D12C9AC5B300251F82 /* Router.swift in Sources */,
 				DCFF76CB2C96C7C800D479E1 /* WeekChartView.swift in Sources */,
@@ -643,6 +670,14 @@
 				version = 10.52.1;
 			};
 		};
+		DCFD54232C9FFD920000D2EC /* XCRemoteSwiftPackageReference "ShuffleIt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dscyrescotti/ShuffleIt.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.1.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -655,6 +690,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DCFD541E2C9EB8650000D2EC /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		DCFD54242C9FFD920000D2EC /* ShuffleDeck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCFD54232C9FFD920000D2EC /* XCRemoteSwiftPackageReference "ShuffleIt" */;
+			productName = ShuffleDeck;
+		};
+		DCFD54262C9FFD920000D2EC /* ShuffleIt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCFD54232C9FFD920000D2EC /* XCRemoteSwiftPackageReference "ShuffleIt" */;
+			productName = ShuffleIt;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

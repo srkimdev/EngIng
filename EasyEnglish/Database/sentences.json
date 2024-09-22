@@ -1,0 +1,33 @@
+/* 
+  sentences.json
+  EasyEnglish
+
+  Created by 김성률 on 9/22/24.
+  
+*/
+
+
+{
+  "Daily Life": [
+      "chapter1":
+        [{
+          "korean": "안녕하세요",
+          "english": "Hello"
+        },
+        {
+          "korean": "오늘 날씨가 좋네요",
+          "english": "The weather is nice today"
+        }]
+  ],
+  "Travel": [
+      "chapter1":
+        [{
+          "korean": "여행을 가고 싶어요",
+          "english": "I want to go on a trip"
+        },
+        {
+          "korean": "어디로 가는 게 좋을까요?",
+          "english": "Where should I go?"
+        }]
+  ]
+}

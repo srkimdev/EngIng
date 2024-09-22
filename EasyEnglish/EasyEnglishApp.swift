@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct EasyEnglishApp: App {
+    
+    
+    
     var body: some Scene {
         WindowGroup {
             TabbarView()

@@ -43,8 +43,10 @@ enum Categories: String, CaseIterable {
         case .historyCulture:
             return "Phrases linked to historical events and cultural topics."
         }
+        
     }
     
+//    var 
     
     
 }

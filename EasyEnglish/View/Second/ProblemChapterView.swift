@@ -15,7 +15,7 @@ struct ProblemChapterView: View {
         
         GeometryReader { geometry in
             
-            let size = (geometry.size.width - 50) / 2
+            let size = abs((geometry.size.width - 50) / 2)
             
             let columns = [
                 GridItem(.fixed(size), spacing: 15),
@@ -32,8 +32,8 @@ struct ProblemChapterView: View {
                     .padding()
                 
                 LazyVGrid(columns: columns, spacing: 15){
-                    ForEach(Categories.allCases, id: \.self) { item in
-                        categoryRowView(item, size)
+                    ForEach(0..<10) { item in
+                        categoryRowView(size)
                     }
                 }
                 
@@ -42,28 +42,26 @@ struct ProblemChapterView: View {
             .toolbar(.hidden, for: .tabBar)
             
         }
-        
-        
-        
+
     }
     
-    private func categoryRowView(_ category: Categories, _ height: CGFloat) -> some View {
+    private func categoryRowView(_ height: CGFloat) -> some View {
         
         ZStack {
             
             NavigationLink {
-//                ProblemChapterView(category: category)
+                ProblemSentenceView()
             } label: {
                 RoundedRectangle(cornerRadius: 8)
                     .fill(.white)
-                    .frame(height: height)
             }
+            .frame(width: height, height: height)
                 
             VStack(alignment: .leading) {
                 Spacer()
                 Image(systemName: "star")
                 Spacer()
-                Text(category.rawValue)
+                Text("chapter1")
                     .font(.title2)
                 Spacer()
                 Text("Your completed 50%")
