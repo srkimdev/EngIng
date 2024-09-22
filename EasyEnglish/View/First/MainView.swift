@@ -27,7 +27,7 @@ struct MainView: View {
                     }
                     .padding(25)
                     .padding(.top)
-            }
+                }
             
             //MARK: Main
             VStack {
