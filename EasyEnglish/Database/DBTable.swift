@@ -8,20 +8,35 @@
 import Foundation
 import RealmSwift
 
-final class DBTable: Object {
+//MARK: Problem
+final class CategoryTable: Object {
     @Persisted(primaryKey: true) var id: ObjectId
-    @Persisted var category: String
-    @Persisted var chapters = RealmSwift.List<Chapter>()
+    @Persisted var categoryName: String = ""
+    @Persisted var chapters = List<ChapterTable>()
 }
 
-final class Chapter: Object {
+final class ChapterTable: Object {
     @Persisted(primaryKey: true) var id: ObjectId
-    @Persisted var number: Int = 1
-    @Persisted var sentences = RealmSwift.List<Sentence>()
+    @Persisted var chapterName: String = ""
+    @Persisted var sentences = List<SentenceTable>()
 }
 
-final class Sentence: Object {
+final class SentenceTable: Object {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var korean: String = ""
     @Persisted var english: String = ""
+    @Persisted var isLike: Bool = false
 }
+
+//MARK: Diary
+final class DiaryTable: Object {
+    @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted var title: String
+    @Persisted var content: String
+    @Persisted var date: Date
+    @Persisted var image: String // ??
+}
+
+
+
+
