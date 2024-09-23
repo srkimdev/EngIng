@@ -41,10 +41,10 @@
 		DCFD54222C9FFB960000D2EC /* ProblemSentenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFD54212C9FFB960000D2EC /* ProblemSentenceView.swift */; };
 		DCFD54252C9FFD920000D2EC /* ShuffleDeck in Frameworks */ = {isa = PBXBuildFile; productRef = DCFD54242C9FFD920000D2EC /* ShuffleDeck */; };
 		DCFD54272C9FFD920000D2EC /* ShuffleIt in Frameworks */ = {isa = PBXBuildFile; productRef = DCFD54262C9FFD920000D2EC /* ShuffleIt */; };
-		DCFD54292CA008950000D2EC /* DBTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFD54282CA008950000D2EC /* DBTable.swift */; };
-		DCFD542B2CA00C900000D2EC /* makeDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFD542A2CA00C900000D2EC /* makeDB.swift */; };
 		DCFD542D2CA0175B0000D2EC /* sentences.json in Resources */ = {isa = PBXBuildFile; fileRef = DCFD542C2CA0175B0000D2EC /* sentences.json */; };
 		DCFD542F2CA017F40000D2EC /* ReadJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFD542E2CA017F40000D2EC /* ReadJSON.swift */; };
+		DCFD54302CA110310000D2EC /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = DCFD541F2C9EB8650000D2EC /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		DCFD54402CA158870000D2EC /* DBTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFD543D2CA158870000D2EC /* DBTable.swift */; };
 		DCFF76C62C959F7900D479E1 /* ProblemChapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76C52C959F7900D479E1 /* ProblemChapterView.swift */; };
 		DCFF76C92C96C36700D479E1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76C82C96C36700D479E1 /* MainView.swift */; };
 		DCFF76CB2C96C7C800D479E1 /* WeekChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76CA2C96C7C800D479E1 /* WeekChartView.swift */; };
@@ -52,6 +52,20 @@
 		DCFF76CF2C996C9100D479E1 /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76CE2C996C9100D479E1 /* CustomBackButton.swift */; };
 		DCFF76D22C997A5400D479E1 /* DiaryWriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76D12C997A5400D479E1 /* DiaryWriteView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DCFD54312CA110310000D2EC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DCFD54302CA110310000D2EC /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DC0D9B882C930E2900AD91DC /* ProblemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemListView.swift; sourceTree = "<group>"; };
@@ -85,10 +99,9 @@
 		DC6666F02C9D997600251F82 /* UserSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingView.swift; sourceTree = "<group>"; };
 		DCFD541C2C9EA9E50000D2EC /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		DCFD54212C9FFB960000D2EC /* ProblemSentenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemSentenceView.swift; sourceTree = "<group>"; };
-		DCFD54282CA008950000D2EC /* DBTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTable.swift; sourceTree = "<group>"; };
-		DCFD542A2CA00C900000D2EC /* makeDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeDB.swift; sourceTree = "<group>"; };
 		DCFD542C2CA0175B0000D2EC /* sentences.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sentences.json; sourceTree = "<group>"; };
 		DCFD542E2CA017F40000D2EC /* ReadJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadJSON.swift; sourceTree = "<group>"; };
+		DCFD543D2CA158870000D2EC /* DBTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBTable.swift; sourceTree = "<group>"; };
 		DCFF76C52C959F7900D479E1 /* ProblemChapterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemChapterView.swift; sourceTree = "<group>"; };
 		DCFF76C82C96C36700D479E1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DCFF76CA2C96C7C800D479E1 /* WeekChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekChartView.swift; sourceTree = "<group>"; };
@@ -258,10 +271,9 @@
 		DC5DBBAA2C9073C1001687FC /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				DCFD54282CA008950000D2EC /* DBTable.swift */,
-				DCFD542A2CA00C900000D2EC /* makeDB.swift */,
-				DCFD542C2CA0175B0000D2EC /* sentences.json */,
+				DCFD543D2CA158870000D2EC /* DBTable.swift */,
 				DCFD542E2CA017F40000D2EC /* ReadJSON.swift */,
+				DCFD542C2CA0175B0000D2EC /* sentences.json */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -329,6 +341,7 @@
 				DC5DBB912C9069F8001687FC /* Sources */,
 				DC5DBB922C9069F8001687FC /* Frameworks */,
 				DC5DBB932C9069F8001687FC /* Resources */,
+				DCFD54312CA110310000D2EC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -410,20 +423,19 @@
 				DC0D9B892C930E2900AD91DC /* ProblemListView.swift in Sources */,
 				DCFF76C92C96C36700D479E1 /* MainView.swift in Sources */,
 				DC6666DB2C9BE20C00251F82 /* TargetType.swift in Sources */,
+				DCFD54402CA158870000D2EC /* DBTable.swift in Sources */,
 				DC6666DF2C9BE8BB00251F82 /* TranslateQuery.swift in Sources */,
 				DCFF76C62C959F7900D479E1 /* ProblemChapterView.swift in Sources */,
 				DC5DBB9B2C9069F8001687FC /* ContentView.swift in Sources */,
 				DC0D9B962C9323AB00AD91DC /* CalendarView.swift in Sources */,
 				DC0D9B8E2C93129300AD91DC /* APIKey.swift in Sources */,
 				DC0D9B942C931B3E00AD91DC /* DiaryCalendarView.swift in Sources */,
-				DCFD54292CA008950000D2EC /* DBTable.swift in Sources */,
 				DC0D9BA42C9456E100AD91DC /* TabbarView.swift in Sources */,
 				DC6666EE2C9C5AF000251F82 /* View+.swift in Sources */,
 				DCFF76CF2C996C9100D479E1 /* CustomBackButton.swift in Sources */,
 				DC5DBB992C9069F8001687FC /* EasyEnglishApp.swift in Sources */,
 				DC6666E32C9BF3A500251F82 /* TranslateViewModel.swift in Sources */,
 				DC6666D32C9AC9B400251F82 /* Header.swift in Sources */,
-				DCFD542B2CA00C900000D2EC /* makeDB.swift in Sources */,
 				DC6666EC2C9C3C7500251F82 /* CustomTextEditor.swift in Sources */,
 				DCFD541D2C9EA9E50000D2EC /* Categories.swift in Sources */,
 				DCFD542F2CA017F40000D2EC /* ReadJSON.swift in Sources */,

@@ -10,7 +10,9 @@ import SwiftUI
 @main
 struct EasyEnglishApp: App {
     
-    
+    init() {
+        checkFirstLaunch()
+    }
     
     var body: some Scene {
         WindowGroup {
