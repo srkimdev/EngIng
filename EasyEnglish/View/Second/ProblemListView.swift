@@ -6,14 +6,17 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ProblemListView: View {
+    
+    @ObservedResults(CategoryTable.self) var categories
     
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
                 LazyVStack {
-                    ForEach(Categories.allCases, id: \.self) { item in
+                    ForEach(categories, id: \.id) { item in
                         chapterView(geometry, item)
                     }
                 }
@@ -22,7 +25,7 @@ struct ProblemListView: View {
         .navigationTitle("Category")
     }
     
-    func chapterView(_ geometry: GeometryProxy, _ category: Categories) -> some View {
+    func chapterView(_ geometry: GeometryProxy, _ category: CategoryTable) -> some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
                 .fill(.cyan)
@@ -40,25 +43,25 @@ struct ProblemListView: View {
                 
                 Spacer()
 
-                Text(category.rawValue)
+                Text(category.categoryName)
                     .font(.title.bold())
                     .foregroundStyle(.white)
 
-                Text(category.description)
+                Text(category.categoryDescription)
                     .font(.body)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)
                 
                 Spacer()
 
-                Text("Chapter 20")
+                Text("chapter20")
                     .font(.title3)
                     .foregroundColor(.gray)
 
                 Spacer()
 
                 NavigationLink {
-                    ProblemChapterView()
+                    ProblemChapterView(category: category)
                 } label: {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(.white)
@@ -77,6 +80,6 @@ struct ProblemListView: View {
     
 }
 
-#Preview {
-    ProblemListView()
-}
+//#Preview {
+//    ProblemListView()
+//}

@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ProblemChapterView: View {
     
     @State private var progress = 0.5
-    
+    var category: CategoryTable
+
     var body: some View {
         
         GeometryReader { geometry in
@@ -26,14 +28,14 @@ struct ProblemChapterView: View {
             
             ScrollView {
                 
-                Text("Category")
+                Text(category.categoryName)
                     .font(.title.bold())
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
                 
                 LazyVGrid(columns: columns, spacing: 15){
-                    ForEach(0..<10) { item in
-                        categoryRowView(size)
+                    ForEach(category.chapters, id: \.id) { item in
+                        categoryRowView(item, size)
                     }
                 }
                 
@@ -45,7 +47,7 @@ struct ProblemChapterView: View {
 
     }
     
-    private func categoryRowView(_ height: CGFloat) -> some View {
+    private func categoryRowView(_ chapter: ChapterTable ,_ height: CGFloat) -> some View {
         
         ZStack {
             
@@ -61,7 +63,7 @@ struct ProblemChapterView: View {
                 Spacer()
                 Image(systemName: "star")
                 Spacer()
-                Text("chapter1")
+                Text(chapter.chapterName)
                     .font(.title2)
                 Spacer()
                 Text("Your completed 50%")
@@ -75,6 +77,6 @@ struct ProblemChapterView: View {
     }
 }
 
-#Preview {
-    ProblemChapterView()
-}
+//#Preview {
+//    ProblemChapterView(category: )
+//}

@@ -1,6 +1,6 @@
     [
     {
-        "categoryName": "movieDrama",
+        "categoryName": "Movie & Drama",
         "chapters": [
             {
                 "chapterName": "chapter1",
@@ -40,7 +40,7 @@
     },
     
     {
-        "categoryName": "transportation",
+        "categoryName": "Transportation",
         "chapters": [
             {
                 "chapterName": "chapter1",
@@ -80,7 +80,7 @@
     },
     
     {
-        "categoryName": "dailyLife",
+        "categoryName": "Daily Life",
         "chapters": [
             {
                 "chapterName": "chapter1",
@@ -120,7 +120,7 @@
     },
     
     {
-        "categoryName": "travel",
+        "categoryName": "Travel",
         "chapters": [
             {
                 "chapterName": "chapter1",
@@ -160,7 +160,7 @@
     },
     
     {
-        "categoryName": "business",
+        "categoryName": "Business",
         "chapters": [
             {
                 "chapterName": "chapter1",
@@ -200,7 +200,7 @@
     },
     
     {
-        "categoryName": "sports",
+        "categoryName": "Sports",
         "chapters": [
             {
                 "chapterName": "chapter1",
@@ -240,7 +240,7 @@
     },
     
     {
-        "categoryName": "music",
+        "categoryName": "Music",
         "chapters": [
             {
                 "chapterName": "chapter1",
@@ -280,7 +280,7 @@
     },
     
     {
-        "categoryName": "shopping",
+        "categoryName": "Shopping",
         "chapters": [
             {
                 "chapterName": "chapter1",
@@ -320,7 +320,7 @@
     },
     
     {
-        "categoryName": "historyCulture",
+        "categoryName": "History & Culture",
         "chapters": [
             {
                 "chapterName": "chapter1",

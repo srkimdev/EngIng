@@ -9,9 +9,10 @@ import Foundation
 import RealmSwift
 
 //MARK: Problem
-final class CategoryTable: Object {
+final class CategoryTable: Object, Identifiable {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var categoryName: String = ""
+    @Persisted var categoryDescription = ""
     @Persisted var chapters = List<ChapterTable>()
 }
 
@@ -25,6 +26,7 @@ final class SentenceTable: Object {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var korean: String = ""
     @Persisted var english: String = ""
+    @Persisted var isCheck: Bool = false
     @Persisted var isLike: Bool = false
 }
 
