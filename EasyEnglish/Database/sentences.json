@@ -15,11 +15,11 @@
                     },
                     {
                         "korean": "주인공이 마지막에 어떻게 됐어?",
-                        "english": "What happened to the main character at the end"
+                        "english": "What happened to the main character at the end?"
                     },
                     {
                         "korean": "다음 시즌 언제 나와?",
-                        "english": "When is the next season coming out"
+                        "english": "When is the next season coming out?"
                     },
                     {
                         "korean": "이 드라마 진짜 중독성 있어",
@@ -46,24 +46,24 @@
                 "chapterName": "chapter1",
                 "sentences": [
                     {
-                        "korean": "메뉴 추천해줄 수 있어?",
-                        "english": "Can you recommand a dish?"
+                        "korean": "버스 정류장이 어디에 있나요?",
+                        "english": "Where is the bus stop?"
                     },
                     {
-                        "korean": "이거 채식주의자도 먹을 수 있나요?",
-                        "english": "Is this suitable for vegetarians?"
+                        "korean": "택시를 불러 주시겠어요?",
+                        "english": "Can you call a taxi for me?"
                     },
                     {
-                        "korean": "매운 음식 좋아하세요?",
-                        "english": "Do you like spicy food?"
+                        "korean": "지하철역까지 얼마나 걸리나요?",
+                        "english": "How long does it take to get to the subway station?"
                     },
                     {
-                        "korean": "맛이 어때요?",
-                        "english": "How does it taste?"
+                        "korean": "기차표는 어디서 살 수 있나요?",
+                        "english": "Where can i buy train tickets?"
                     },
                     {
-                        "korean": "이거 포장해 주세요.",
-                        "english": "Please pack this to go"
+                        "korean": "이 버스는 시내로 가나요?",
+                        "english": "Does this bus go downtown?"
                     },
                 ]
             },

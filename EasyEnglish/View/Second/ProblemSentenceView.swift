@@ -10,7 +10,12 @@ import ShuffleDeck
 
 struct ProblemSentenceView: View {
     
-//    var chapter: ChapterTable
+    private let repository = RealmRepository<ChapterTable>()
+    
+    var chapter: ChapterTable
+    
+    @State var currentPage: Int = 0
+    @State var answerButtonClick: Bool = false
     
 //    let colors: [Color] = [.blue, .brown, .black, .cyan, .green, .indigo, .pink, .purple, .red, .orange, .yellow]
     let colors: [Color] = [.white, .white, .white, .white, .white, .white, .white, .white, .white, .white]
@@ -19,46 +24,67 @@ struct ProblemSentenceView: View {
         
         GeometryReader { geometry in
             
-            ShuffleDeck(
-                colors,
-                initialIndex: 0
-            ) { color in
-                color
-                    .border(.black, width: 1)
-                    .frame(width: abs(geometry.size.width - 60), height: abs(geometry.size.height / 1.4))
-//                    .clipShape(RoundedRectangle(cornerRadius: 16))
-                    .overlay {
-                        
-                        VStack {
+            VStack {
+                ShuffleDeck(
+                    colors,
+                    initialIndex: 0
+                ) { color in
+                    color
+                        .border(.black, width: 1)
+                        .frame(width: abs(geometry.size.width - 60), height: abs(geometry.size.height / 1.4))
+    //                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                        .overlay {
                             
-                            Spacer()
-                            
-                            Text("한국어")
-                            
-                            Spacer()
-                            
-                            Rectangle()
-                                .frame(height: 1)
-                            
-                            Spacer()
-                            
-                            Text("What are you doing?")
-                            
-                            Spacer()
+                            VStack {
+                                
+                                Spacer()
+                                
+                                Text(chapter.sentences[currentPage].korean)
+                                
+                                Spacer()
+                                
+                                Rectangle()
+                                    .frame(height: 1)
+                                
+                                Spacer()
+                                
+                                if answerButtonClick {
+                                    Text(chapter.sentences[currentPage].english)
+                                } else {
+                                    Text("")
+                                }
+                                
+                                Spacer()
+                                
+                            }
+                            .padding()
                             
                         }
-                        .padding()
-                        
+                }
+                .onShuffleDeck({ value in
+                    print(value)
+                    currentPage = value.index
+                    answerButtonClick = false
+                })
+                .padding(.top, 30)
+                
+                Button(action: {
+                    answerButtonClick.toggle()
+                
+                    repository.updateItem(primaryKey: chapter.id) { value in
+                        value.sentences[currentPage].isCheck = true
                     }
+                   
+                }, label: {
+                    RoundedRectangle(cornerRadius: 10)
+                        .frame(width: 50, height: 50)
+                })
             }
-            .onShuffleDeck({ index in
-                print(index)
-            })
-            .padding(.top, 30)
             
         }
         
     }
+    
 }
 
 //#Preview {

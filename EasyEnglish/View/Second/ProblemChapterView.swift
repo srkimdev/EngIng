@@ -10,6 +10,8 @@ import RealmSwift
 
 struct ProblemChapterView: View {
     
+    let repository = RealmRepository<ChapterTable>()
+    
     @State private var progress = 0.5
     var category: CategoryTable
 
@@ -52,7 +54,7 @@ struct ProblemChapterView: View {
         ZStack {
             
             NavigationLink {
-                ProblemSentenceView()
+                ProblemSentenceView(chapter: chapter)
             } label: {
                 RoundedRectangle(cornerRadius: 8)
                     .fill(.white)
@@ -66,7 +68,7 @@ struct ProblemChapterView: View {
                 Text(chapter.chapterName)
                     .font(.title2)
                 Spacer()
-                Text("Your completed 50%")
+                Text("Your completed %")
                     .font(.system(size: 13))
                 ProgressView(value: progress)
             }

@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "14" : {
 
     },
@@ -82,9 +85,6 @@
 
     },
     "User" : {
-
-    },
-    "What are you doing?" : {
 
     },
     "Write" : {

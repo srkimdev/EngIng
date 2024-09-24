@@ -36,6 +36,7 @@
 		DC6666EC2C9C3C7500251F82 /* CustomTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6666EB2C9C3C7500251F82 /* CustomTextEditor.swift */; };
 		DC6666EE2C9C5AF000251F82 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6666ED2C9C5AF000251F82 /* View+.swift */; };
 		DC6666F12C9D997700251F82 /* UserSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6666F02C9D997600251F82 /* UserSettingView.swift */; };
+		DCC7900D2CA2ABF70088AB76 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7900C2CA2ABF70088AB76 /* RealmRepository.swift */; };
 		DCFD541D2C9EA9E50000D2EC /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFD541C2C9EA9E50000D2EC /* Categories.swift */; };
 		DCFD54202C9EB8650000D2EC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DCFD541F2C9EB8650000D2EC /* RealmSwift */; };
 		DCFD54222C9FFB960000D2EC /* ProblemSentenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFD54212C9FFB960000D2EC /* ProblemSentenceView.swift */; };
@@ -97,6 +98,7 @@
 		DC6666EB2C9C3C7500251F82 /* CustomTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextEditor.swift; sourceTree = "<group>"; };
 		DC6666ED2C9C5AF000251F82 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		DC6666F02C9D997600251F82 /* UserSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingView.swift; sourceTree = "<group>"; };
+		DCC7900C2CA2ABF70088AB76 /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
 		DCFD541C2C9EA9E50000D2EC /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		DCFD54212C9FFB960000D2EC /* ProblemSentenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemSentenceView.swift; sourceTree = "<group>"; };
 		DCFD542C2CA0175B0000D2EC /* sentences.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sentences.json; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				DCFD543D2CA158870000D2EC /* DBTable.swift */,
 				DCFD542E2CA017F40000D2EC /* ReadJSON.swift */,
 				DCFD542C2CA0175B0000D2EC /* sentences.json */,
+				DCC7900C2CA2ABF70088AB76 /* RealmRepository.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				DC0D9BA62C9457FA00AD91DC /* SaveProblemView.swift in Sources */,
 				DCFD54222C9FFB960000D2EC /* ProblemSentenceView.swift in Sources */,
 				DC0D9B9F2C94522C00AD91DC /* CustomTabView.swift in Sources */,
+				DCC7900D2CA2ABF70088AB76 /* RealmRepository.swift in Sources */,
 				DC6666D12C9AC5B300251F82 /* Router.swift in Sources */,
 				DCFF76CB2C96C7C800D479E1 /* WeekChartView.swift in Sources */,
 				DC6666CF2C9AB7E300251F82 /* DiaryReviseView.swift in Sources */,
