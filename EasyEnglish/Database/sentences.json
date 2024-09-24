@@ -24,6 +24,86 @@
                     {
                         "korean": "이 드라마 진짜 중독성 있어",
                         "english": "This drama is really addictive"
+                    },
+                    {
+                        "korean": "이 배우 연기 정말 대단해.",
+                        "english": "This actor’s performance is amazing."
+                    },
+                    {
+                        "korean": "무서운 장면에서 깜짝 놀랐어.",
+                        "english": "I got scared during the scary scene."
+                    },
+                    {
+                        "korean": "이 장르의 영화 좋아해?",
+                        "english": "Do you like movies of this genre?"
+                    },
+                    {
+                        "korean": "대본이 정말 잘 쓰였어.",
+                        "english": "The script is really well written."
+                    },
+                    {
+                        "korean": "이 영화 결말 어떻게 생각해?",
+                        "english": "What do you think about the ending of this movie?"
+                    }
+                ]
+            },
+            {
+                "chapterName": "chapter2",
+                "sentences": [
+                    {
+                        "korean": "주인공이 마지막에 어떻게 됐어?",
+                        "english": "What happened to the main character at the end?"
+                    }
+                ]
+            }
+        ]
+    },
+    
+    {
+        "categoryName": "Food",
+        "chapters": [
+            {
+                "chapterName": "chapter1",
+                "sentences": [
+                    {
+                        "korean": "메뉴 추천해줄 수 있어?",
+                        "english": "Have you seen this movie?"
+                    },
+                    {
+                        "korean": "이거 채식주의자도 먹을 수 있나요?",
+                        "english": "This scene is really touching."
+                    },
+                    {
+                        "korean": "매운 음식 좋아하세요?",
+                        "english": "What happened to the main character at the end?"
+                    },
+                    {
+                        "korean": "맛이 어때요?",
+                        "english": "When is the next season coming out?"
+                    },
+                    {
+                        "korean": "이거 포장해 주세요.",
+                        "english": "This drama is really addictive"
+                    },
+                    {
+                        "korean": "이 요리 어떻게 만들어요?",
+                        "english": "How do you make this dish?"
+                    },
+                    {
+                        "korean": "디저트는 뭐가 있나요?",
+                        "english": "What desserts do you have?"
+                    },
+                    {
+                        "korean": "계산서를 부탁드릴게요.",
+                        "english": "Can I have the bill, please?"
+                    },
+                    {
+                        "korean": "음식을 좀 덜 맵게 해줄 수 있나요?",
+                        "english": "Can you make the food less spicy?"
+                    },
+                    {
+                        "korean": "오늘의 스페셜은 뭐예요?",
+                        "english": "What is today's special?"
                     }
                 ]
             },
@@ -65,6 +145,26 @@
                         "korean": "이 버스는 시내로 가나요?",
                         "english": "Does this bus go downtown?"
                     },
+                    {
+                        "korean": "다음 정거장은 어디인가요?",
+                        "english": "What's the next stop?"
+                    },
+                    {
+                        "korean": "차가 많이 막히네요.",
+                        "english": "The traffic is really heavy"
+                    },
+                    {
+                        "korean": "기차표를 예매했어요.",
+                        "english": "I booked a train ticket"
+                    },
+                    {
+                        "korean": "지하철 노선도를 볼 수 있을까요?",
+                        "english": "Can I see the subway map?"
+                    },
+                    {
+                        "korean": "이 버스는 몇 번 운행하나요?",
+                        "english": "How often does this bus run?"
+                    }
                 ]
             },
             {
@@ -86,25 +186,45 @@
                 "chapterName": "chapter1",
                 "sentences": [
                     {
-                        "korean": "메뉴 추천해줄 수 있어?",
-                        "english": "Can you recommand a dish?"
+                        "korean": "오늘 날씨가 정말 좋네요.",
+                        "english": "The weather is really nice today"
                     },
                     {
-                        "korean": "이거 채식주의자도 먹을 수 있나요?",
-                        "english": "Is this suitable for vegetarians?"
+                        "korean": "어떻게 지내세요?",
+                        "english": "How have you been?"
                     },
                     {
-                        "korean": "매운 음식 좋아하세요?",
-                        "english": "Do you like spicy food?"
+                        "korean": "그건 어디서 샀어요?",
+                        "english": "Where did you buy that?"
                     },
                     {
-                        "korean": "맛이 어때요?",
-                        "english": "How does it taste?"
+                        "korean": "오늘 저녁에 뭐 할 거예요?",
+                        "english": "What are you doing tonight?"
                     },
                     {
-                        "korean": "이거 포장해 주세요.",
-                        "english": "Please pack this to go"
+                        "korean": "지금 몇 시예요?",
+                        "english": "What time is it?"
                     },
+                    {
+                        "korean": "주말에 뭐 했어요?",
+                        "english": "What did you do over the weekend?"
+                    },
+                    {
+                        "korean": "저녁 먹었어요?",
+                        "english": "Have you had dinner?"
+                    },
+                    {
+                        "korean": "좀 도와줄 수 있어요?",
+                        "english": "Can you help me with something?"
+                    },
+                    {
+                        "korean": "휴일 계획이 있나요?",
+                        "english": "Do you have any plans for the holidays?"
+                    },
+                    {
+                        "korean": "오늘 정말 바빴어요.",
+                        "english": "I was really busy today."
+                    }
                 ]
             },
             {
@@ -126,24 +246,44 @@
                 "chapterName": "chapter1",
                 "sentences": [
                     {
-                        "korean": "메뉴 추천해줄 수 있어?",
-                        "english": "Can you recommand a dish?"
+                        "korean": "근처에 추천할 만한 관광지가 있나요?",
+                        "english": "Are there any tourist attractions nearby?"
                     },
                     {
-                        "korean": "이거 채식주의자도 먹을 수 있나요?",
-                        "english": "Is this suitable for vegetarians?"
+                        "korean": "이곳까지 택시로 얼마나 걸리나요?",
+                        "english": "How long does it take to get here by taxi?"
                     },
                     {
-                        "korean": "매운 음식 좋아하세요?",
-                        "english": "Do you like spicy food?"
+                        "korean": "짐을 어디에 맡길 수 있나요?",
+                        "english": "Where can I leave my luggage?"
                     },
                     {
-                        "korean": "맛이 어때요?",
-                        "english": "How does it taste?"
+                        "korean": "이 호텔에 와이파이가 있나요?",
+                        "english": "Does this hotel have Wi-Fi?"
                     },
                     {
-                        "korean": "이거 포장해 주세요.",
-                        "english": "Please pack this to go"
+                        "korean": "여기서 사진 찍어도 되나요?",
+                        "english": "Can I take pictures here?"
+                    },
+                    {
+                        "korean": "환전할 수 있는 곳이 어디인가요?",
+                        "english": "Where can I exchange currency?"
+                    },
+                    {
+                        "korean": "투어 예약을 하고 싶어요.",
+                        "english": "I’d like to book a tour."
+                    },
+                    {
+                        "korean": "이곳은 몇 시에 문을 닫나요?",
+                        "english": "What time does this place close?"
+                    },
+                    {
+                        "korean": "근처에 유명한 식당이 있나요?",
+                        "english": "Are there any famous restaurants nearby?"
+                    },
+                    {
+                        "korean": "가이드북을 어디에서 살 수 있나요?",
+                        "english": "Where can I buy a guidebook?"
                     },
                 ]
             },
@@ -166,23 +306,23 @@
                 "chapterName": "chapter1",
                 "sentences": [
                     {
-                        "korean": "메뉴 추천해줄 수 있어?",
+                        "korean": "회의는 몇 시에 시작하나요?",
                         "english": "Can you recommand a dish?"
                     },
                     {
-                        "korean": "이거 채식주의자도 먹을 수 있나요?",
+                        "korean": "이메일로 자료를 보내드릴게요.",
                         "english": "Is this suitable for vegetarians?"
                     },
                     {
-                        "korean": "매운 음식 좋아하세요?",
+                        "korean": "내일 미팅 준비는 다 됐나요?",
                         "english": "Do you like spicy food?"
                     },
                     {
-                        "korean": "맛이 어때요?",
+                        "korean": "이 계약 조건에 대해 논의해보죠.",
                         "english": "How does it taste?"
                     },
                     {
-                        "korean": "이거 포장해 주세요.",
+                        "korean": "회의록을 작성해 주세요.",
                         "english": "Please pack this to go"
                     },
                 ]

@@ -39,4 +39,3 @@ final class DiaryTable: Object {
     @Persisted var image: String // ??
 }
 
-

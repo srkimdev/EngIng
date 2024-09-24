@@ -10,7 +10,7 @@ import Charts
 
 struct MainView: View {
     
-//    @Binding var hideTabbar: Bool
+    @StateObject var viewModel = AttendanceViewModel()
     
     var body: some View {
         
@@ -46,6 +46,9 @@ struct MainView: View {
             }
                 
         }
+        .onAppear {
+            viewModel.resetAttendanceIfNeeded()
+        }
 
     }
     
@@ -59,6 +62,9 @@ struct MainView: View {
             RoundedRectangle(cornerRadius: 20)
                 .fill(.white.opacity(0.7))
                 .frame(height: geometry.size.height / 15)
+                .overlay {
+                    daysCircle7View()
+                }
         }
         
     }
@@ -93,9 +99,23 @@ struct MainView: View {
             recent7daysChart()
                 .frame(height: geometry.size.height / 3)
                 .padding(.bottom, 60)
+            
         }
         .padding(25)
  
+    }
+    
+    func daysCircle7View() -> some View {
+        
+        HStack {
+            ForEach(viewModel.attendances.indices, id: \.self) { index in
+                Circle()
+                    .fill(viewModel.attendances[index].isChecked ? Color.green : Color.gray)
+                    .frame(width: 40, height: 40)
+                    .overlay(Text(viewModel.attendances[index].day).foregroundColor(.white))
+            }
+        }
+        
     }
     
 //    func circle3ChartView() -> some View {
