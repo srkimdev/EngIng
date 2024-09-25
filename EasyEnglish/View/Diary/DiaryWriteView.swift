@@ -9,8 +9,7 @@ import SwiftUI
 
 struct DiaryWriteView: View {
     
-    @State var titleText: String = ""
-    @State var storyText: String = ""
+    @StateObject private var viewModel = DiaryWriteViewModel()
     
     var body: some View {
         
@@ -20,24 +19,24 @@ struct DiaryWriteView: View {
                 .font(.system(size: 24).bold())
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            TextEditor(text: $titleText)
+            TextEditor(text: $viewModel.input.titleText)
                 .frame(height: 50)
                 .overlay(alignment: .topLeading) {
                     Text("제목을 입력해주세요.")
                         .padding(.vertical, 8)
-                        .foregroundStyle(titleText.isEmpty ? .gray : .clear)
+                        .foregroundStyle(viewModel.input.titleText.isEmpty ? .gray : .clear)
                 }
             
             Text("Story")
                 .font(.system(size: 24).bold())
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            TextEditor(text: $storyText)
+            TextEditor(text: $viewModel.input.storyText)
 //                .frame(height: 250)
                 .overlay(alignment: .topLeading) {
                     Text("내용을 입력해주세요.")
                         .padding(.vertical, 8)
-                        .foregroundStyle(storyText.isEmpty ? .gray : .clear)
+                        .foregroundStyle(viewModel.input.storyText.isEmpty ? .gray : .clear)
                 }
             
             Spacer()
@@ -87,7 +86,7 @@ struct DiaryWriteView: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
-                    print("Save")
+                    viewModel.input.saveButtonTapped.send()
                 } label: {
                     Text("저장")
                         .foregroundStyle(.black)

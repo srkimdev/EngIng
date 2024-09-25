@@ -37,5 +37,13 @@ final class DiaryTable: Object {
     @Persisted var content: String
     @Persisted var date: Date
     @Persisted var image: String // ??
+    
+    convenience init(title: String = "", content: String = "", date: Date = Date(), image: String = "") {
+        self.init()
+        self.title = title
+        self.content = content
+        self.date = date
+        self.image = image
+    }
 }
 

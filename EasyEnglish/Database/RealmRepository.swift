@@ -23,6 +23,12 @@ final class RealmRepository<T: Object> {
             print("Realm Error")
         }
     }
+    
+    //MARK: Read All
+    func readAllItem() -> [T] {
+        let list = realm.objects(T.self)
+        return Array(list)
+    }
 
     //MARK: Read - ASC
     func readAllItemASC(byKeyPath keyPath: String = "storeTime") -> [T] {

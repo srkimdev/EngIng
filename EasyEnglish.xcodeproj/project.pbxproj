@@ -37,6 +37,8 @@
 		DC6666EC2C9C3C7500251F82 /* CustomTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6666EB2C9C3C7500251F82 /* CustomTextEditor.swift */; };
 		DC6666EE2C9C5AF000251F82 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6666ED2C9C5AF000251F82 /* View+.swift */; };
 		DC6666F12C9D997700251F82 /* UserSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6666F02C9D997600251F82 /* UserSettingView.swift */; };
+		DC9983AA2CA3F26700D54CCE /* DiaryCalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9983A92CA3F26700D54CCE /* DiaryCalendarViewModel.swift */; };
+		DC9983AC2CA4088800D54CCE /* DiaryWriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9983AB2CA4088800D54CCE /* DiaryWriteViewModel.swift */; };
 		DCC7900D2CA2ABF70088AB76 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7900C2CA2ABF70088AB76 /* RealmRepository.swift */; };
 		DCFD541D2C9EA9E50000D2EC /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFD541C2C9EA9E50000D2EC /* Categories.swift */; };
 		DCFD54202C9EB8650000D2EC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DCFD541F2C9EB8650000D2EC /* RealmSwift */; };
@@ -100,6 +102,8 @@
 		DC6666EB2C9C3C7500251F82 /* CustomTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextEditor.swift; sourceTree = "<group>"; };
 		DC6666ED2C9C5AF000251F82 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		DC6666F02C9D997600251F82 /* UserSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingView.swift; sourceTree = "<group>"; };
+		DC9983A92CA3F26700D54CCE /* DiaryCalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCalendarViewModel.swift; sourceTree = "<group>"; };
+		DC9983AB2CA4088800D54CCE /* DiaryWriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryWriteViewModel.swift; sourceTree = "<group>"; };
 		DCC7900C2CA2ABF70088AB76 /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
 		DCFD541C2C9EA9E50000D2EC /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		DCFD54212C9FFB960000D2EC /* ProblemSentenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemSentenceView.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 				DC0D9B932C931B3E00AD91DC /* DiaryCalendarView.swift */,
 				DC0D9B952C9323AB00AD91DC /* CalendarView.swift */,
 				DC0D9B972C93F67800AD91DC /* CalendarView+Extension.swift */,
+				DC9983A92CA3F26700D54CCE /* DiaryCalendarViewModel.swift */,
 			);
 			path = Third;
 			sourceTree = "<group>";
@@ -341,6 +346,7 @@
 			children = (
 				DCFF76D12C997A5400D479E1 /* DiaryWriteView.swift */,
 				DC6666CE2C9AB7E300251F82 /* DiaryReviseView.swift */,
+				DC9983AB2CA4088800D54CCE /* DiaryWriteViewModel.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -443,6 +449,7 @@
 				DC5DBB9B2C9069F8001687FC /* ContentView.swift in Sources */,
 				DC0D9B962C9323AB00AD91DC /* CalendarView.swift in Sources */,
 				DC0D9B8E2C93129300AD91DC /* APIKey.swift in Sources */,
+				DC9983AC2CA4088800D54CCE /* DiaryWriteViewModel.swift in Sources */,
 				DC0D9B942C931B3E00AD91DC /* DiaryCalendarView.swift in Sources */,
 				DC0D9BA42C9456E100AD91DC /* TabbarView.swift in Sources */,
 				DC6666EE2C9C5AF000251F82 /* View+.swift in Sources */,
@@ -458,6 +465,7 @@
 				DCFD54222C9FFB960000D2EC /* ProblemSentenceView.swift in Sources */,
 				DC0D9B9F2C94522C00AD91DC /* CustomTabView.swift in Sources */,
 				DCC7900D2CA2ABF70088AB76 /* RealmRepository.swift in Sources */,
+				DC9983AA2CA3F26700D54CCE /* DiaryCalendarViewModel.swift in Sources */,
 				DC6666D12C9AC5B300251F82 /* Router.swift in Sources */,
 				DCFF76CB2C96C7C800D479E1 /* WeekChartView.swift in Sources */,
 				DC6666CF2C9AB7E300251F82 /* DiaryReviseView.swift in Sources */,

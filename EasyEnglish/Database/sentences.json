@@ -1,4 +1,4 @@
-    [
+[
     {
         "categoryName": "Movie & Drama",
         "chapters": [
@@ -51,8 +51,134 @@
                 "chapterName": "chapter2",
                 "sentences": [
                     {
-                        "korean": "주인공이 마지막에 어떻게 됐어?",
-                        "english": "What happened to the main character at the end?"
+                        "korean": "어떤 장르의 영화를 좋아해?",
+                        "english": "What genre of movies do you like?"
+                    },
+                    {
+                        "korean": "이 영화 평이 좋았어.",
+                        "english": "This movie got good reviews."
+                    },
+                    {
+                        "korean": "영화가 생각보다 지루했어.",
+                        "english": "The movie was more boring than I expected."
+                    },
+                    {
+                        "korean": "주인공이 너무 멋졌어.",
+                        "english": "The main character was really cool."
+                    },
+                    {
+                        "korean": "어디에서 촬영한 거야?",
+                        "english": "Where was it filmed?"
+                    },
+                    {
+                        "korean": "이 영화 예고편 봤어?",
+                        "english": "Did you watch the trailer for this movie?"
+                    },
+                    {
+                        "korean": "이 영화 추천할 만해.",
+                        "english": "This movie is worth recommending."
+                    },
+                    {
+                        "korean": "이 영화의 배경음악이 정말 좋았어.",
+                        "english": "The soundtrack of this movie was amazing."
+                    },
+                    {
+                        "korean": "영화 시작 시간 몇 시야?",
+                        "english": "What time does the movie start?"
+                    },
+                    {
+                        "korean": "이 영화는 비평가들 사이에서 호평을 받았어.",
+                        "english": "This movie was well-received by critics."
+                    }
+                ]
+            },
+            {
+                "chapterName": "chapter3",
+                "sentences": [
+                    {
+                        "korean": "그 배우 다른 영화에도 나왔어?",
+                        "english": "Has that actor appeared in other movies?"
+                    },
+                    {
+                        "korean": "이 영화는 생각할 거리가 많아.",
+                        "english": "This movie makes you think a lot."
+                    },
+                    {
+                        "korean": "영화가 끝나고 뭐 할 거야?",
+                        "english": "What are you going to do after the movie?"
+                    },
+                    {
+                        "korean": "이 영화는 자막이 필요해?",
+                        "english": "Do you need subtitles for this movie?"
+                    },
+                    {
+                        "korean": "이 영화는 실화를 바탕으로 한 거야.",
+                        "english": "This movie is based on a true story."
+                    },
+                    {
+                        "korean": "이 드라마는 어디서 볼 수 있어?",
+                        "english": "Where can I watch this drama?"
+                    },
+                    {
+                        "korean": "영화관에 가서 보는 게 더 나아.",
+                        "english": "It's better to watch it at the theater."
+                    },
+                    {
+                        "korean": "속편이 나올 예정이야.",
+                        "english": "The sequel is coming out soon."
+                    },
+                    {
+                        "korean": "영화가 예상을 완전히 뒤집었어.",
+                        "english": "The movie had an unexpected twist."
+                    },
+                    {
+                        "korean": "그 드라마 주제가 정말 좋지 않아?",
+                        "english": " Isn’t the theme song of that drama great?"
+                    }
+                ]
+            },
+            {
+                "chapterName": "chapter4",
+                "sentences": [
+                    {
+                        "korean": "이 영화는 다시 보고 싶지 않아.",
+                        "english": "I don’t want to watch this movie again."
+                    },
+                    {
+                        "korean": "그 배우가 주연을 맡았어.",
+                        "english": "That actor played the lead role."
+                    },
+                    {
+                        "korean": "줄거리를 미리 알면 재미없어.",
+                        "english": "It’s no fun if you know the plot beforehand."
+                    },
+                    {
+                        "korean": "이번 영화는 전작보다 나았어.",
+                        "english": "This movie was better than the previous one."
+                    },
+                    {
+                        "korean": "영화 보는 동안 팝콘 먹었어?",
+                        "english": "Did you eat popcorn during the movie?"
+                    },
+                    {
+                        "korean": "이번 시즌의 마지막 화가 너무 기대돼.",
+                        "english": " I’m really looking forward to the season finale."
+                    },
+                    {
+                        "korean": "영화가 너무 길었어.",
+                        "english": "The movie was too long."
+                    },
+                    {
+                        "korean": "영화관에서 자리를 예약할 수 있나요?",
+                        "english": "Can I reserve a seat at the theater?"
+                    },
+                    {
+                        "korean": "이 영화는 가족끼리 보기 좋아.",
+                        "english": "This movie is great for families."
+                    },
+                    {
+                        "korean": "예매한 티켓 확인할 수 있을까요?",
+                        "english": "Can I check the ticket I reserved?"
                     }
                 ]
             }
@@ -111,11 +237,137 @@
                 "chapterName": "chapter2",
                 "sentences": [
                     {
-                        "korean": "주인공이 마지막에 어떻게 됐어?",
-                        "english": "What happened to the main character at the end?"
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
                     }
                 ]
-            }
+            },
+            {
+                "chapterName": "chapter3",
+                "sentences": [
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    }
+                ]
+            },
+            {
+                "chapterName": "chapter4",
+                "sentences": [
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    }
+                ]
+            },
         ]
     },
     
@@ -171,11 +423,137 @@
                 "chapterName": "chapter2",
                 "sentences": [
                     {
-                        "korean": "안녕하세요",
-                        "english": "Hello"
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
                     }
                 ]
-            }
+            },
+            {
+                "chapterName": "chapter3",
+                "sentences": [
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    }
+                ]
+            },
+            {
+                "chapterName": "chapter4",
+                "sentences": [
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    }
+                ]
+            },
         ]
     },
     
@@ -231,11 +609,137 @@
                 "chapterName": "chapter2",
                 "sentences": [
                     {
-                        "korean": "안녕하세요",
-                        "english": "Hello"
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
                     }
                 ]
-            }
+            },
+            {
+                "chapterName": "chapter3",
+                "sentences": [
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    }
+                ]
+            },
+            {
+                "chapterName": "chapter4",
+                "sentences": [
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    }
+                ]
+            },
         ]
     },
     
@@ -291,8 +795,134 @@
                 "chapterName": "chapter2",
                 "sentences": [
                     {
-                        "korean": "안녕하세요",
-                        "english": "Hello"
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    }
+                ]
+            },
+            {
+                "chapterName": "chapter3",
+                "sentences": [
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    }
+                ]
+            },
+            {
+                "chapterName": "chapter4",
+                "sentences": [
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
                     }
                 ]
             }
@@ -325,17 +955,163 @@
                         "korean": "회의록을 작성해 주세요.",
                         "english": "Please pack this to go"
                     },
+                    {
+                        "korean": "제안서를 작성 중입니다.",
+                        "english": "I’m working on the proposal."
+                    },
+                    {
+                        "korean": "마감일이 언제인가요?",
+                        "english": "When is the deadline?"
+                    },
+                    {
+                        "korean": "프로젝트 진행 상황을 업데이트해 주세요.",
+                        "english": "Please update me on the project status."
+                    },
+                    {
+                        "korean": "이 거래에 대해 논의할 시간이 있나요?",
+                        "english": "Do you have time to discuss this deal?"
+                    },
+                    {
+                        "korean": "새로운 계약서를 준비 중입니다.",
+                        "english": "We are preparing a new contract."
+                    }
                 ]
             },
             {
                 "chapterName": "chapter2",
                 "sentences": [
                     {
-                        "korean": "안녕하세요",
-                        "english": "Hello"
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
                     }
                 ]
-            }
+            },
+            {
+                "chapterName": "chapter3",
+                "sentences": [
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    }
+                ]
+            },
+            {
+                "chapterName": "chapter4",
+                "sentences": [
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    },
+                    {
+                        "korean": "",
+                        "english": ""
+                    }
+                ]
+            },
         ]
     },
     

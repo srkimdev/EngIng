@@ -11,6 +11,7 @@ struct CalendarView: View {
     
     @State var month: Date = Date()
     @State private var clickedCurrentMonthDates: Date?
+    @EnvironmentObject var viewModel: DiaryCalendarViewModel
     
     init(month: Date, clickedCurrentMonthDates: Date? = nil) {
         _month = State(initialValue: month)
@@ -20,29 +21,8 @@ struct CalendarView: View {
     var body: some View {
         
         VStack {
-//            yearView
             headerView
             calendarGridView
-//                .padding(.horizontal, 40)
-        }
-        
-    }
-    
-    //MARK: Year
-    private var yearView: some View {
-        
-        HStack {
-            Text(month.getYear)
-                .font(.system(size: 18))
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, 30)
-                .padding([.top, .bottom], 5)
-            
-            Text("연속 7일")
-                .font(.system(size: 17))
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .padding(.trailing, 30)
-                .padding([.top, .bottom], 5)
         }
         
     }
@@ -55,7 +35,6 @@ struct CalendarView: View {
                 yearMonthView
             }
             .padding(.bottom)
-//            .padding([.horizontal, .bottom])
             
             HStack {
                 ForEach(Self.weekdaySymbols.indices, id: \.self) { symbol in
@@ -135,6 +114,9 @@ struct CalendarView: View {
                     if 0 <= index && index < daysInMonth {
                         let date = getDate(for: index)
                         clickedCurrentMonthDates = date
+                        print(date)
+                        viewModel.input.selectedDate.send(date)
+                        print("pass")
                     }
                 }
             
@@ -192,6 +174,6 @@ private struct CellView: View {
     
 }
 
-#Preview {
-    CalendarView(month: Date())
-}
+//#Preview {
+//    CalendarView(month: Date(), selectedDate: )
+//}

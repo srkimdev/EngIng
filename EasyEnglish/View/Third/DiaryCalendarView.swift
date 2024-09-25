@@ -9,6 +9,9 @@ import SwiftUI
 
 struct DiaryCalendarView: View {
     
+    @StateObject private var viewModel = DiaryCalendarViewModel()
+    @State var date: Date = Date()
+    
     var body: some View {
         
         GeometryReader { geometry in
@@ -25,7 +28,7 @@ struct DiaryCalendarView: View {
                 
                 RoundedRectangle(cornerRadius: 25)
                     .fill(Colors.backgroundColor)
-                        .frame(height: geometry.size.height * 3 / 4)
+                    .frame(height: geometry.size.height * 3 / 4)
                     .overlay {
                         ScrollView {
                             //                            mainView(geometry: geometry)
@@ -34,17 +37,24 @@ struct DiaryCalendarView: View {
                 
             }
             
-            RoundedRectangle(cornerRadius: 20)
-                .fill(.white)
-                .overlay {
-                    CalendarView(month: Date())
-                        .padding(20)
-                }
-                .frame(height: geometry.size.height / 2.3)
-                .padding(30)
-            
-            
-            
+            VStack {
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(.white)
+                    .overlay {
+                        CalendarView(month: Date())
+                            .environmentObject(viewModel)
+                            .padding(20)
+                    }
+                    .frame(height: geometry.size.height / 2.3)
+                    .padding(.bottom, 20)
+                
+                todayDiary
+                
+                DiaryRowView(diary: $viewModel.output.showDiary)
+                
+            }
+            .padding(30)
+
         }
         
     }
@@ -54,27 +64,14 @@ struct DiaryCalendarView: View {
         Text("Today's Diary")
             .font(.title2.bold())
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding([.horizontal, .top], 25)
         
     }
     
 }
 
-//        Spacer()
-//
-//        ScrollView {
-//            VStack {
-//                CalendarView(month: Date())
-//                todayDiary
-//                DiaryRowView()
-//            }
-//        }
-//        .navigationTitle("Calendar")
-//        .navigationBarTitleDisplayMode(.inline)
-    
-//}
-
 struct DiaryRowView: View {
+    
+    @Binding var diary: DiaryTable
     
     var body: some View {
         
@@ -88,10 +85,10 @@ struct DiaryRowView: View {
                     
                     HStack {
                         VStack(alignment: .leading) {
-                            Text("Subject")
+                            Text(diary.title)
                                 .foregroundStyle(.black)
                             Spacer()
-                            Text("Today i went to watch a game...")
+                            Text(diary.content)
                                 .foregroundStyle(.black)
                         }
                         .padding(.vertical, 30)
