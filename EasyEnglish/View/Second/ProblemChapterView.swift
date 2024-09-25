@@ -42,8 +42,8 @@ struct ProblemChapterView: View {
                 }
                 
             }
-            .navigationTitle("둘러보기")
-            .toolbar(.hidden, for: .tabBar)
+//            .navigationTitle("둘러보기")
+//            .toolbar(.hidden, for: .tabBar)
             
         }
 

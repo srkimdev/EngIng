@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Charts
+import Lottie
 
 struct MainView: View {
     
@@ -21,12 +22,8 @@ struct MainView: View {
                 .fill(.orange.opacity(0.2))
                 .frame(height: geometry.size.height / 3.7)
                 .overlay {
-                    VStack {
-                        profileView(geometry: geometry)
-                        Spacer()
-                    }
-                    .padding(25)
-                    .padding(.top)
+                    profileView(geometry: geometry)
+                        .padding(25)
                 }
             
             //MARK: Main
@@ -55,24 +52,32 @@ struct MainView: View {
     //MARK: Profile
     func profileView(geometry: GeometryProxy) -> some View {
         
-        VStack {
+        HStack {
+            
+            LottieView(animation: .named("Animation - 1727267547779"))
+                .looping()
+                .frame(width: geometry.size.width / 3, height: geometry.size.width / 3)
+            
+            Spacer()
+            
             Text("Hi Octavia, \nthis is your study")
-                .padding(.bottom)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            RoundedRectangle(cornerRadius: 20)
-                .fill(.white.opacity(0.7))
-                .frame(height: geometry.size.height / 15)
-                .overlay {
-                    daysCircle7View()
-                }
+            
         }
-        
+
     }
 
     //MARK: Main
     func mainView(geometry: GeometryProxy) -> some View {
         
         VStack {
+            
+            RoundedRectangle(cornerRadius: 20)
+                .fill(.white.opacity(0.7))
+                .frame(height: geometry.size.height / 15)
+                .overlay {
+                    daysCircle7View()
+                }
+                .padding(.bottom, 20)
             
             RoundedRectangle(cornerRadius: 20)
                 .fill(.white)
@@ -89,8 +94,8 @@ struct MainView: View {
                 }
                 .padding(.bottom, 20)
             
-            button3View()
-                .frame(height: geometry.size.height / 5)
+//            button3View()
+//                .frame(height: geometry.size.height / 5)
             
             Text("Recent 7 days study")
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -201,8 +206,8 @@ struct MainView: View {
     
 }
 
-#Preview {
-    MainView()
-}
+//#Preview {
+//    MainView()
+//}
 
 

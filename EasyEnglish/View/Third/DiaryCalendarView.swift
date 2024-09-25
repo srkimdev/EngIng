@@ -91,7 +91,10 @@ struct DiaryRowView: View {
                             Text(diary.content)
                                 .foregroundStyle(.black)
                         }
+                        .padding(.leading, 20)
                         .padding(.vertical, 30)
+                        
+                        Spacer()
                         
                         RoundedRectangle(cornerRadius: 10)
                             .fill(.white)
