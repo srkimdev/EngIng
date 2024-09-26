@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CarouselStack
 
 struct DiaryReviseView: View {
     
@@ -13,44 +14,31 @@ struct DiaryReviseView: View {
     
     var body: some View {
         
-        ScrollView {
-            VStack {
+        GeometryReader { geometry in
+            ScrollView {
                 
-                Text(DateFormatManager.shared.ddmy(diary.date))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-    //                .padding(.bottom, 2)
-                
-                Text(diary.title)
-                    .font(.title.bold())
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                ScrollView(.horizontal) {
-                    HStack {
-                        ForEach(0..<6) { item in
-                            RoundedRectangle(cornerRadius: 15)
-                                .frame(width: Constants.screenWidth - 50, height: 240)
-                        }
-                    }
+                VStack(alignment: .leading) {
+                    
+                    Text(DateFormatManager.shared.ddmy(diary.date))
+                        .padding(.bottom, 10)
+                    
+                    Text(diary.title)
+                        .font(.title.bold())
+                    
+                    Image(systemName: "star")
+                        .frame(width: abs(geometry.size.width - 50), height: 240)
+                    
+                    Text(diary.content)
+                    
                 }
-                .padding(.vertical)
-                
-                Text("The city of southern califonia, san diego is locally known as America's firest city Presenting a language learning UI design concept here. It’s mainly for second/third generation immigrants to learn their mother tongue from family members, rather than dictionary-based systematic learning. What do you think? Let me know in the comment 👇Any constructive criticism is welcome! Visit my portfolio for more works: michellezhudesign.com Welcome to connect via instagram: https://www.instagram.com/michelle.ux.ui Got an idea? Thinking about building a language app or flashcard app? Reach out and let's talk!")
-                    .frame(maxWidth: .infinity, alignment: .leading)
                 
             }
+            .scrollIndicators(.hidden)
+            .padding(25)
             
         }
-        .padding(25)
         .navigationTitle("Diary")
         .navigationBarTitleDisplayMode(.inline)
-        
-//        Button(action: {
-//            print("revise")
-//        }, label: {
-//            Image(systemName: "pencil")
-//                .resizable()
-//                .frame(width: 20, height: 20)
-//        })
         
     }
 }

@@ -20,6 +20,7 @@
 		DC0D9BA62C9457FA00AD91DC /* SaveProblemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0D9BA52C9457FA00AD91DC /* SaveProblemView.swift */; };
 		DC113C902CA43B8A0008F310 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DC113C8F2CA43B8A0008F310 /* Lottie */; };
 		DC113C922CA5547A0008F310 /* DateFormatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC113C912CA5547A0008F310 /* DateFormatManager.swift */; };
+		DC113C942CA576540008F310 /* ProblemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC113C932CA576540008F310 /* ProblemListViewModel.swift */; };
 		DC1C6AEA2CA2C4830033666A /* AttendanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C6AE92CA2C4830033666A /* AttendanceViewModel.swift */; };
 		DC5DBB992C9069F8001687FC /* EasyEnglishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DBB982C9069F8001687FC /* EasyEnglishApp.swift */; };
 		DC5DBB9B2C9069F8001687FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DBB9A2C9069F8001687FC /* ContentView.swift */; };
@@ -88,6 +89,7 @@
 		DC0D9BA32C9456E100AD91DC /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		DC0D9BA52C9457FA00AD91DC /* SaveProblemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveProblemView.swift; sourceTree = "<group>"; };
 		DC113C912CA5547A0008F310 /* DateFormatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatManager.swift; sourceTree = "<group>"; };
+		DC113C932CA576540008F310 /* ProblemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemListViewModel.swift; sourceTree = "<group>"; };
 		DC1C6AE92CA2C4830033666A /* AttendanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewModel.swift; sourceTree = "<group>"; };
 		DC5DBB952C9069F8001687FC /* EasyEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5DBB982C9069F8001687FC /* EasyEnglishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyEnglishApp.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				DC0D9B882C930E2900AD91DC /* ProblemListView.swift */,
 				DCFF76C52C959F7900D479E1 /* ProblemChapterView.swift */,
 				DCFD54212C9FFB960000D2EC /* ProblemSentenceView.swift */,
+				DC113C932CA576540008F310 /* ProblemListViewModel.swift */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				DC0D9B892C930E2900AD91DC /* ProblemListView.swift in Sources */,
 				DCFF76C92C96C36700D479E1 /* MainView.swift in Sources */,
 				DC6666DB2C9BE20C00251F82 /* TargetType.swift in Sources */,
+				DC113C942CA576540008F310 /* ProblemListViewModel.swift in Sources */,
 				DCFD54402CA158870000D2EC /* DBTable.swift in Sources */,
 				DC6666DF2C9BE8BB00251F82 /* TranslateQuery.swift in Sources */,
 				DCFF76C62C959F7900D479E1 /* ProblemChapterView.swift in Sources */,

@@ -11,7 +11,7 @@ import RealmSwift
 //MARK: Problem
 final class CategoryTable: Object, Identifiable {
     @Persisted(primaryKey: true) var id: ObjectId
-    @Persisted var categoryName: String = ""
+    @Persisted var categoryName: String = "Movie & Drama"
     @Persisted var categoryDescription = ""
     @Persisted var chapters = List<ChapterTable>()
 }
@@ -36,14 +36,13 @@ final class DiaryTable: Object {
     @Persisted var title: String
     @Persisted var content: String
     @Persisted var date: Date
-    @Persisted var image: String // ??
+    @Persisted var image: Data
     
-    convenience init(title: String = "", content: String = "", date: Date = Date(), image: String = "") {
+    convenience init(title: String, content: String, date: Date = Date()) {
         self.init()
         self.title = title
         self.content = content
         self.date = date
-        self.image = image
     }
 }
 

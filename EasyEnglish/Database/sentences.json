@@ -193,23 +193,23 @@
                 "sentences": [
                     {
                         "korean": "메뉴 추천해줄 수 있어?",
-                        "english": "Have you seen this movie?"
+                        "english": "Can you recommend a dish?"
                     },
                     {
                         "korean": "이거 채식주의자도 먹을 수 있나요?",
-                        "english": "This scene is really touching."
+                        "english": "Is this suitable for vegetarians?"
                     },
                     {
-                        "korean": "매운 음식 좋아하세요?",
-                        "english": "What happened to the main character at the end?"
+                        "korean": "매운 음식 좋아하세요?"
+                        "english": "Do you like spicy food?"
                     },
                     {
                         "korean": "맛이 어때요?",
-                        "english": "When is the next season coming out?"
+                        "english": "How does it taste?"
                     },
                     {
                         "korean": "이거 포장해 주세요.",
-                        "english": "This drama is really addictive"
+                        "english": "Please pack this to go."
                     },
                     {
                         "korean": "이 요리 어떻게 만들어요?",

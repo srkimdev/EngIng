@@ -44,7 +44,6 @@ final class DiaryWriteViewModel: ObservableObject {
             
         } else {
             repository.createItem(DiaryTable(title: input.titleText, content: input.storyText))
-    
         }
         
     }

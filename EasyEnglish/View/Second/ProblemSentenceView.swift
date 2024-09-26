@@ -17,7 +17,6 @@ struct ProblemSentenceView: View {
     @State var currentPage: Int = 0
     @State var answerButtonClick: Bool = false
     
-//    let colors: [Color] = [.blue, .brown, .black, .cyan, .green, .indigo, .pink, .purple, .red, .orange, .yellow]
     let colors: [Color] = [.white, .white, .white, .white, .white, .white, .white, .white, .white, .white]
     
     var body: some View {
@@ -62,7 +61,6 @@ struct ProblemSentenceView: View {
                         }
                 }
                 .onShuffleDeck({ value in
-                    print(value)
                     currentPage = value.index
                     answerButtonClick = false
                 })
@@ -71,9 +69,9 @@ struct ProblemSentenceView: View {
                 Button(action: {
                     answerButtonClick.toggle()
                 
-                    repository.updateItem(primaryKey: chapter.id) { value in
-                        value.sentences[currentPage].isCheck = true
-                    }
+//                    repository.updateItem(primaryKey: chapter.id) { value in
+//                        value.sentences[currentPage].isCheck = true
+//                    }
                    
                 }, label: {
                     RoundedRectangle(cornerRadius: 10)
