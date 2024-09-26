@@ -24,7 +24,7 @@ final class DiaryWriteViewModel: ObservableObject {
     }
     
     struct Output {
-//        var
+        var diary = DiaryTable()
     }
     
     init() {
@@ -39,7 +39,14 @@ final class DiaryWriteViewModel: ObservableObject {
     }
     
     private func saveDiary() {
-        repository.createItem(DiaryTable(title: input.titleText, content: input.storyText))
+        
+        if input.titleText.isEmpty || input.storyText.isEmpty {
+            
+        } else {
+            repository.createItem(DiaryTable(title: input.titleText, content: input.storyText))
+    
+        }
+        
     }
     
 }

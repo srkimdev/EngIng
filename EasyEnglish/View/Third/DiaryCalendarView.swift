@@ -52,9 +52,18 @@ struct DiaryCalendarView: View {
                 
                 DiaryRowView(diary: $viewModel.output.showDiary)
                 
+                Spacer()
+                
+                writeButtonView(geometry)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .padding(.bottom, 60)
+                    
             }
             .padding(30)
 
+        }
+        .onAppear {
+            viewModel.input.selectedDate.send(Date())
         }
         
     }
@@ -67,44 +76,66 @@ struct DiaryCalendarView: View {
         
     }
     
+    func writeButtonView(_ geometry: GeometryProxy) -> some View {
+        
+        NavigationLink {
+            DiaryWriteView()
+        } label: {
+            Circle()
+                .fill(.orange.opacity(0.2))
+                .overlay {
+                    Image(systemName: "plus")
+                        .foregroundStyle(.white)
+                }
+        }
+        .frame(width: geometry.size.width / 8, height: geometry.size.width / 8)
+
+    }
+    
 }
 
 struct DiaryRowView: View {
     
-    @Binding var diary: DiaryTable
+    @Binding var diary: DiaryTable?
     
     var body: some View {
         
-        NavigationLink {
-            DiaryReviseView()
-        } label: {
+        if let diary {
+            NavigationLink {
+                DiaryReviseView(diary: diary)
+            } label: {
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(.orange.opacity(0.2))
+                    .frame(width: Constants.screenWidth - 50, height: 100)
+                    .overlay {
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text(diary.title)
+                                    .foregroundStyle(.black)
+                                Spacer()
+                                Text(diary.content)
+                                    .foregroundStyle(.black)
+                            }
+                            .padding(.leading, 20)
+                            .padding(.vertical, 30)
+                            
+                            Spacer()
+                            
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(.white)
+                                .frame(width: 80, height: 80)
+                            
+                        }
+                        .padding(.horizontal, 10)
+                    }
+            }
+        } else {
             RoundedRectangle(cornerRadius: 10)
                 .fill(.orange.opacity(0.2))
                 .frame(width: Constants.screenWidth - 50, height: 100)
                 .overlay {
-                    
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(diary.title)
-                                .foregroundStyle(.black)
-                            Spacer()
-                            Text(diary.content)
-                                .foregroundStyle(.black)
-                        }
-                        .padding(.leading, 20)
-                        .padding(.vertical, 30)
-                        
-                        Spacer()
-                        
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(.white)
-                            .frame(width: 80, height: 80)
-                            
-                    }
-                    .padding(.horizontal, 10)
-                    
+                    Text("일기가 없습니다.")
                 }
-            
         }
         
     }

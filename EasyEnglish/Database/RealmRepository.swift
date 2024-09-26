@@ -29,18 +29,6 @@ final class RealmRepository<T: Object> {
         let list = realm.objects(T.self)
         return Array(list)
     }
-
-    //MARK: Read - ASC
-    func readAllItemASC(byKeyPath keyPath: String = "storeTime") -> [T] {
-        let list = realm.objects(T.self).sorted(byKeyPath: keyPath, ascending: true)
-        return Array(list)
-    }
-    
-    //MARK: Read - DESC
-    func readAllItemDESC(byKeyPath keyPath: String = "storeTime") -> [T] {
-        let list = realm.objects(T.self).sorted(byKeyPath: keyPath, ascending: false)
-        return Array(list)
-    }
     
     //MARK: Update
     func updateItem(primaryKey: Any, with updates: (T) -> Void) {

@@ -114,9 +114,7 @@ struct CalendarView: View {
                     if 0 <= index && index < daysInMonth {
                         let date = getDate(for: index)
                         clickedCurrentMonthDates = date
-                        print(date)
                         viewModel.input.selectedDate.send(date)
-                        print("pass")
                     }
                 }
             

@@ -22,26 +22,24 @@ final class DiaryCalendarViewModel: ObservableObject {
     }
     
     struct Output {
-        var showDiary = DiaryTable()
+        var showDiary: DiaryTable?
     }
     
     init() {
         
         input.selectedDate
             .sink { value in
-                print(value)
-                self.output.showDiary = self.readDiary(for: value).first!
-                print(self.output.showDiary)
+                self.output.showDiary = self.readDiary(for: value)
             }
             .store(in: &cancellables)
         
     }
     
-    func readDiary(for date: Date) -> [DiaryTable] {
+    func readDiary(for date: Date) -> DiaryTable? {
         let startOfDay = Calendar.current.startOfDay(for: date)
         let endOfDay = Calendar.current.date(byAdding: .day, value: 1, to: startOfDay)!
         
-        let result = repository.readAllItem().filter { diary in
+        let result = repository.readAllItem().first { diary in
             return diary.date >= startOfDay && diary.date < endOfDay
         }
         

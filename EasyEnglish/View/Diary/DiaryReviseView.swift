@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct DiaryReviseView: View {
+    
+    var diary: DiaryTable
+    
     var body: some View {
         
         ScrollView {
             VStack {
                 
-                Text("Friday, 13 March 2018")
+                Text(DateFormatManager.shared.ddmy(diary.date))
                     .frame(maxWidth: .infinity, alignment: .leading)
     //                .padding(.bottom, 2)
                 
-                Text("Full-day Hike in the Moun")
+                Text(diary.title)
                     .font(.title.bold())
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
@@ -41,17 +44,17 @@ struct DiaryReviseView: View {
         .navigationTitle("Diary")
         .navigationBarTitleDisplayMode(.inline)
         
-        Button(action: {
-            print("revise")
-        }, label: {
-            Image(systemName: "pencil")
-                .resizable()
-                .frame(width: 20, height: 20)
-        })
+//        Button(action: {
+//            print("revise")
+//        }, label: {
+//            Image(systemName: "pencil")
+//                .resizable()
+//                .frame(width: 20, height: 20)
+//        })
         
     }
 }
 
-#Preview {
-    DiaryReviseView()
-}
+//#Preview {
+//    DiaryReviseView()
+//}

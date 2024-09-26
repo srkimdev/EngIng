@@ -22,12 +22,6 @@
     "Example" : {
 
     },
-    "Friday, 13 March 2018" : {
-
-    },
-    "Full-day Hike in the Moun" : {
-
-    },
     "Hello" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -88,6 +82,9 @@
 
     },
     "내용을 입력해주세요." : {
+
+    },
+    "일기가 없습니다." : {
 
     },
     "저장" : {
