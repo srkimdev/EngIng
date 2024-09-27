@@ -23,7 +23,7 @@ struct MainView: View {
                 .frame(height: geometry.size.height / 3.7)
                 .overlay {
                     profileView(geometry: geometry)
-                        .padding(25)
+                        .padding(20)
                 }
             
             //MARK: Main
@@ -58,9 +58,20 @@ struct MainView: View {
                 .looping()
                 .frame(width: geometry.size.width / 3, height: geometry.size.width / 3)
             
-            Spacer()
-            
-            Text("Hi Octavia, \nthis is your study")
+            RoundedRectangle(cornerRadius: 20)
+                .fill(.white)
+                .frame(height: geometry.size.height / 6)
+                .overlay {
+                    
+                    HStack {
+                        Spacer()
+                        CircleChartView()
+                            .frame(width: geometry.size.width / 5, height: geometry.size.width / 5)
+                    }
+                    .padding(.horizontal, 25)
+                    
+                }
+                .padding(.bottom, 20)
             
         }
 
@@ -79,24 +90,35 @@ struct MainView: View {
                 }
                 .padding(.bottom, 20)
             
-            RoundedRectangle(cornerRadius: 20)
-                .fill(.white)
-                .frame(height: geometry.size.height / 4)
-                .overlay {
-                    
-                    HStack {
-                        Spacer()
-                        CircleChartView()
-                            .frame(width: geometry.size.width / 3, height: geometry.size.width / 3)
+            NavigationLink {
+                SaveProblemView()
+            } label: {
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(.white.opacity(0.7))
+                    .frame(height: geometry.size.height / 12)
+                    .overlay {
+                        HStack {
+                            Image(systemName: "book")
+                                .foregroundStyle(.black)
+                            Text("저장한 문장 학습하기")
+                                .foregroundStyle(.black)
+                            Spacer()
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(.orange.opacity(0.2))
+                                .overlay {
+                                    Text("1")
+                                        .foregroundStyle(.white)
+                                }
+                                .frame(width: geometry.size.width / 12, height: geometry.size.width / 12)
+                                
+                            Image(systemName: "chevron.right")
+                                .foregroundStyle(.black)
+                        }
+                        .padding()
                     }
-                    .padding(.horizontal, 25)
-                    
-                }
-                .padding(.bottom, 20)
-            
-//            button3View()
-//                .frame(height: geometry.size.height / 5)
-            
+            }
+            .padding(.bottom, 20)
+
             Text("Recent 7 days study")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.title2)

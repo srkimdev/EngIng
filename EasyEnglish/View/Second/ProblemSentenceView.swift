@@ -71,7 +71,7 @@ struct ProblemSentenceView: View {
                     
                     Button(action: {
                         repository.updateItem(primaryKey: chapter.id) { value in
-                            value.sentences[currentPage].isCheck = true
+                            value.sentences[currentPage].isLike = true
                         }
                     }) {
                         RoundedRectangle(cornerRadius: 10)
@@ -87,6 +87,9 @@ struct ProblemSentenceView: View {
                     
                     Button(action: {
                         answerButtonClick.toggle()
+                        repository.updateItem(primaryKey: chapter.id) { value in
+                            value.sentences[currentPage].isCheck = true
+                        }
                     }) {
                         RoundedRectangle(cornerRadius: 10)
                             .fill(.orange.opacity(0.2))
@@ -121,6 +124,8 @@ struct ProblemSentenceView: View {
             }
             
         }
+        .navigationTitle(chapter.chapterName)
+        .navigationBarTitleDisplayMode(.inline)
         
     }
     

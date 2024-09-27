@@ -87,12 +87,14 @@ struct ProblemListView: View {
                         viewModel.input.starButtonTap.send(chapter)
                     } label: {
                         Image(systemName: chapter.star ? "star.fill" : "star")
+                            .foregroundStyle(.blue.opacity(0.3))
                     }
                 }
                 Spacer()
                 Text("Your completed \(Int(chapter.progress))%")
                     .font(.system(size: 13))
                 ProgressView(value: chapter.progress / 100)
+                    
             }
             .padding()
         
