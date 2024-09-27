@@ -9,7 +9,6 @@ import SwiftUI
 import ShuffleDeck
 
 struct ProblemSentenceView: View {
-    
     private let repository = RealmRepository<ChapterTable>()
     
     var chapter: ChapterTable
@@ -64,19 +63,61 @@ struct ProblemSentenceView: View {
                     currentPage = value.index
                     answerButtonClick = false
                 })
-                .padding(.top, 30)
+                .padding(.top, 20)
                 
-                Button(action: {
-                    answerButtonClick.toggle()
-                
-                    repository.updateItem(primaryKey: chapter.id) { value in
-                        value.sentences[currentPage].isCheck = true
+                HStack {
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        repository.updateItem(primaryKey: chapter.id) { value in
+                            value.sentences[currentPage].isCheck = true
+                        }
+                    }) {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(.orange.opacity(0.2))
+                            .overlay {
+                                Image(systemName: "square.and.arrow.up")
+                                    .foregroundStyle(.black)
+                            }
                     }
-                   
-                }, label: {
-                    RoundedRectangle(cornerRadius: 10)
-                        .frame(width: 50, height: 50)
-                })
+                    .frame(width: geometry.size.width / 8, height: geometry.size.width / 8)
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        answerButtonClick.toggle()
+                    }) {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(.orange.opacity(0.2))
+                            .overlay {
+                                Text("정답보기")
+                                    .foregroundStyle(.black)
+                            }
+                    }
+                    .frame(width: geometry.size.width / 4, height: geometry.size.width / 8)
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        
+                    }) {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(.orange.opacity(0.2))
+                            .overlay {
+                                Image(systemName: "speaker.wave.2")
+                                    .foregroundStyle(.black)
+                            }
+                    }
+                    .frame(width: geometry.size.width / 8, height: geometry.size.width / 8)
+                    
+                    
+                    Spacer()
+                    
+                }
+                .padding()
+                .frame(maxWidth: .infinity)
+    
             }
             
         }
