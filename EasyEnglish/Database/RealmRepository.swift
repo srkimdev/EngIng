@@ -25,9 +25,9 @@ final class RealmRepository<T: Object> {
     }
     
     //MARK: Read All
-    func readAllItem() -> [T] {
+    func readAllItem() -> Results<T> {
         let list = realm.objects(T.self)
-        return Array(list)
+        return list
     }
     
     //MARK: Update

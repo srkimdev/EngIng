@@ -19,6 +19,8 @@ final class CategoryTable: Object, Identifiable {
 final class ChapterTable: Object {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var chapterName: String = ""
+    @Persisted var star: Bool = false
+    @Persisted var progress: Double = 0
     @Persisted var sentences = List<SentenceTable>()
 }
 
@@ -44,5 +46,16 @@ final class DiaryTable: Object {
         self.content = content
         self.date = date
     }
+}
+
+final class WeekTable: Object {
+    @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted var date: Date
+    
+    convenience init(date: Date) {
+        self.init()
+        self.date = date
+    }
+    
 }
 

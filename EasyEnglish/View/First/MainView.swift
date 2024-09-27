@@ -44,7 +44,7 @@ struct MainView: View {
                 
         }
         .onAppear {
-            viewModel.resetAttendanceIfNeeded()
+            viewModel.input.attendanceCheck.send()
         }
 
     }
@@ -113,11 +113,11 @@ struct MainView: View {
     func daysCircle7View() -> some View {
         
         HStack {
-            ForEach(viewModel.attendances.indices, id: \.self) { index in
+            ForEach(0..<7) { index in
                 Circle()
-                    .fill(viewModel.attendances[index].isChecked ? Color.green : Color.gray)
+                    .fill(/*viewModel.attendances[index].isChecked ? Color.green : Color.gray*/Color.gray)
                     .frame(width: 40, height: 40)
-                    .overlay(Text(viewModel.attendances[index].day).foregroundColor(.white))
+                    .overlay(Text("월").foregroundColor(.white))
             }
         }
         
@@ -137,7 +137,7 @@ struct MainView: View {
 //                            .frame(maxWidth: .infinity, alignment: .leading)
 //                        
 //                        Spacer()
-//                        
+//
 //                        Text("총 7일 연속")
 //                            .font(.system(size: 20))
 //                            .frame(maxWidth: .infinity, alignment: .leading)

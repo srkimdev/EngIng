@@ -69,9 +69,9 @@ struct ProblemSentenceView: View {
                 Button(action: {
                     answerButtonClick.toggle()
                 
-//                    repository.updateItem(primaryKey: chapter.id) { value in
-//                        value.sentences[currentPage].isCheck = true
-//                    }
+                    repository.updateItem(primaryKey: chapter.id) { value in
+                        value.sentences[currentPage].isCheck = true
+                    }
                    
                 }, label: {
                     RoundedRectangle(cornerRadius: 10)

@@ -6,44 +6,77 @@
 //
 
 import Foundation
+import Combine
 
-struct Attendance: Identifiable {
-    let id = UUID()
-    let day: String
-    var isChecked: Bool
-}
-
-class AttendanceViewModel: ObservableObject {
+final class AttendanceViewModel: ObservableObject {
     
-    @Published var attendances: [Attendance] = [
-        Attendance(day: "일", isChecked: false),
-        Attendance(day: "월", isChecked: true),
-        Attendance(day: "화", isChecked: false),
-        Attendance(day: "수", isChecked: false),
-        Attendance(day: "목", isChecked: false),
-        Attendance(day: "금", isChecked: false),
-        Attendance(day: "토", isChecked: false),
-    ]
+    var cancellables = Set<AnyCancellable>()
+    let input = Input()
+    @Published var output = Output()
     
-    func toggleAttendance(for index: Int) {
-        attendances[index].isChecked.toggle()
+    let repository = RealmRepository<WeekTable>()
+    
+    struct Input {
+        let attendanceCheck = PassthroughSubject<Void, Never>()
     }
     
-    func resetAttendanceIfNeeded() {
+    struct Output {
+        
+    }
+    
+    init() {
+        
+        input.attendanceCheck
+            .sink { [weak self] _ in
+                self?.checkAttendance()
+            }
+            .store(in: &cancellables)
+        
+    }
+    
+    //MARK: check Attendance
+    func checkAttendance() {
+        
+        let startOfDay = Calendar.current.startOfDay(for: Date())
+        let endOfDay = Calendar.current.date(byAdding: .day, value: 1, to: startOfDay)!
+        let attendanceRecords = repository.readAllItem().filter("date >= %@ AND date < %@", startOfDay, endOfDay)
+        
+        if attendanceRecords.isEmpty {
+            saveAttendance()
+        } else {
+            print("Already saved")
+        }
+    
+    }
+    
+    //MARK: get first date of week
+    func startOfWeek(for date: Date) -> Date? {
         let calendar = Calendar.current
-        let currentWeekday = calendar.component(.weekday, from: Date())
-        // 1 ± 7 -> 일 ± 토
+        let components = calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: date)
         
-        print(currentWeekday)
+        return calendar.date(from: components)
+    }
+    
+    //MARK: save Attendance
+    func saveAttendance() {
+        let newRecord = WeekTable()
+        newRecord.date = Date()
         
-        // 만약 주의 첫 날(일요일)인 경우 출석 리셋
-        if currentWeekday == 1 {
-            for index in attendances.indices {
-                attendances[index].isChecked = false
+        repository.createItem(newRecord)
+    }
+    
+    //MARK: set 7days list
+    func getDatesForWeek(startingFrom date: Date) -> [Date] {
+        let calendar = Calendar.current
+        var weekDates: [Date] = []
+        
+        for dayOffset in 0..<7 {
+            if let weekDay = calendar.date(byAdding: .day, value: dayOffset, to: date) {
+                weekDates.append(weekDay)
             }
         }
         
-        attendances[currentWeekday - 1].isChecked = true
-
+        return weekDates
     }
+    
 }

@@ -11,9 +11,8 @@ import CarouselStack
 
 struct ProblemListView: View {
     
-    let colors: [Color] = [.blue, .brown, .black, .cyan, .green, .indigo, .pink, .purple, .red, .orange, .yellow]
+    let colors: [Color] = [.blue.opacity(0.2), .brown, .black, .cyan, .green, .indigo, .pink, .purple, .red, .orange, .yellow]
     
-    @State private var progress = 0.5
     @StateObject private var viewModel = ProblemListViewModel()
     
     var body: some View {
@@ -58,6 +57,9 @@ struct ProblemListView: View {
             }
 
         }
+        .onAppear {
+            viewModel.input.progressCheck.send()
+        }
         
     }
     
@@ -77,14 +79,20 @@ struct ProblemListView: View {
                 
             VStack(alignment: .leading) {
                 Spacer()
-                Image(systemName: "star")
+                HStack {
+                    Text(chapter.chapterName)
+                        .font(.title2)
+                    Spacer()
+                    Button {
+                        viewModel.input.starButtonTap.send(chapter)
+                    } label: {
+                        Image(systemName: chapter.star ? "star.fill" : "star")
+                    }
+                }
                 Spacer()
-                Text(chapter.chapterName)
-                    .font(.title2)
-                Spacer()
-                Text("Your completed %")
+                Text("Your completed \(Int(chapter.progress))%")
                     .font(.system(size: 13))
-                ProgressView(value: progress)
+                ProgressView(value: chapter.progress / 100)
             }
             .padding()
         
