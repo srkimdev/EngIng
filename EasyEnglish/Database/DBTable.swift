@@ -24,7 +24,7 @@ final class ChapterTable: Object {
     @Persisted var sentences = List<SentenceTable>()
 }
 
-final class SentenceTable: Object {
+final class SentenceTable: Object, Identifiable {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var korean: String = ""
     @Persisted var english: String = ""
@@ -48,14 +48,17 @@ final class DiaryTable: Object {
     }
 }
 
-final class WeekTable: Object {
+//MARK: Show a week
+final class WeekAttendance: Object {
     @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted var weekStartDate: Date
+    @Persisted var days: List<DayAttendance>
+}
+
+final class DayAttendance: Object {
+    @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted var dayName: String
     @Persisted var date: Date
-    
-    convenience init(date: Date) {
-        self.init()
-        self.date = date
-    }
-    
+    @Persisted var isAttended: Bool
 }
 

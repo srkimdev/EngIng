@@ -45,6 +45,7 @@ struct MainView: View {
         }
         .onAppear {
             viewModel.input.attendanceCheck.send()
+            viewModel.input.showSavedSentenceCount.send()
         }
 
     }
@@ -106,8 +107,8 @@ struct MainView: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .fill(.orange.opacity(0.2))
                                 .overlay {
-                                    Text("1")
-                                        .foregroundStyle(.white)
+                                    Text("\(viewModel.output.savedSentenceCount)")
+                                        .foregroundStyle(.black)
                                 }
                                 .frame(width: geometry.size.width / 12, height: geometry.size.width / 12)
                                 
@@ -137,9 +138,12 @@ struct MainView: View {
         HStack {
             ForEach(0..<7) { index in
                 Circle()
-                    .fill(/*viewModel.attendances[index].isChecked ? Color.green : Color.gray*/Color.gray)
+                    .fill(/*viewModel.markedDays[index] ? Color.green : Color.gray*/)
                     .frame(width: 40, height: 40)
-                    .overlay(Text("월").foregroundColor(.white))
+                    .overlay {
+                        Text("월").foregroundColor(.white)
+                    }
+                        
             }
         }
         

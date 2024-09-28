@@ -23,5 +23,13 @@ final class DateFormatManager {
         return formattedDate
     }
     
+    func dateToyyyyMMdd(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        let formattedDate = dateFormatter.string(from: date)
+        return formattedDate
+    }
+    
 }
 

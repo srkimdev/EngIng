@@ -21,6 +21,7 @@
 		DC113C902CA43B8A0008F310 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DC113C8F2CA43B8A0008F310 /* Lottie */; };
 		DC113C922CA5547A0008F310 /* DateFormatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC113C912CA5547A0008F310 /* DateFormatManager.swift */; };
 		DC113C942CA576540008F310 /* ProblemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC113C932CA576540008F310 /* ProblemListViewModel.swift */; };
+		DC113C982CA6CBFD0008F310 /* SaveProblemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC113C972CA6CBFD0008F310 /* SaveProblemViewModel.swift */; };
 		DC1C6AEA2CA2C4830033666A /* AttendanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C6AE92CA2C4830033666A /* AttendanceViewModel.swift */; };
 		DC5DBB992C9069F8001687FC /* EasyEnglishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DBB982C9069F8001687FC /* EasyEnglishApp.swift */; };
 		DC5DBB9B2C9069F8001687FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DBB9A2C9069F8001687FC /* ContentView.swift */; };
@@ -90,6 +91,7 @@
 		DC0D9BA52C9457FA00AD91DC /* SaveProblemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveProblemView.swift; sourceTree = "<group>"; };
 		DC113C912CA5547A0008F310 /* DateFormatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatManager.swift; sourceTree = "<group>"; };
 		DC113C932CA576540008F310 /* ProblemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemListViewModel.swift; sourceTree = "<group>"; };
+		DC113C972CA6CBFD0008F310 /* SaveProblemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveProblemViewModel.swift; sourceTree = "<group>"; };
 		DC1C6AE92CA2C4830033666A /* AttendanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewModel.swift; sourceTree = "<group>"; };
 		DC5DBB952C9069F8001687FC /* EasyEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5DBB982C9069F8001687FC /* EasyEnglishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyEnglishApp.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				DC0D9BA52C9457FA00AD91DC /* SaveProblemView.swift */,
+				DC113C972CA6CBFD0008F310 /* SaveProblemViewModel.swift */,
 			);
 			path = Save;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC113C982CA6CBFD0008F310 /* SaveProblemViewModel.swift in Sources */,
 				DC6666F12C9D997700251F82 /* UserSettingView.swift in Sources */,
 				DC6666E52C9BF5B400251F82 /* NetworkManager.swift in Sources */,
 				DC6666E12C9BEA8100251F82 /* TranslateResponse.swift in Sources */,
