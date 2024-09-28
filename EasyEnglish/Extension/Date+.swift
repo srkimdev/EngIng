@@ -40,5 +40,5 @@ extension Date {
     var formattedCalendarDayDate: String {
       return Date.calendarDayDateFormatter.string(from: self)
     }
-
+    
 }

@@ -15,8 +15,7 @@ final class AttendanceViewModel: ObservableObject {
     let input = Input()
     @Published var output = Output()
     
-    let repoWeek = RealmRepository<WeekAttendance>()
-    let repoDay = RealmRepository<DayAttendance>()
+    let repository = RealmRepository<DayTable>()
     
     @ObservedResults(SentenceTable.self) var sentences
     
@@ -27,14 +26,23 @@ final class AttendanceViewModel: ObservableObject {
     
     struct Output {
         var savedSentenceCount = 0
+        var weekDate: [DayTable] = []
     }
     
     init() {
         
+        if repository.readAllItem().isEmpty {
+            saveNextWeekDays(from: Date())
+        }
+        
+        loadAttendance(for: Date())
         
         input.attendanceCheck
             .sink { [weak self] _ in
-                self?.setWeek(for: Date())
+                guard let self else { return }
+                
+                checkAttendance(Date())
+    
             }
             .store(in: &cancellables)
         
@@ -47,30 +55,54 @@ final class AttendanceViewModel: ObservableObject {
         
     }
     
-    func setWeek(for date: Date) {
+    func saveNextWeekDays(from date: Date) {
+        let calendar = Calendar.current
+        
+        for i in -7..<365 {
+            let currentDate = calendar.date(byAdding: .day, value: i, to: date)!
+            let dayEntry = DayTable()
+            dayEntry.date = currentDate
+
+            repository.createItem(dayEntry)
+        }
+    }
+    
+    func checkAttendance(_ date: Date) {
+        let calendar = Calendar.current
+        
+        let savedDays = repository.readAllItem()
+        let matchingDays = savedDays.filter {
+            calendar.isDate($0.date, inSameDayAs: date)
+        }
+        
+        if let matchingDay = matchingDays.first {
+            repository.updateItem(primaryKey: matchingDay.id) { value in
+                value.isAttended = true
+            }
+        }
+        
+    }
+
+    func loadAttendance(for date: Date) {
+        
         let calendar = Calendar.current
         let weekStart = calendar.date(byAdding: .day, value: -calendar.component(.weekday, from: date) + 1, to: date)!
         
-        let weekEntry = WeekAttendance()
-        weekEntry.weekStartDate = weekStart
+        output.weekDate = fetchDays(from: weekStart)
         
-        let dayEntry = DayAttendance()
+    }
+    
+    func fetchDays(from startDate: Date) -> [DayTable] {
+        let calendar = Calendar.current
         
-        for i in 0..<7 {
-            let currentDate = calendar.date(byAdding: .day, value: i, to: weekStart)!
-            dayEntry.date = currentDate
-            dayEntry.isAttended = false
-            weekEntry.days.append(dayEntry)
+        guard let endDate = calendar.date(byAdding: .day, value: 7, to: startDate) else {
+            return []
         }
         
-        repoWeek.createItem(weekEntry)
+        let savedDays = repository.readAllItem().filter("date >= %@ AND date < %@", startDate, endDate)
+
+        print(savedDays)
+        return Array(savedDays)
     }
-    
-    func loadAttendance() {
-        
-    }
-    
-    // 접속하면 그 주의 첫째날부터 마지막날 까지 불러와서 attend만 띄워주기
-    // 접속 로직 -> 접속안되있으면 체크, 되있으면 넘어가기
     
 }

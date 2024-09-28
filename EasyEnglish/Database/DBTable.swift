@@ -48,16 +48,8 @@ final class DiaryTable: Object {
     }
 }
 
-//MARK: Show a week
-final class WeekAttendance: Object {
+final class DayTable: Object {
     @Persisted(primaryKey: true) var id: ObjectId
-    @Persisted var weekStartDate: Date
-    @Persisted var days: List<DayAttendance>
-}
-
-final class DayAttendance: Object {
-    @Persisted(primaryKey: true) var id: ObjectId
-    @Persisted var dayName: String
     @Persisted var date: Date
     @Persisted var isAttended: Bool
 }

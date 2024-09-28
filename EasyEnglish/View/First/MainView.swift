@@ -138,10 +138,11 @@ struct MainView: View {
         HStack {
             ForEach(0..<7) { index in
                 Circle()
-                    .fill(/*viewModel.markedDays[index] ? Color.green : Color.gray*/)
+                    .fill(viewModel.output.weekDate[index].isAttended ? Color.green : Color.gray)
                     .frame(width: 40, height: 40)
                     .overlay {
-                        Text("월").foregroundColor(.white)
+                        Text(DateFormatManager.shared.getDayOfWeek(from: viewModel.output.weekDate[index].date))
+                            .foregroundColor(.white)
                     }
                         
             }
