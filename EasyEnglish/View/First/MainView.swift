@@ -144,7 +144,6 @@ struct MainView: View {
                         Text(DateFormatManager.shared.getDayOfWeek(from: viewModel.output.weekDate[index].date))
                             .foregroundColor(.white)
                     }
-                        
             }
         }
         

@@ -14,12 +14,12 @@ final class DiaryWriteViewModel: ObservableObject {
     var input = Input()
     @Published var output = Output()
     
+    @Published var titleText = ""
+    @Published var storyText = ""
+    
     let repository = RealmRepository<DiaryTable>()
     
     struct Input {
-        var titleText = ""
-        var storyText = ""
-        
         let saveButtonTapped = PassthroughSubject<Void, Never>()
     }
     
@@ -40,10 +40,10 @@ final class DiaryWriteViewModel: ObservableObject {
     
     private func saveDiary() {
         
-        if input.titleText.isEmpty || input.storyText.isEmpty {
+        if titleText.isEmpty || storyText.isEmpty {
             
         } else {
-            repository.createItem(DiaryTable(title: input.titleText, content: input.storyText))
+            repository.createItem(DiaryTable(title: titleText, content: storyText))
         }
         
     }

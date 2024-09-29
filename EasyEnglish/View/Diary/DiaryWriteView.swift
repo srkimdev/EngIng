@@ -19,25 +19,33 @@ struct DiaryWriteView: View {
                 .font(.system(size: 24).bold())
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            TextEditor(text: $viewModel.input.titleText)
-                .frame(height: 50)
-                .overlay(alignment: .topLeading) {
+            ZStack(alignment: .topLeading) {
+                
+                if viewModel.titleText.isEmpty {
                     Text("제목을 입력해주세요.")
                         .padding(.vertical, 8)
-                        .foregroundStyle(viewModel.input.titleText.isEmpty ? .gray : .clear)
+                        .foregroundStyle(.gray)
                 }
+                
+                TextEditor(text: $viewModel.titleText)
+                    .frame(height: 50)
+                    .opacity(viewModel.titleText.isEmpty ? 0.5 : 1)
+            }
             
             Text("Story")
                 .font(.system(size: 24).bold())
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            TextEditor(text: $viewModel.input.storyText)
-//                .frame(height: 250)
-                .overlay(alignment: .topLeading) {
+            ZStack(alignment: .topLeading) {
+                if viewModel.storyText.isEmpty {
                     Text("내용을 입력해주세요.")
                         .padding(.vertical, 8)
-                        .foregroundStyle(viewModel.input.storyText.isEmpty ? .gray : .clear)
+                        .foregroundStyle(.gray)
                 }
+                
+                TextEditor(text: $viewModel.storyText)
+                    .opacity(viewModel.storyText.isEmpty ? 0.5 : 1)
+            }
             
             Spacer()
             
