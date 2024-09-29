@@ -106,8 +106,6 @@ struct DiaryWriteView: View {
                             .frame(width: 50, height: 50)
                             .overlay {
                                 Image(systemName: "camera")
-    //                                .resizable()
-    //                                .frame(width: 20, height: 20)
                                     .foregroundStyle(.black)
                             }
                     }
@@ -122,7 +120,13 @@ struct DiaryWriteView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         viewModel.input.saveButtonTapped.send()
-                        dismiss()
+                        
+                        if viewModel.output.isAllowed {
+                            FilesManager.shared.saveImageToDocument(image: savedImage!, filename: DateFormatManager.shared.getyymmdd(Date()))
+                            dismiss()
+                            viewModel.output.isAllowed = false
+                        }
+                        
                     } label: {
                         Text("저장")
                             .foregroundStyle(.black)
@@ -135,7 +139,6 @@ struct DiaryWriteView: View {
                     if let photosPickerItem, let data = try? await photosPickerItem.loadTransferable(type: Data.self) {
                         if let image = UIImage(data: data) {
                             savedImage = image
-                            print(savedImage)
                         }
                     }
                     

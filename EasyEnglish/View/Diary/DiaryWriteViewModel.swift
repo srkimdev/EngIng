@@ -25,6 +25,7 @@ final class DiaryWriteViewModel: ObservableObject {
     
     struct Output {
         var diary = DiaryTable()
+        var isAllowed = false
     }
     
     init() {
@@ -41,9 +42,10 @@ final class DiaryWriteViewModel: ObservableObject {
     private func saveDiary() {
         
         if titleText.isEmpty || storyText.isEmpty {
-            
+            output.isAllowed = false
         } else {
             repository.createItem(DiaryTable(title: titleText, content: storyText))
+            output.isAllowed = true
         }
         
     }

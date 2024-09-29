@@ -122,8 +122,16 @@ struct DiaryRowView: View {
                             Spacer()
                             
                             RoundedRectangle(cornerRadius: 10)
-                                .fill(.white)
                                 .frame(width: 80, height: 80)
+                                .overlay {
+                                    if let uiImage = FilesManager.shared.loadImageToDocument(filename: DateFormatManager.shared.getyymmdd(diary.date)) {
+                                        Image(uiImage: uiImage)
+                                            .resizable()
+                                            .scaledToFill()
+                                            .frame(width: 80, height: 80)
+                                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                                    }
+                                }
                             
                         }
                         .padding(.horizontal, 10)
