@@ -22,6 +22,7 @@
 		DC113C922CA5547A0008F310 /* DateFormatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC113C912CA5547A0008F310 /* DateFormatManager.swift */; };
 		DC113C942CA576540008F310 /* ProblemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC113C932CA576540008F310 /* ProblemListViewModel.swift */; };
 		DC113C982CA6CBFD0008F310 /* SaveProblemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC113C972CA6CBFD0008F310 /* SaveProblemViewModel.swift */; };
+		DC113C9A2CA920F90008F310 /* FilesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC113C992CA920F90008F310 /* FilesManager.swift */; };
 		DC1C6AEA2CA2C4830033666A /* AttendanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C6AE92CA2C4830033666A /* AttendanceViewModel.swift */; };
 		DC5DBB992C9069F8001687FC /* EasyEnglishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DBB982C9069F8001687FC /* EasyEnglishApp.swift */; };
 		DC5DBB9B2C9069F8001687FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DBB9A2C9069F8001687FC /* ContentView.swift */; };
@@ -92,6 +93,7 @@
 		DC113C912CA5547A0008F310 /* DateFormatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatManager.swift; sourceTree = "<group>"; };
 		DC113C932CA576540008F310 /* ProblemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemListViewModel.swift; sourceTree = "<group>"; };
 		DC113C972CA6CBFD0008F310 /* SaveProblemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveProblemViewModel.swift; sourceTree = "<group>"; };
+		DC113C992CA920F90008F310 /* FilesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesManager.swift; sourceTree = "<group>"; };
 		DC1C6AE92CA2C4830033666A /* AttendanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewModel.swift; sourceTree = "<group>"; };
 		DC5DBB952C9069F8001687FC /* EasyEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5DBB982C9069F8001687FC /* EasyEnglishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyEnglishApp.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				DCFD543D2CA158870000D2EC /* DBTable.swift */,
 				DCFD542E2CA017F40000D2EC /* ReadJSON.swift */,
 				DCC7900C2CA2ABF70088AB76 /* RealmRepository.swift */,
+				DC113C992CA920F90008F310 /* FilesManager.swift */,
 				DCFD542C2CA0175B0000D2EC /* sentences.json */,
 			);
 			path = Database;
@@ -467,6 +470,7 @@
 				DCFD54402CA158870000D2EC /* DBTable.swift in Sources */,
 				DC6666DF2C9BE8BB00251F82 /* TranslateQuery.swift in Sources */,
 				DCFF76C62C959F7900D479E1 /* ProblemChapterView.swift in Sources */,
+				DC113C9A2CA920F90008F310 /* FilesManager.swift in Sources */,
 				DC5DBB9B2C9069F8001687FC /* ContentView.swift in Sources */,
 				DC0D9B962C9323AB00AD91DC /* CalendarView.swift in Sources */,
 				DC0D9B8E2C93129300AD91DC /* APIKey.swift in Sources */,
