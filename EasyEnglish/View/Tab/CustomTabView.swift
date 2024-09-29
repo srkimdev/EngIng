@@ -43,7 +43,7 @@ struct CustomTabView: View {
                         .scaledToFit()
                         .frame(width: 22)
                     if selected == .problem {
-                        Text("Review")
+                        Text("Study")
                             .font(.system(size: 11))
                     }
                 }

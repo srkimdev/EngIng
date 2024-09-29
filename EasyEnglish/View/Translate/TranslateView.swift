@@ -21,7 +21,7 @@ struct TranslateView: View {
             VStack(spacing: 0) {
                 
                 Rectangle()
-                    .fill(.blue.opacity(0.05))
+                    .fill(.orange.opacity(0.05))
                     .overlay {
                         CustomTextEditor(text: $previousText, placeholder: "Enter some text")
                             .padding([.top, .horizontal], 25)
@@ -34,10 +34,10 @@ struct TranslateView: View {
                 
                 Rectangle()
                     .fill(.white)
-                    .overlay {
-                        TextEditor(text: $viewModel.output.translatedText)
-                            .padding([.bottom, .horizontal], 25)
+                    .overlay(alignment: .topLeading) {
+                        Text(viewModel.output.translatedText)
                             .padding(.top, 80)
+                            .padding(.horizontal, 35)
                     }
             }
             
@@ -53,7 +53,7 @@ struct TranslateView: View {
         HStack {
             VStack {
                 Text("한국어")
-                    .foregroundStyle(.blue)
+                    .foregroundStyle(.black)
                 Button(action: {
                     viewModel.input.inputText.send(previousText) //
                 }, label: {
@@ -68,7 +68,7 @@ struct TranslateView: View {
                 .padding(.horizontal, 16)
                 
                 Text("English")
-                    .foregroundStyle(.blue)
+                    .foregroundStyle(.black)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             
@@ -78,6 +78,7 @@ struct TranslateView: View {
                 
             }, label: {
                 Image(systemName: "speaker.wave.2")
+                    .foregroundStyle(.black)
             })
             .padding(.top, 100)
 
