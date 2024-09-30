@@ -11,8 +11,6 @@ import CarouselStack
 
 struct ProblemListView: View {
     
-    let colors: [Color] = [.blue.opacity(0.2), .brown, .black, .cyan, .green, .indigo, .pink, .purple, .red, .orange, .yellow]
-    
     @StateObject private var viewModel = ProblemListViewModel()
     
     var body: some View {
@@ -20,16 +18,10 @@ struct ProblemListView: View {
         GeometryReader { geometry in
         
             VStack {
-                CarouselStack(
-                        colors,
-                        initialIndex: 0
-                    ) { color in
-                        color
-                            .frame(width: geometry.size.width / 1.2, height: geometry.size.width / 1.96)
-                            .cornerRadius(16)
-                            .overlay {
-                                Text("124")
-                            }
+                CarouselStack(Categories.allCases, initialIndex: 0) { category in
+                    
+                    bannerView(category, geometry)
+                        .frame(width: geometry.size.width / 1.2, height: geometry.size.width / 1.96)
                     }
                     .carouselStyle(.infiniteScroll)
                     .carouselScale(0.8)
@@ -41,7 +33,6 @@ struct ProblemListView: View {
                 ScrollView {
                         
                     VStack {
-                        Text("Example")
                         
                         ForEach(viewModel.output.selectedCategory.chapters, id: \.self) { item in
                             categoryRowView(item)
@@ -63,18 +54,38 @@ struct ProblemListView: View {
         
     }
     
+    private func bannerView(_ category: Categories, _ geometry: GeometryProxy) -> some View {
+        
+        RoundedRectangle(cornerRadius: 16)
+            .fill(category.colors)
+            .overlay {
+                HStack {
+                    VStack {
+                        Spacer()
+                        Image(category.images)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: geometry.size.width / 3.2)
+                    }
+                    Spacer()
+                    Text(category.rawValue)
+                        .font(.title2)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                }
+                .padding(.horizontal)
+            }
+        
+    }
+    
     private func categoryRowView(_ chapter: ChapterTable) -> some View {
 
         ZStack {
-            
-            Color.gray.opacity(0.1)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
             
             NavigationLink {
                 ProblemSentenceView(chapter: chapter)
             } label: {
                 RoundedRectangle(cornerRadius: 8)
-                    .fill(.white)
+                    .fill(.gray.opacity(0.1))
             }
                 
             VStack(alignment: .leading) {

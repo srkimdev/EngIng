@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum Categories: String, CaseIterable {
     
@@ -46,7 +47,54 @@ enum Categories: String, CaseIterable {
         
     }
     
-//    var 
+    var images: String {
+        switch self {
+        case .movieDrama:
+            return "dog"
+        case .food:
+            return "cat"
+        case .transportation:
+            return "chicken"
+        case .dailyLife:
+            return "frog"
+        case .travel:
+            return "hamster"
+        case .business:
+            return "hedgehog"
+        case .sports:
+            return "cat2"
+        case .music:
+            return "rabbit"
+        case .shopping:
+            return "snake"
+        case .historyCulture:
+            return "bird"
+        }
+    }
     
+    var colors: Color {
+        switch self {
+        case .movieDrama:
+            return Color.red.opacity(0.3)
+        case .food:
+            return Color.orange.opacity(0.3)
+        case .transportation:
+            return Color.yellow.opacity(0.3)
+        case .dailyLife:
+            return Color.green.opacity(0.3)
+        case .travel:
+            return Color.blue.opacity(0.3)
+        case .business:
+            return Color.indigo.opacity(0.3)
+        case .sports:
+            return Color.purple.opacity(0.3)
+        case .music:
+            return Color.brown.opacity(0.3)
+        case .shopping:
+            return Color.cyan.opacity(0.3)
+        case .historyCulture:
+            return Color.pink.opacity(0.3)
+        }
+    }
     
 }

@@ -56,7 +56,6 @@
 		DCFD542F2CA017F40000D2EC /* ReadJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFD542E2CA017F40000D2EC /* ReadJSON.swift */; };
 		DCFD54302CA110310000D2EC /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = DCFD541F2C9EB8650000D2EC /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		DCFD54402CA158870000D2EC /* DBTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFD543D2CA158870000D2EC /* DBTable.swift */; };
-		DCFF76C62C959F7900D479E1 /* ProblemChapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76C52C959F7900D479E1 /* ProblemChapterView.swift */; };
 		DCFF76C92C96C36700D479E1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76C82C96C36700D479E1 /* MainView.swift */; };
 		DCFF76CB2C96C7C800D479E1 /* WeekChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76CA2C96C7C800D479E1 /* WeekChartView.swift */; };
 		DCFF76CD2C96D20D00D479E1 /* CircleChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFF76CC2C96D20D00D479E1 /* CircleChartView.swift */; };
@@ -121,7 +120,6 @@
 		DCFD542C2CA0175B0000D2EC /* sentences.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sentences.json; sourceTree = "<group>"; };
 		DCFD542E2CA017F40000D2EC /* ReadJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadJSON.swift; sourceTree = "<group>"; };
 		DCFD543D2CA158870000D2EC /* DBTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBTable.swift; sourceTree = "<group>"; };
-		DCFF76C52C959F7900D479E1 /* ProblemChapterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemChapterView.swift; sourceTree = "<group>"; };
 		DCFF76C82C96C36700D479E1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DCFF76CA2C96C7C800D479E1 /* WeekChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekChartView.swift; sourceTree = "<group>"; };
 		DCFF76CC2C96D20D00D479E1 /* CircleChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleChartView.swift; sourceTree = "<group>"; };
@@ -166,7 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				DC0D9B882C930E2900AD91DC /* ProblemListView.swift */,
-				DCFF76C52C959F7900D479E1 /* ProblemChapterView.swift */,
 				DCFD54212C9FFB960000D2EC /* ProblemSentenceView.swift */,
 				DC113C932CA576540008F310 /* ProblemListViewModel.swift */,
 			);
@@ -469,7 +466,6 @@
 				DC113C942CA576540008F310 /* ProblemListViewModel.swift in Sources */,
 				DCFD54402CA158870000D2EC /* DBTable.swift in Sources */,
 				DC6666DF2C9BE8BB00251F82 /* TranslateQuery.swift in Sources */,
-				DCFF76C62C959F7900D479E1 /* ProblemChapterView.swift in Sources */,
 				DC113C9A2CA920F90008F310 /* FilesManager.swift in Sources */,
 				DC5DBB9B2C9069F8001687FC /* ContentView.swift in Sources */,
 				DC0D9B962C9323AB00AD91DC /* CalendarView.swift in Sources */,
