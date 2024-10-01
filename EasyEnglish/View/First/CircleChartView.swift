@@ -10,9 +10,10 @@ import Charts
 
 private struct Pie: View {
 
-    @State var slices: [(Double, Color)]
+    var slices: [(Double, Color)]
 
     var body: some View {
+        let _ = print(slices)
         Canvas { context, size in
             let total = slices.reduce(0) { $0 + $1.0 }
             context.translateBy(x: size.width * 0.5, y: size.height * 0.5)
@@ -36,20 +37,21 @@ private struct Pie: View {
     }
 }
 
-struct Expense: Identifiable {
-    let id = UUID()
-    let category: String
-    let amount: Double
-}
-
 struct CircleChartView: View {
+    
+    @Binding var solved: Int
+    @Binding var total: Int
     
     var body: some View {
         
         GeometryReader { geometry in
+            
+            let solvedDouble = Double(solved)
+            let totalDouble = Double(total)
+            
             Pie(slices: [
-                (2, .red),
-                (3, .orange)
+                (solvedDouble, .red),
+                (totalDouble - solvedDouble, .orange)
             ])
             .overlay {
                 Circle()
@@ -59,8 +61,11 @@ struct CircleChartView: View {
                         height: geometry.size.height * 0.75
                     )
                 VStack {
-                    Text("14")
-                    Text("Days")
+                    if totalDouble > 0 {
+                        Text("\(Int(solvedDouble / totalDouble * 100))%")
+                    } else {
+                        Text("0%")
+                    }
                 }
                 
             }
@@ -71,5 +76,5 @@ struct CircleChartView: View {
 }
 
 //#Preview {
-//    CircleChartView()
+//    CircleChartView(solved: 20)
 //}

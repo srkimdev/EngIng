@@ -22,10 +22,13 @@ final class AttendanceViewModel: ObservableObject {
     struct Input {
         let attendanceCheck = PassthroughSubject<Void, Never>()
         let showSavedSentenceCount = PassthroughSubject<Void, Never>()
+        let showSolvedSentenceCount = PassthroughSubject<Void, Never>()
     }
     
     struct Output {
         var savedSentenceCount = 0
+        var solvedSentenceCount = 0
+        var solvedTotalCount = 0
         var weekDate: [DayTable] = []
     }
     
@@ -50,6 +53,15 @@ final class AttendanceViewModel: ObservableObject {
             .sink { [weak self] _ in
                 guard let self else { return }
                 output.savedSentenceCount = sentences.filter { $0.isLike == true }.count
+            }
+            .store(in: &cancellables)
+        
+        input.showSolvedSentenceCount
+            .sink { [weak self] _ in
+                guard let self else { return }
+                output.solvedSentenceCount = sentences.filter { $0.isCheck == true }.count
+                output.solvedTotalCount = sentences.count
+                print(output.solvedSentenceCount, output.solvedTotalCount)
             }
             .store(in: &cancellables)
         

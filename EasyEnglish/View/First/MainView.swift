@@ -38,6 +38,7 @@ struct MainView: View {
                         ScrollView {
                             mainView(geometry: geometry)
                         }
+                        .scrollIndicators(.hidden)
                     }
                 
             }
@@ -46,6 +47,7 @@ struct MainView: View {
         .onAppear {
             viewModel.input.attendanceCheck.send()
             viewModel.input.showSavedSentenceCount.send()
+            viewModel.input.showSolvedSentenceCount.send()
         }
 
     }
@@ -65,11 +67,25 @@ struct MainView: View {
                 .overlay {
                     
                     HStack {
+                        VStack {
+                            Text("해결한 문제")
+                                .font(.system(size: 13))
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(.orange.opacity(0.2))
+                                .frame(width: geometry.size.width / 6, height: geometry.size.width / 10)
+                                .overlay {
+                                    Text("\(viewModel.output.solvedSentenceCount)개")
+                                }
+                        }
+                        
                         Spacer()
-                        CircleChartView()
+                        CircleChartView(
+                            solved: $viewModel.output.solvedSentenceCount,
+                            total: $viewModel.output.solvedTotalCount
+                        )
                             .frame(width: geometry.size.width / 5, height: geometry.size.width / 5)
                     }
-                    .padding(.horizontal, 25)
+                    .padding(.horizontal, 20)
                     
                 }
                 .padding(.bottom, 20)
@@ -149,36 +165,6 @@ struct MainView: View {
         
     }
     
-//    func circle3ChartView() -> some View {
-//        
-//        RoundedRectangle(cornerRadius: 15)
-////            .fill(.black)
-//            .frame(height: Constants.screenHeight / 5.5)
-//            .overlay {
-//                
-//                HStack {
-//                    VStack {
-//                        Text("goal reached")
-//                            .font(.system(size: 20).bold())
-//                            .frame(maxWidth: .infinity, alignment: .leading)
-//                        
-//                        Spacer()
-//
-//                        Text("총 7일 연속")
-//                            .font(.system(size: 20))
-//                            .frame(maxWidth: .infinity, alignment: .leading)
-//                    }
-//                    .padding(.vertical, 25)
-//                    
-//                    CircleChartView()
-//                }
-//                .padding(.horizontal, 25)
-//
-//            }
-//            .padding(.horizontal, 16)
-//        
-//    }
-    
     func button3View() -> some View {
     
         HStack {
@@ -232,8 +218,8 @@ struct MainView: View {
     
 }
 
-//#Preview {
-//    MainView()
-//}
+#Preview {
+    MainView()
+}
 
 

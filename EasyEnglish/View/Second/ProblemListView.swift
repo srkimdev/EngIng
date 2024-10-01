@@ -69,7 +69,7 @@ struct ProblemListView: View {
                     }
                     Spacer()
                     Text(category.rawValue)
-                        .font(.title2)
+                        .font(.system(size: 24).bold())
                         .frame(maxWidth: .infinity, alignment: .center)
                 }
                 .padding(.horizontal)
@@ -110,6 +110,7 @@ struct ProblemListView: View {
             .padding()
         
         }
+        .padding(.bottom, 10)
         
     }
     
