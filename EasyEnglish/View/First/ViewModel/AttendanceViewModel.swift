@@ -61,7 +61,7 @@ final class AttendanceViewModel: ObservableObject {
                 guard let self else { return }
                 output.solvedSentenceCount = sentences.filter { $0.isCheck == true }.count
                 output.solvedTotalCount = sentences.count
-                print(output.solvedSentenceCount, output.solvedTotalCount)
+                getSolveCount()
             }
             .store(in: &cancellables)
         
@@ -74,6 +74,7 @@ final class AttendanceViewModel: ObservableObject {
             let currentDate = calendar.date(byAdding: .day, value: i, to: date)!
             let dayEntry = DayTable()
             dayEntry.date = currentDate
+            dayEntry.day = DateFormatManager.shared.getDayOfWeek(from: currentDate)
 
             repository.createItem(dayEntry)
         }
@@ -115,6 +116,16 @@ final class AttendanceViewModel: ObservableObject {
 
         print(savedDays)
         return Array(savedDays)
+    }
+    
+    func getSolveCount() {
+        
+        for item in output.weekDate {
+            repository.updateItem(primaryKey: item.id) { value in
+                value.solveCount = sentences.filter { $0.whenSolved == DateFormatManager.shared.getyymmdd(value.date) }.count
+            }
+        }
+        
     }
     
 }

@@ -71,7 +71,7 @@ struct MainView: View {
                             Text("해결한 문제")
                                 .font(.system(size: 13))
                             RoundedRectangle(cornerRadius: 10)
-                                .fill(.orange.opacity(0.2))
+                                .fill(Color(red: 249/255, green: 192/255, blue: 12/255).opacity(0.5))
                                 .frame(width: geometry.size.width / 6, height: geometry.size.width / 10)
                                 .overlay {
                                     Text("\(viewModel.output.solvedSentenceCount)개")
@@ -140,7 +140,7 @@ struct MainView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.title2)
             
-            recent7daysChart()
+            recent7daysChart(viewModel.output.weekDate)
                 .frame(height: geometry.size.height / 3)
                 .padding(.bottom, 60)
             
@@ -154,64 +154,26 @@ struct MainView: View {
         HStack {
             ForEach(0..<7) { index in
                 Circle()
-                    .fill(viewModel.output.weekDate[index].isAttended ? Color.green : Color.gray)
+                    .fill(viewModel.output.weekDate[index].isAttended ? Color.brown.opacity(0.5) : Color.gray)
                     .frame(width: 40, height: 40)
                     .overlay {
                         Text(DateFormatManager.shared.getDayOfWeek(from: viewModel.output.weekDate[index].date))
-                            .foregroundColor(.white)
+                            .foregroundColor(viewModel.output.weekDate[index].isAttended ? .black : Color.white)
                     }
             }
         }
         
     }
     
-    func button3View() -> some View {
-    
-        HStack {
-            ForEach(Sections.allCases, id: \.self) { item in
-                buttonRowView(item)
-            }
-        }
-        
-    }
-    
-    func buttonRowView(_ vc: Sections) -> some View {
-        
-        VStack {
-            
-            NavigationLink {
-                vc.showVC
-            } label: {
-                RoundedRectangle(cornerRadius: 15)
-                    .fill(Color.gray.opacity(0.3))
-                    .frame(width: (Constants.screenWidth - 180) / 3, height: (Constants.screenWidth - 180) / 3)
-                    .padding(.bottom, 5)
-                    .overlay {
-//                        Image(vc.images)
-//                            .resizable()
-//                            .aspectRatio(contentMode: .fit)
-//                            .frame(width: 40, height: 40)
-                    }
-            }
-            
-            Text(vc.rawValue)
-            
-        }
-        .padding(.horizontal, 20)
-    
-    }
-    
-    func recent7daysChart() -> some View {
+    func recent7daysChart(_ weekList: [DayTable]) -> some View {
         
         RoundedRectangle(cornerRadius: 10)
             .fill(.white)
             .overlay {
-                
                 VStack {
-                    WeekChartView()
+                    WeekChartView(weekList: weekList)
                 }
                 .padding(20)
-                
             }
         
     }

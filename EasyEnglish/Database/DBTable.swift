@@ -30,6 +30,7 @@ final class SentenceTable: Object, Identifiable {
     @Persisted var english: String = ""
     @Persisted var isCheck: Bool = false
     @Persisted var isLike: Bool = false
+    @Persisted var whenSolved: String = ""
 }
 
 //MARK: Diary
@@ -48,9 +49,11 @@ final class DiaryTable: Object {
     }
 }
 
-final class DayTable: Object {
+final class DayTable: Object, Identifiable {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var date: Date
+    @Persisted var day: String
     @Persisted var isAttended: Bool
+    @Persisted var solveCount: Int
 }
 

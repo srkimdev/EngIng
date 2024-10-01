@@ -14,6 +14,7 @@ struct CustomTabView: View {
     var body: some View {
         
         HStack {
+            
             Spacer()
             
             Button {
@@ -70,23 +71,24 @@ struct CustomTabView: View {
             
             Spacer()
             
-            Button {
-                selected = .user
-            } label: {
-                VStack(alignment: .center) {
-                    Image(systemName: "person")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 22)
-                    if selected == .user {
-                        Text("User")
-                            .font(.system(size: 11))
-                    }
-                }
-            }
-            .foregroundStyle(selected == .user ? Color.accentColor : Color.primary)
+//            Spacer()
+//            
+//            Button {
+//                selected = .user
+//            } label: {
+//                VStack(alignment: .center) {
+//                    Image(systemName: "person")
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 22)
+//                    if selected == .user {
+//                        Text("User")
+//                            .font(.system(size: 11))
+//                    }
+//                }
+//            }
+//            .foregroundStyle(selected == .user ? Color.accentColor : Color.primary)
             
-            Spacer()
             
         }
         .padding()

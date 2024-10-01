@@ -19,16 +19,16 @@ extension Date {
         return Date.getYearFormatter.string(from: self)
     }
     
+    var getMonth: String {
+        return Date.getMonthFormatter.string(from: self)
+    }
+    
     //MARK: Get MMMM string
     static let getMonthFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "MMMM"
         return formatter
     }()
-      
-    var getMonth: String {
-        return Date.getMonthFormatter.string(from: self)
-    }
     
     //MARK: Get MMMM yyyy dd string
     static let calendarDayDateFormatter: DateFormatter = {

@@ -13,7 +13,7 @@ private struct Pie: View {
     var slices: [(Double, Color)]
 
     var body: some View {
-        let _ = print(slices)
+        
         Canvas { context, size in
             let total = slices.reduce(0) { $0 + $1.0 }
             context.translateBy(x: size.width * 0.5, y: size.height * 0.5)
@@ -51,7 +51,7 @@ struct CircleChartView: View {
             
             Pie(slices: [
                 (solvedDouble, .red),
-                (totalDouble - solvedDouble, .orange)
+                (totalDouble - solvedDouble, .gray.opacity(0.2))
             ])
             .overlay {
                 Circle()

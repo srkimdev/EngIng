@@ -89,6 +89,7 @@ struct ProblemSentenceView: View {
                         answerButtonClick.toggle()
                         repository.updateItem(primaryKey: chapter.id) { value in
                             value.sentences[currentPage].isCheck = true
+                            value.sentences[currentPage].whenSolved = DateFormatManager.shared.getyymmdd(Date())
                         }
                     }) {
                         RoundedRectangle(cornerRadius: 10)

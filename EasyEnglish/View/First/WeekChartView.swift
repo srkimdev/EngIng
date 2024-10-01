@@ -8,33 +8,21 @@
 import SwiftUI
 import Charts
 
-struct Posting: Identifiable {
-  let name: String
-  let count: Int
-  
-  var id: String { name }
-}
-
-let postings: [Posting] = [
-  .init(name: "MON", count: 20),
-  .init(name: "TUE", count: 18),
-  .init(name: "WED", count: 40),
-  .init(name: "THU", count: 50),
-  .init(name: "FRI", count: 20),
-  .init(name: "SAT", count: 10),
-  .init(name: "SUN", count: 30)
-]
-
 struct WeekChartView: View {
+    
+    var weekList: [DayTable]?
+    
     var body: some View {
         
+//        let _ = print(repository.detectRealmURL())
+        
         Chart {
-            ForEach(postings) { posting in
+            ForEach(weekList ?? []) { posting in
                 LineMark(
-                    x: .value("Name", posting.name),
-                    y: .value("Posting", posting.count)
+                    x: .value("Name", posting.day),
+                    y: .value("Posting", posting.solveCount)
                 )
-                .foregroundStyle(Color.red)
+                .foregroundStyle(.red)
             }
         }
         
