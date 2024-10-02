@@ -13,6 +13,7 @@ protocol TargetType: URLRequestConvertible {
     var method: HTTPMethod { get }
     var path: String { get }
     var header: [String: String] { get }
+    var queryItems: [URLQueryItem]? { get }
     var body: Data? { get }
 }
 
@@ -20,7 +21,7 @@ extension TargetType {
     
     func asURLRequest() throws -> URLRequest {
         let url = try baseURL.asURL()
-        var request = try URLRequest(url: url.appending(path: path), method: method)
+        var request = try URLRequest(url: url.appending(path: path).appending(queryItems: queryItems ?? []), method: method)
         request.allHTTPHeaderFields = header
         request.httpBody = body
         return request

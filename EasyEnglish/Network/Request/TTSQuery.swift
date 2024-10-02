@@ -19,7 +19,7 @@ struct TextInput: Codable {
 
 struct VoiceSelectionParams: Codable {
     let languageCode: String = "en-US"
-    let name: String = "en-GB-Standard-A"
+    let name: String = "en-US-Wavenet-D"
     let ssmlGender: String = "FEMALE"
 }
 

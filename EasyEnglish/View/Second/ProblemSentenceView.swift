@@ -14,7 +14,8 @@ struct ProblemSentenceView: View {
     var chapter: ChapterTable
     
     @State var currentPage: Int = 0
-    @State var answerButtonClick: Bool = false
+    
+    @StateObject private var viewModel = ProblemSentenceViewModel()
     
     let colors: [Color] = [.white, .white, .white, .white, .white, .white, .white, .white, .white, .white]
     
@@ -30,7 +31,6 @@ struct ProblemSentenceView: View {
                     color
                         .border(.black, width: 1)
                         .frame(width: abs(geometry.size.width - 60), height: abs(geometry.size.height / 1.4))
-    //                    .clipShape(RoundedRectangle(cornerRadius: 16))
                         .overlay {
                             
                             VStack {
@@ -46,7 +46,7 @@ struct ProblemSentenceView: View {
                                 
                                 Spacer()
                                 
-                                if answerButtonClick {
+                                if viewModel.output.answerButtonStatus {
                                     Text(chapter.sentences[currentPage].english)
                                 } else {
                                     Text("")
@@ -61,7 +61,7 @@ struct ProblemSentenceView: View {
                 }
                 .onShuffleDeck({ value in
                     currentPage = value.index
-                    answerButtonClick = false
+                    viewModel.output.answerButtonStatus = false
                 })
                 .padding(.top, 20)
                 
@@ -86,7 +86,7 @@ struct ProblemSentenceView: View {
                     Spacer()
                     
                     Button(action: {
-                        answerButtonClick.toggle()
+                        viewModel.input.answerButtonTap.send()
                         repository.updateItem(primaryKey: chapter.id) { value in
                             value.sentences[currentPage].isCheck = true
                             value.sentences[currentPage].whenSolved = DateFormatManager.shared.getyymmdd(Date())
@@ -104,7 +104,9 @@ struct ProblemSentenceView: View {
                     Spacer()
                     
                     Button(action: {
-                        
+                        if viewModel.output.answerButtonStatus {
+                            viewModel.input.soundButtonTap.send(chapter.sentences[currentPage].english)
+                        }
                     }) {
                         RoundedRectangle(cornerRadius: 10)
                             .fill(.orange.opacity(0.2))

@@ -1,74 +1,57 @@
 //
-//  TranslateViewModel.swift
+//  ProblemSentenceViewModel.swift
 //  EasyEnglish
 //
-//  Created by 김성률 on 9/19/24.
+//  Created by 김성률 on 10/2/24.
 //
 
 import Foundation
 import Combine
 import AVFoundation
 
-final class TranslateViewModel: ObservableObject {
+final class ProblemSentenceViewModel: ObservableObject {
     
     var cancellables = Set<AnyCancellable>()
-    var input = Input()
-    @Published var output = Output()
-    
     var audioPlayer: AVAudioPlayer?
     
+    let input = Input()
+    @Published
+    var output = Output()
+    
     struct Input {
-        let inputText = PassthroughSubject<String, Never>()
-        let ttsButtonTap = PassthroughSubject<String, Never>()
+        let answerButtonTap = PassthroughSubject<Void, Never>()
+        let soundButtonTap = PassthroughSubject<String, Never>()
     }
-
+    
     struct Output {
-        var translatedText: String = ""
-        var ttsMP3: String = ""
+        var answerButtonStatus = false
     }
     
     init() {
         
-        input.inputText
+        input.answerButtonTap
             .sink { value in
-                Task {
-                    await self.translate(text: value)
-                }
+                self.output.answerButtonStatus.toggle()
             }
             .store(in: &cancellables)
         
-        input.ttsButtonTap
+        input.soundButtonTap
             .sink { value in
                 Task {
                     await self.tts(text: value)
                 }
             }
             .store(in: &cancellables)
-            
-    }
-    
-    func translate(text: String) async {
-        let query = TranslateQuery(text: [text], target_lang: "EN")
-        let result = await NetworkManager.shared.requestAPI(router: Router.translate(query: query), type: TranslateResponse.self)
         
-        switch result {
-        case .success(let value):
-            DispatchQueue.main.async {
-                self.output.translatedText = value.translations.first?.text ?? ""
-            }
-        case .failure(let error):
-            print(error)
-        }
     }
     
-    func tts(text: String) async {
+    private func tts(text: String) async {
         
         let input = TextInput(text: text)
         let voiceSelectionParams = VoiceSelectionParams()
         let audioConfig = AudioConfig()
         
         let query = TTSInput(input: input, voice: voiceSelectionParams, audioConfig: audioConfig)
-        print(query, "query")
         let result = await NetworkManager.shared.requestAPI(router: Router.tts(query: query), type: TTSResponse.self)
         
         switch result {
@@ -82,7 +65,7 @@ final class TranslateViewModel: ObservableObject {
         
     }
     
-    func playSound(data: Data) {
+    private func playSound(data: Data) {
         do {
             audioPlayer = try AVAudioPlayer(data: data)
             audioPlayer?.play()
@@ -92,5 +75,6 @@ final class TranslateViewModel: ObservableObject {
             print("오디오 재생 중 오류 발생: \(error.localizedDescription)")
         }
     }
+    
     
 }

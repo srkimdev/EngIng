@@ -27,7 +27,7 @@ enum Router: TargetType {
         case .translate:
             return "v2/translate"
         case .tts:
-            return "v1/text:synthesize?key=\(APIKey.ttsKey)"
+            return "v1/text:synthesize"
         }
     }
     
@@ -37,6 +37,15 @@ enum Router: TargetType {
             return .post
         case .tts:
             return .post
+        }
+    }
+    
+    var queryItems: [URLQueryItem]? {
+        switch self {
+        case .tts:
+            return [URLQueryItem(name: "key", value: APIKey.ttsKey)]
+        default:
+            return nil
         }
     }
     
