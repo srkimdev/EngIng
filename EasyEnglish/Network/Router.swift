@@ -11,11 +11,14 @@ import Alamofire
 enum Router: TargetType {
     
     case translate(query: TranslateQuery)
+    case tts(query: TTSInput)
     
     var baseURL: String {
         switch self {
         case .translate:
             return "https://api-free.deepl.com/"
+        case .tts:
+            return "https://texttospeech.googleapis.com/"
         }
     }
     
@@ -23,6 +26,8 @@ enum Router: TargetType {
         switch self {
         case .translate:
             return "v2/translate"
+        case .tts:
+            return "v1/text:synthesize?key=\(APIKey.ttsKey)"
         }
     }
     
@@ -30,12 +35,24 @@ enum Router: TargetType {
         switch self {
         case .translate:
             return .post
+        case .tts:
+            return .post
         }
     }
     
     var body: Data? {
         switch self {
         case .translate(let query):
+            let encoder = JSONEncoder()
+            
+            do {
+                let data = try encoder.encode(query)
+                return data
+            } catch {
+                return nil
+            }
+            
+        case .tts(let query):
             let encoder = JSONEncoder()
             
             do {
@@ -56,6 +73,10 @@ enum Router: TargetType {
         case .translate:
             return [
                 Header.authorization.rawValue: Header.DeepLKey.rawValue + APIKey.deepLKey,
+                Header.contentType.rawValue: Header.json.rawValue
+            ]
+        case .tts:
+            return [
                 Header.contentType.rawValue: Header.json.rawValue
             ]
         }
