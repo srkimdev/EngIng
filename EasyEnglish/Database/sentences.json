@@ -234,140 +234,140 @@
                 ]
             },
             {
-                "chapterName": "Chapter2",
-                "sentences": [
+                  "chapterName": "Chapter2",
+                  "sentences": [
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이 식당에서 가장 인기 있는 메뉴는 뭐예요?",
+                      "english": "What’s the most popular dish at this restaurant?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "더 필요한 게 있나요?",
+                      "english": "Do you need anything else?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이건 너무 짜네요.",
+                      "english": "This is too salty."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "식사 후에 커피 드시겠어요?",
+                      "english": "Would you like coffee after the meal?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "양파는 빼주세요.",
+                      "english": "Please leave out the onions."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이 요리에는 어떤 재료가 들어가요?",
+                      "english": "What ingredients are in this dish?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이번에 와인 한 병을 추가할게요.",
+                      "english": "Let’s add a bottle of wine this time."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "아침 식사는 포함되어 있나요?",
+                      "english": "Is breakfast included?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "음식을 남겨도 괜찮아요?",
+                      "english": "Is it okay to leave some food behind?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이 샌드위치 안에 뭐가 들어 있어요?",
+                      "english": "What’s inside this sandwich?"
                     }
-                ]
+                  ]
             },
             {
-                "chapterName": "Chapter3",
-                "sentences": [
+                  "chapterName": "Chapter3",
+                  "sentences": [
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이번에 새로운 레시피를 시도해 볼까요?",
+                      "english": "Shall we try a new recipe this time?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "재료가 신선한가요?",
+                      "english": "Are the ingredients fresh?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이 요리는 맵지 않나요?",
+                      "english": "Is this dish spicy?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "음료수는 뭐가 있나요?",
+                      "english": "What drinks do you have?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이 레스토랑은 유명한 셰프가 있나요?",
+                      "english": "Does this restaurant have a famous chef?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이번에 다른 메뉴를 시켜보세요.",
+                      "english": "Try ordering something different this time."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "커피는 무료 리필이 되나요?",
+                      "english": "Is coffee refillable for free?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이 요리는 어떻게 만들어지나요?",
+                      "english": "How is this dish prepared?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "음식을 포장할 수 있나요?",
+                      "english": "Can I get the food to-go?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이건 셰프 추천 메뉴입니다.",
+                      "english": "This is the chef’s recommendation."
                     }
-                ]
+                  ]
             },
             {
-                "chapterName": "Chapter4",
-                "sentences": [
+                  "chapterName": "Chapter4",
+                  "sentences": [
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "디저트는 나중에 주문할게요.",
+                      "english": "I’ll order dessert later."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "짠 음식을 좋아하시나요?",
+                      "english": "Do you like salty food?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "식사할 때 무엇을 마시고 싶으세요?",
+                      "english": "What would you like to drink with your meal?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이곳의 대표 메뉴는 무엇인가요?",
+                      "english": "What’s the signature dish here?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "생선을 좋아하시나요?",
+                      "english": "Do you like fish?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "음식을 나눠 먹을 수 있나요?",
+                      "english": "Can we share the food?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "아이스크림은 디저트로 좋은 선택이에요.",
+                      "english": "Ice cream is a great choice for dessert."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "특별한 식사 요청이 있나요?",
+                      "english": "Do you have any special dietary requests?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "채식 메뉴를 추천해 주세요.",
+                      "english": "Can you recommend a vegetarian dish?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이 레스토랑은 예약이 필요한가요?",
+                      "english": "Do we need a reservation for this restaurant?"
                     }
-                ]
-            },
+                  ]
+            }
         ]
     },
     
@@ -391,7 +391,7 @@
                     },
                     {
                         "korean": "기차표는 어디서 살 수 있나요?",
-                        "english": "Where can i buy train tickets?"
+                        "english": "Where can I buy train tickets?"
                     },
                     {
                         "korean": "이 버스는 시내로 가나요?",
@@ -403,11 +403,11 @@
                     },
                     {
                         "korean": "차가 많이 막히네요.",
-                        "english": "The traffic is really heavy"
+                        "english": "The traffic is really heavy."
                     },
                     {
                         "korean": "기차표를 예매했어요.",
-                        "english": "I booked a train ticket"
+                        "english": "I booked a train ticket."
                     },
                     {
                         "korean": "지하철 노선도를 볼 수 있을까요?",
@@ -420,140 +420,140 @@
                 ]
             },
             {
-                "chapterName": "Chapter2",
-                "sentences": [
+                  "chapterName": "Chapter2",
+                  "sentences": [
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "택시 타는 곳이 어디예요?",
+                      "english": "Where is the taxi stand?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "여기서 기차역까지 얼마나 걸려요?",
+                      "english": "How far is it from here to the train station?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "비행기 좌석은 창가로 예약했어요.",
+                      "english": "I reserved a window seat on the plane."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "주차 요금은 얼마인가요?",
+                      "english": "How much is the parking fee?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "운전면허증이 필요해요?",
+                      "english": "Do I need a driver's license?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "여기서 주유소가 어디예요?",
+                      "english": "Where is the nearest gas station?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이 버스는 몇 시에 출발하나요?",
+                      "english": "What time does this bus leave?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이번 정거장에서 내리면 되나요?",
+                      "english": "Is this my stop?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "버스를 타려면 어디로 가야 해요?",
+                      "english": "Where do I go to catch the bus?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "어디서 표를 사야 하나요?",
+                      "english": "Where can I buy a ticket?"
                     }
-                ]
+                  ]
             },
             {
-                "chapterName": "Chapter3",
-                "sentences": [
+                  "chapterName": "Chapter3",
+                  "sentences": [
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "다음 기차는 몇 시에 출발하나요?",
+                      "english": "When does the next train depart?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "교통 상황이 어떤가요?",
+                      "english": "How’s the traffic?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이 버스는 이 지역을 지나가나요?",
+                      "english": "Does this bus pass through this area?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "대중교통 카드가 필요해요?",
+                      "english": "Do I need a public transport card?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "여기서 지하철로 갈아타야 하나요?",
+                      "english": "Do I need to transfer to the subway here?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "비행기는 언제 이륙하나요?",
+                      "english": "When does the plane take off?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "오늘 교통이 혼잡할 거라고 들었어요.",
+                      "english": "I heard traffic will be heavy today."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "택시 요금은 카드로 결제할 수 있나요?",
+                      "english": "Can I pay the taxi fare with a card?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "택시로 가면 얼마나 걸릴까요?",
+                      "english": "How long will it take if I take a taxi?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "버스는 몇 분마다 있나요?",
+                      "english": "How often does the bus come?"
                     }
-                ]
+                  ]
             },
             {
-                "chapterName": "Chapter4",
-                "sentences": [
+                  "chapterName": "Chapter4",
+                  "sentences": [
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "가장 가까운 버스 정류장은 어디예요?",
+                      "english": "Where is the nearest bus stop?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "지하철 노선도를 어디서 볼 수 있나요?",
+                      "english": "Where can I find the subway map?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "자동차를 렌트하고 싶은데 어떻게 해야 하나요?",
+                      "english": "I’d like to rent a car. How do I do that?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "기차는 어디서 타나요?",
+                      "english": "Where do I catch the train?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "오늘 기차는 지연되나요?",
+                      "english": "Is the train delayed today?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "도로 상황을 미리 확인했어요?",
+                      "english": "Did you check the road conditions in advance?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "택시에서 내릴 곳을 알려 줄 수 있나요?",
+                      "english": "Can you tell me where to get off the taxi?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "비행기 좌석은 얼마나 편안해요?",
+                      "english": "How comfortable are the airplane seats?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "자전거로 여행하기 좋은 날씨인가요?",
+                      "english": "Is the weather good for cycling today?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "오늘은 주차 공간을 쉽게 찾을 수 있을까요?",
+                      "english": "Will it be easy to find parking today?"
                     }
-                ]
-            },
+                  ]
+            }
         ]
     },
     
@@ -565,7 +565,7 @@
                 "sentences": [
                     {
                         "korean": "오늘 날씨가 정말 좋네요.",
-                        "english": "The weather is really nice today"
+                        "english": "The weather is really nice today."
                     },
                     {
                         "korean": "어떻게 지내세요?",
@@ -606,140 +606,140 @@
                 ]
             },
             {
-                "chapterName": "Chapter2",
-                "sentences": [
+                  "chapterName": "Chapter2",
+                  "sentences": [
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "오늘 너무 피곤해 보이네.",
+                      "english": "You look really tired today."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "커피 한 잔 할래?",
+                      "english": "Do you want to grab a coffee?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "어제 잠을 잘 잤어?",
+                      "english": "Did you sleep well last night?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "정리정돈을 잘하는 편이야?",
+                      "english": "Are you good at organizing things?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "집에 오면 보통 뭐 해?",
+                      "english": "What do you usually do when you get home?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "주말에 시간이 있어?",
+                      "english": "Do you have time on the weekend?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "운동하러 갈 때 같이 가자.",
+                      "english": "Let’s go to the gym together next time."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이웃들과 자주 만나?",
+                      "english": "Do you often meet your neighbors?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "오늘 회의는 몇 시에 시작해요?",
+                      "english": "What time does the meeting start today?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "일요일에 어디 갔었어?",
+                      "english": "Where did you go on Sunday?"
                     }
-                ]
+                  ]
             },
             {
-                "chapterName": "Chapter3",
-                "sentences": [
+                  "chapterName": "Chapter3",
+                  "sentences": [
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이제 저녁 먹을 시간이야.",
+                      "english": "It's time to have dinner now."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "아침에 일찍 일어났어?",
+                      "english": "Did you wake up early this morning?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "오늘 일정을 다 마쳤나요?",
+                      "english": "Did you finish all your tasks today?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "주말에는 보통 뭘 해?",
+                      "english": "What do you usually do on weekends?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "취미가 뭐예요?",
+                      "english": "What are your hobbies?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "지금 바빠요?",
+                      "english": "Are you busy right now?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "자주 운동해요?",
+                      "english": "Do you work out often?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "아침마다 신문을 읽어요.",
+                      "english": "I read the newspaper every morning."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "매일 일찍 자는 편이에요?",
+                      "english": "Do you usually go to bed early?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "오늘 하루는 어땠어요?",
+                      "english": "How was your day today?"
                     }
-                ]
+                  ]
             },
             {
-                "chapterName": "Chapter4",
-                "sentences": [
+                  "chapterName": "Chapter4",
+                  "sentences": [
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "가끔 명상을 해요.",
+                      "english": "I meditate sometimes."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "어제 친구와 만나서 커피를 마셨어요.",
+                      "english": "I met a friend for coffee yesterday."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "오늘 새로운 요리를 시도해 봤어요.",
+                      "english": "I tried a new recipe today."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "주말에 특별한 계획 있어요?",
+                      "english": "Do you have any special plans for the weekend?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "산책하러 갈래요?",
+                      "english": "Do you want to go for a walk?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "요즘 책을 많이 읽고 있어요.",
+                      "english": "I’ve been reading a lot of books lately."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "매일 아침 커피를 마셔요.",
+                      "english": "I drink coffee every morning."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이웃들과 자주 이야기하나요?",
+                      "english": "Do you talk with your neighbors often?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "휴일에는 주로 집에 있어요.",
+                      "english": "I usually stay home on holidays."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "저녁 먹고 나서 산책하는 걸 좋아해요.",
+                      "english": "I like taking walks after dinner."
                     }
-                ]
-            },
+                  ]
+            }
         ]
     },
     
@@ -788,143 +788,143 @@
                     {
                         "korean": "가이드북을 어디에서 살 수 있나요?",
                         "english": "Where can I buy a guidebook?"
-                    },
-                ]
-            },
-            {
-                "chapterName": "Chapter2",
-                "sentences": [
-                    {
-                        "korean": "",
-                        "english": ""
-                    },
-                    {
-                        "korean": "",
-                        "english": ""
-                    },
-                    {
-                        "korean": "",
-                        "english": ""
-                    },
-                    {
-                        "korean": "",
-                        "english": ""
-                    },
-                    {
-                        "korean": "",
-                        "english": ""
-                    },
-                    {
-                        "korean": "",
-                        "english": ""
-                    },
-                    {
-                        "korean": "",
-                        "english": ""
-                    },
-                    {
-                        "korean": "",
-                        "english": ""
-                    },
-                    {
-                        "korean": "",
-                        "english": ""
-                    },
-                    {
-                        "korean": "",
-                        "english": ""
                     }
                 ]
             },
             {
-                "chapterName": "Chapter3",
-                "sentences": [
+                  "chapterName": "Chapter2",
+                  "sentences": [
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "해외여행은 좋아해?",
+                      "english": "Do you like traveling abroad?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "여행 중에 새로운 사람들을 만나고 싶어요.",
+                      "english": "I want to meet new people during my trip."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "주변에 좋은 레스토랑이 있나요?",
+                      "english": "Are there any good restaurants around here?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "기념품 가게는 어디에 있나요?",
+                      "english": "Where is the souvenir shop?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "관광 투어를 예약할 수 있나요?",
+                      "english": "Can I book a sightseeing tour?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "여행 가방을 놓을 곳이 없어요.",
+                      "english": "There’s no place to put my luggage."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "여행할 때 사진 많이 찍어요?",
+                      "english": "Do you take a lot of photos while traveling?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "여행을 언제 떠나나요?",
+                      "english": "When are you leaving for the trip?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이곳에 온 목적은 무엇인가요?",
+                      "english": "What’s the purpose of your visit?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "여행 가이드가 있나요?",
+                      "english": "Do you have a travel guide?"
                     }
-                ]
+                  ]
             },
             {
-                "chapterName": "Chapter4",
-                "sentences": [
+                  "chapterName": "Chapter3",
+                  "sentences": [
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "비행기 티켓을 예약했나요?",
+                      "english": "Did you book the plane ticket?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "여행 가방을 다 쌌어요?",
+                      "english": "Have you packed your suitcase?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이 도시는 관광객에게 인기 있어요.",
+                      "english": "This city is popular with tourists."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "숙소는 어디에 있어요?",
+                      "english": "Where is the accommodation?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "여권을 꼭 챙기세요.",
+                      "english": "Make sure to bring your passport."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "여행 경비는 얼마나 들었나요?",
+                      "english": "How much did the trip cost?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "가이드 투어가 있나요?",
+                      "english": "Is there a guided tour available?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "여행 일정은 어떻게 되나요?",
+                      "english": "What’s the itinerary for the trip?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이 나라에서 유명한 음식이 뭐예요?",
+                      "english": "What’s the famous food in this country?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "여기서 기념품을 살 수 있나요?",
+                      "english": "Can I buy souvenirs here?"
                     }
-                ]
+                  ]
+            },
+            {
+                  "chapterName": "Chapter4",
+                  "sentences": [
+                    {
+                      "korean": "여행 중에 길을 잃었어요.",
+                      "english": "I got lost during my trip."
+                    },
+                    {
+                      "korean": "여기서 사진을 찍어도 될까요?",
+                      "english": "Is it okay to take pictures here?"
+                    },
+                    {
+                      "korean": "지도를 어디서 구할 수 있나요?",
+                      "english": "Where can I get a map?"
+                    },
+                    {
+                      "korean": "이곳에서 가장 가까운 화장실이 어디에 있나요?",
+                      "english": "Where is the nearest restroom around here?"
+                    },
+                    {
+                      "korean": "이 도시의 대중교통은 어떻게 이용하나요?",
+                      "english": "How do I use public transportation in this city?"
+                    },
+                    {
+                      "korean": "제주공항은 어디에 있나요?",
+                      "english": "Where is Jeju airport?"
+                    },
+                    {
+                      "korean": "이 지역은 치안이 안전한가요?",
+                      "english": "Is this area safe?"
+                    },
+                    {
+                      "korean": "여기서 몇 박 머물 계획이에요?",
+                      "english": "How many nights are you staying here?"
+                    },
+                    {
+                      "korean": "이 호텔에서 조식이 제공되나요?",
+                      "english": "Does this hotel provide breakfast?"
+                    },
+                    {
+                      "korean": "택시를 타면 얼마나 걸리나요?",
+                      "english": "How long will it take by taxi?"
+                    }
+                  ]
             }
         ]
     },
@@ -933,185 +933,185 @@
         "categoryName": "Business",
         "chapters": [
             {
-                "chapterName": "Chapter1",
-                "sentences": [
+                  "chapterName": "Chapter1",
+                  "sentences": [
                     {
-                        "korean": "회의는 몇 시에 시작하나요?",
-                        "english": "Can you recommand a dish?"
+                      "korean": "회의는 언제 시작하나요?",
+                      "english": "When does the meeting start?"
                     },
                     {
-                        "korean": "이메일로 자료를 보내드릴게요.",
-                        "english": "Is this suitable for vegetarians?"
+                      "korean": "프로젝트 마감일은 언제인가요?",
+                      "english": "When is the project deadline?"
                     },
                     {
-                        "korean": "내일 미팅 준비는 다 됐나요?",
-                        "english": "Do you like spicy food?"
+                      "korean": "견적서를 받아볼 수 있나요?",
+                      "english": "Can I get a quotation?"
                     },
                     {
-                        "korean": "이 계약 조건에 대해 논의해보죠.",
-                        "english": "How does it taste?"
+                      "korean": "이 서류에 서명해 주시겠어요?",
+                      "english": "Could you sign this document?"
                     },
                     {
-                        "korean": "회의록을 작성해 주세요.",
-                        "english": "Please pack this to go"
+                      "korean": "회의록을 작성했나요?",
+                      "english": "Did you take the meeting minutes?"
                     },
                     {
-                        "korean": "제안서를 작성 중입니다.",
-                        "english": "I’m working on the proposal."
+                      "korean": "거래 조건을 논의할 수 있나요?",
+                      "english": "Can we discuss the terms of the deal?"
                     },
                     {
-                        "korean": "마감일이 언제인가요?",
-                        "english": "When is the deadline?"
+                      "korean": "이 계약의 세부 사항을 검토해야 합니다.",
+                      "english": "We need to review the details of this contract."
                     },
                     {
-                        "korean": "프로젝트 진행 상황을 업데이트해 주세요.",
-                        "english": "Please update me on the project status."
+                      "korean": "보고서는 언제 완료될 예정인가요?",
+                      "english": "When will the report be completed?"
                     },
                     {
-                        "korean": "이 거래에 대해 논의할 시간이 있나요?",
-                        "english": "Do you have time to discuss this deal?"
+                      "korean": "프레젠테이션 준비는 다 됐나요?",
+                      "english": "Is the presentation ready?"
                     },
                     {
-                        "korean": "새로운 계약서를 준비 중입니다.",
-                        "english": "We are preparing a new contract."
+                      "korean": "이제 회의를 시작할 수 있나요?",
+                      "english": "Can we start the meeting now?"
                     }
-                ]
+                  ]
+                },
+            {
+                  "chapterName": "Chapter2",
+                  "sentences": [
+                    {
+                      "korean": "메일을 보냈는데 받았나요?",
+                      "english": "I sent an email, did you receive it?"
+                    },
+                    {
+                      "korean": "계약서에 서명하셨나요?",
+                      "english": "Have you signed the contract?"
+                    },
+                    {
+                      "korean": "예산을 초과하면 안 됩니다.",
+                      "english": "We must not exceed the budget."
+                    },
+                    {
+                      "korean": "다음 주까지 보고서를 제출해 주세요.",
+                      "english": "Please submit the report by next week."
+                    },
+                    {
+                      "korean": "이 프로젝트는 언제 시작되나요?",
+                      "english": "When will this project begin?"
+                    },
+                    {
+                      "korean": "오늘 회의가 취소됐어요.",
+                      "english": "Today’s meeting has been canceled."
+                    },
+                    {
+                      "korean": "우리의 경쟁사는 누구인가요?",
+                      "english": "Who are our competitors?"
+                    },
+                    {
+                      "korean": "이건 회사의 중요한 결정이에요.",
+                      "english": "This is an important decision for the company."
+                    },
+                    {
+                      "korean": "다음 미팅은 어디서 진행되나요?",
+                      "english": "Where is the next meeting taking place?"
+                    },
+                    {
+                      "korean": "예산 안에서 해결할 수 있나요?",
+                      "english": "Can we manage this within the budget?"
+                    }
+                  ]
             },
             {
-                "chapterName": "Chapter2",
-                "sentences": [
+                  "chapterName": "Chapter3",
+                  "sentences": [
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "다음 회의는 언제예요?",
+                      "english": "When is the next meeting?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "보고서는 준비되었나요?",
+                      "english": "Is the report ready?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이 프로젝트의 마감일이 언제인가요?",
+                      "english": "When is the deadline for this project?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "고객과의 미팅은 어떻게 됐나요?",
+                      "english": "How did the meeting with the client go?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "계약 조건을 검토해 보셨나요?",
+                      "english": "Have you reviewed the terms of the contract?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "회의 자료는 다 준비됐어요?",
+                      "english": "Is the presentation material all set?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이번 분기의 목표는 무엇인가요?",
+                      "english": "What’s the goal for this quarter?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "해외 지사와 연락했나요?",
+                      "english": "Did you contact the overseas branch?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "회의 시간을 다시 잡아야 할 것 같아요.",
+                      "english": "We might need to reschedule the meeting."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이 보고서는 언제까지 제출해야 하나요?",
+                      "english": "When should this report be submitted?"
                     }
-                ]
+                  ]
             },
             {
-                "chapterName": "Chapter3",
-                "sentences": [
+                  "chapterName": "Chapter4",
+                  "sentences": [
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "예산을 다시 조정해야 할 것 같아요.",
+                      "english": "We might need to adjust the budget."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "이메일로 자료를 보내 드릴게요.",
+                      "english": "I’ll send you the materials via email."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "오늘 중으로 회신을 받을 수 있을까요?",
+                      "english": "Can I get a reply by the end of today?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "고객 만족도가 중요한 요소입니다.",
+                      "english": "Customer satisfaction is a key factor."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "지금까지 매출은 어떻게 됐나요?",
+                      "english": "How have the sales been so far?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "프로젝트 일정에 차질이 있나요?",
+                      "english": "Is there a delay in the project schedule?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "경쟁사의 동향은 어떻게 파악하고 있나요?",
+                      "english": "How are we keeping track of our competitors?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "우리는 이번 분기 목표를 달성했나요?",
+                      "english": "Have we achieved our targets for this quarter?"
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "거래 조건을 다시 협상해야 합니다.",
+                      "english": "We need to renegotiate the terms of the deal."
                     },
                     {
-                        "korean": "",
-                        "english": ""
+                      "korean": "새로운 거래처를 확보했어요.",
+                      "english": "We’ve secured a new business partner."
                     }
-                ]
-            },
-            {
-                "chapterName": "Chapter4",
-                "sentences": [
-                    {
-                        "korean": "",
-                        "english": ""
-                    },
-                    {
-                        "korean": "",
-                        "english": ""
-                    },
-                    {
-                        "korean": "",
-                        "english": ""
-                    },
-                    {
-                        "korean": "",
-                        "english": ""
-                    },
-                    {
-                        "korean": "",
-                        "english": ""
-                    },
-                    {
-                        "korean": "",
-                        "english": ""
-                    },
-                    {
-                        "korean": "",
-                        "english": ""
-                    },
-                    {
-                        "korean": "",
-                        "english": ""
-                    },
-                    {
-                        "korean": "",
-                        "english": ""
-                    },
-                    {
-                        "korean": "",
-                        "english": ""
-                    }
-                ]
-            },
+                  ]
+            }
         ]
     },
     
@@ -1119,38 +1119,184 @@
         "categoryName": "Sports",
         "chapters": [
             {
-                "chapterName": "Chapter1",
-                "sentences": [
+                  "chapterName": "Chapter1",
+                  "sentences": [
                     {
-                        "korean": "메뉴 추천해줄 수 있어?",
-                        "english": "Can you recommand a dish?"
+                      "korean": "어떤 스포츠를 좋아하세요?",
+                      "english": "What sports do you like?"
                     },
                     {
-                        "korean": "이거 채식주의자도 먹을 수 있나요?",
-                        "english": "Is this suitable for vegetarians?"
+                      "korean": "어제 경기 봤어요?",
+                      "english": "Did you watch the game yesterday?"
                     },
                     {
-                        "korean": "매운 음식 좋아하세요?",
-                        "english": "Do you like spicy food?"
+                      "korean": "축구를 자주 하세요?",
+                      "english": "Do you play soccer often?"
                     },
                     {
-                        "korean": "맛이 어때요?",
-                        "english": "How does it taste?"
+                      "korean": "이번 시즌 누가 우승할 것 같아요?",
+                      "english": "Who do you think will win this season?"
                     },
                     {
-                        "korean": "이거 포장해 주세요.",
-                        "english": "Please pack this to go"
+                      "korean": "농구팀을 응원하러 경기장에 갈 거예요.",
+                      "english": "I’m going to the stadium to cheer for the basketball team."
                     },
-                ]
+                    {
+                      "korean": "저는 배트민턴 치는 것을 좋아해요.",
+                      "english": "I like playing badminton."
+                    },
+                    {
+                      "korean": "이번 경기는 정말 흥미진진했어요.",
+                      "english": "The match was really exciting."
+                    },
+                    {
+                      "korean": "축구는 세계에서 가장 인기 있는 스포츠예요.",
+                      "english": "Soccer is the most popular sport in the world."
+                    },
+                    {
+                      "korean": "경기에서 이길 확률이 높아요.",
+                      "english": "We have a high chance of winning the game."
+                    },
+                    {
+                      "korean": "좋아하는 운동선수가 누구인가요?",
+                      "english": "Who is your favorite athlete?"
+                    }
+                  ]
             },
             {
-                "chapterName": "Chapter2",
-                "sentences": [
+                  "chapterName": "Chapter2",
+                  "sentences": [
                     {
-                        "korean": "안녕하세요",
-                        "english": "Hello"
+                      "korean": "이번 경기는 정말 치열했어요.",
+                      "english": "This game was really intense."
+                    },
+                    {
+                      "korean": "팀이 이길 줄 알았는데요.",
+                      "english": "I thought our team would win."
+                    },
+                    {
+                      "korean": "주말에 야구하러 갈래요?",
+                      "english": "Do you want to go play baseball this weekend?"
+                    },
+                    {
+                      "korean": "좋아하는 선수는 누구예요?",
+                      "english": "Who is your favorite player?"
+                    },
+                    {
+                      "korean": "테니스를 배우고 싶어요.",
+                      "english": "I want to learn how to play tennis."
+                    },
+                    {
+                      "korean": "운동을 자주 하나요?",
+                      "english": "Do you exercise often?"
+                    },
+                    {
+                      "korean": "이번 대회에서 메달을 따길 바래요.",
+                      "english": "I hope to win a medal in this competition."
+                    },
+                    {
+                      "korean": "팀워크가 정말 중요해요.",
+                      "english": "Teamwork is very important."
+                    },
+                    {
+                      "korean": "지금까지 몇 번 경기를 보았나요?",
+                      "english": "How many matches have you watched so far?"
+                    },
+                    {
+                      "korean": "스포츠는 스트레스를 푸는 좋은 방법이에요.",
+                      "english": "Sports are a great way to relieve stress."
                     }
-                ]
+                  ]
+            },
+            {
+                  "chapterName": "Chapter3",
+                  "sentences": [
+                    {
+                      "korean": "경기장에 가본 적 있어요?",
+                      "english": "Have you ever been to a stadium?"
+                    },
+                    {
+                      "korean": "이 선수가 MVP가 될 것 같아요.",
+                      "english": "I think this player will be the MVP."
+                    },
+                    {
+                      "korean": "운동 후에 기분이 어때요?",
+                      "english": "How do you feel after exercising?"
+                    },
+                    {
+                      "korean": "이 팀은 올해 전승했어요.",
+                      "english": "This team has won every game this year."
+                    },
+                    {
+                      "korean": "체육관에 가서 운동할 계획이에요.",
+                      "english": "I’m planning to go to the gym to work out."
+                    },
+                    {
+                      "korean": "이 스포츠는 기술이 많이 필요해요.",
+                      "english": "This sport requires a lot of skill."
+                    },
+                    {
+                      "korean": "어떤 팀을 응원하나요?",
+                      "english": "Which team do you support?"
+                    },
+                    {
+                      "korean": "지난 경기의 결과를 알고 있어요?",
+                      "english": "Do you know the result of the last match?"
+                    },
+                    {
+                      "korean": "훈련이 너무 힘들어요.",
+                      "english": "Training is really tough."
+                    },
+                    {
+                      "korean": "경기장은 언제 열리나요?",
+                      "english": "When does the stadium open?"
+                    }
+                  ]
+            },
+            {
+                  "chapterName": "Chapter4",
+                  "sentences": [
+                    {
+                      "korean": "운동을 얼마나 자주 해요?",
+                      "english": "How often do you exercise?"
+                    },
+                    {
+                      "korean": "달리기는 체력 향상에 좋아요.",
+                      "english": "Running is great for improving stamina."
+                    },
+                    {
+                      "korean": "오늘은 조깅하기 좋은 날씨예요.",
+                      "english": "It’s a great day for jogging."
+                    },
+                    {
+                      "korean": "이 경기는 티켓이 매진됐어요.",
+                      "english": "This game is sold out."
+                    },
+                    {
+                      "korean": "그 선수는 정말 빠르게 달려요.",
+                      "english": "That player runs really fast."
+                    },
+                    {
+                      "korean": "스포츠를 하면서 얻는 이점이 많아요.",
+                      "english": "There are many benefits to playing sports."
+                    },
+                    {
+                      "korean": "올림픽에 대해 어떻게 생각하세요?",
+                      "english": "What do you think about the Olympics?"
+                    },
+                    {
+                      "korean": "운동을 하면서 친구를 사귀었어요.",
+                      "english": "I made friends while playing sports."
+                    },
+                    {
+                      "korean": "이 경기는 역사적인 순간이에요.",
+                      "english": "This match is a historic moment."
+                    },
+                    {
+                      "korean": "스포츠는 건강에 좋습니다.",
+                      "english": "Sports are good for your health."
+                    }
+                  ]
             }
         ]
     },
@@ -1159,38 +1305,187 @@
         "categoryName": "Music",
         "chapters": [
             {
-                "chapterName": "Chapter1",
-                "sentences": [
+                  "chapterName": "Chapter1",
+                  "sentences": [
                     {
-                        "korean": "메뉴 추천해줄 수 있어?",
-                        "english": "Can you recommand a dish?"
+                      "korean": "어떤 장르의 음악을 좋아하세요?",
+                      "english": "What genre of music do you like?"
                     },
                     {
-                        "korean": "이거 채식주의자도 먹을 수 있나요?",
-                        "english": "Is this suitable for vegetarians?"
+                      "korean": "좋아하는 가수가 누구예요?",
+                      "english": "Who’s your favorite singer?"
                     },
                     {
-                        "korean": "매운 음식 좋아하세요?",
-                        "english": "Do you like spicy food?"
+                      "korean": "이 노래를 들어봤어요?",
+                      "english": "Have you heard this song?"
                     },
                     {
-                        "korean": "맛이 어때요?",
-                        "english": "How does it taste?"
+                      "korean": "이 앨범 정말 좋아요.",
+                      "english": "I really like this album."
                     },
                     {
-                        "korean": "이거 포장해 주세요.",
-                        "english": "Please pack this to go"
+                      "korean": "음악을 들으면 기분이 좋아져요.",
+                      "english": "Listening to music makes me feel better."
                     },
-                ]
+                    {
+                      "korean": "기타 치는 것을 잘해요.",
+                      "english": "I’m great at playing the guitar"
+                    },
+                    {
+                      "korean": "이 노래는 정말 좋네요.",
+                      "english": "This song is really good."
+                    },
+                    {
+                      "korean": "최근에 어떤 음악을 듣고 있나요?",
+                      "english": "What music are you listening to lately?"
+                    },
+                    {
+                      "korean": "그 가수의 팬이에요.",
+                      "english": "I’m a fan of that singer."
+                    },
+                    {
+                      "korean": "음악이 나에게 큰 영감을 줘요.",
+                      "english": "Music gives me a lot of inspiration."
+                    }
+
+                  ]
             },
             {
-                "chapterName": "Chapter2",
-                "sentences": [
+                  "chapterName": "Chapter2",
+                  "sentences": [
                     {
-                        "korean": "안녕하세요",
-                        "english": "Hello"
+                      "korean": "콘서트에 가본 적 있어요?",
+                      "english": "Have you ever been to a concert?"
+                    },
+                    {
+                      "korean": "이 노래의 가사가 정말 아름다워요.",
+                      "english": "The lyrics of this song are really beautiful."
+                    },
+                    {
+                      "korean": "음악을 배우고 싶어요.",
+                      "english": "I want to learn music."
+                    },
+                    {
+                      "korean": "이 노래는 언제 들어도 좋아요.",
+                      "english": "I like this song every time I hear it."
+                    },
+                    {
+                      "korean": "좋아하는 악기가 있나요?",
+                      "english": "Do you have a favorite instrument?"
+                    },
+                    {
+                      "korean": "음악을 배우고 싶어요.",
+                      "english": "I want to learn music."
+                    },
+                    {
+                      "korean": "이 곡은 많은 사람들이 좋아해요.",
+                      "english": "Many people like this song."
+                    },
+                    {
+                      "korean": "여기서 공연이 열릴 예정이에요.",
+                      "english": "A concert is scheduled to be held here."
+                    },
+                    {
+                      "korean": "어떤 악기를 다룰 수 있나요?",
+                      "english": "What instrument can you play?"
+                    },
+                    {
+                      "korean": "이 노래의 멜로디가 너무 좋아요.",
+                      "english": "I really like the melody of this song."
                     }
-                ]
+                  ]
+            },
+            {
+                  "chapterName": "Chapter3",
+                  "sentences": [
+                    {
+                      "korean": "이 가수는 실력이 뛰어나요.",
+                      "english": "This singer is really talented."
+                    },
+                    {
+                      "korean": "피아노를 연주할 줄 알아요?",
+                      "english": "Do you know how to play the piano?"
+                    },
+                    {
+                      "korean": "이 곡의 멜로디가 중독성이 있어요.",
+                      "english": "The melody of this song is really catchy."
+                    },
+                    {
+                      "korean": "최근에 나온 노래 중에 좋아하는 게 있나요?",
+                      "english": "Do you have any favorite recent songs?"
+                    },
+                    {
+                      "korean": "저는 클래식 음악을 즐겨 들어요.",
+                      "english": "I enjoy listening to classical music."
+                    },
+                    {
+                      "korean": "이 아티스트의 음악은 언제나 특별해요.",
+                      "english": "This artist's music is always special."
+                    },
+                    {
+                      "korean": "음악 축제에 가고 싶어요.",
+                      "english": "I want to go to a music festival."
+                    },
+                    {
+                      "korean": "이 곡은 특별한 의미가 있어요.",
+                      "english": "This song has a special meaning."
+                    },
+                    {
+                      "korean": "내 플레이리스트에 이 곡을 추가할게요.",
+                      "english": "I will add this song to my playlist."
+                    },
+                    {
+                      "korean": "좋아하는 노래를 같이 들어요.",
+                      "english": "Let’s listen to our favorite songs together."
+                    }
+
+                  ]
+            },
+            {
+                  "chapterName": "Chapter4",
+                  "sentences": [
+                    {
+                      "korean": "음악을 들으며 공부해요?",
+                      "english": "Do you study while listening to music?"
+                    },
+                    {
+                      "korean": "기타를 배우는 중이에요.",
+                      "english": "I’m learning to play the guitar."
+                    },
+                    {
+                      "korean": "이번 앨범은 대단히 성공적이에요.",
+                      "english": "This album has been a huge success."
+                    },
+                    {
+                      "korean": "음악이 없으면 삶이 허전할 것 같아요.",
+                      "english": "Life would feel empty without music."
+                    },
+                    {
+                      "korean": "이 노래는 언제 들어도 질리지 않아요.",
+                      "english": "This song never gets old, no matter how many times I listen to it."
+                    },
+                    {
+                      "korean": "콘서트에 가본 적 있어요?",
+                      "english": "Have you ever been to a concert?"
+                    },
+                    {
+                      "korean": "가장 좋아하는 아티스트는 누구인가요?",
+                      "english": "Who is your favorite artist?"
+                    },
+                    {
+                      "korean": "이 노래의 가사가 정말 감동적이에요.",
+                      "english": "The lyrics of this song are really touching."
+                    },
+                    {
+                      "korean": "그 앨범은 언제 나왔나요?",
+                      "english": "When did that album come out?"
+                    },
+                    {
+                      "korean": "음악을 듣는 게 스트레스 해소에 좋아요.",
+                      "english": "Listening to music is great for relieving stress."
+                    }
+
+                  ]
             }
         ]
     },
@@ -1199,38 +1494,188 @@
         "categoryName": "Shopping",
         "chapters": [
             {
-                "chapterName": "Chapter1",
-                "sentences": [
+                  "chapterName": "Chapter1",
+                  "sentences": [
                     {
-                        "korean": "메뉴 추천해줄 수 있어?",
-                        "english": "Can you recommand a dish?"
+                      "korean": "쇼핑하러 가고 싶어요.",
+                      "english": "I want to go shopping."
                     },
                     {
-                        "korean": "이거 채식주의자도 먹을 수 있나요?",
-                        "english": "Is this suitable for vegetarians?"
+                      "korean": "이 옷을 어디서 샀어요?",
+                      "english": "Where did you buy this outfit?"
                     },
                     {
-                        "korean": "매운 음식 좋아하세요?",
-                        "english": "Do you like spicy food?"
+                      "korean": "할인 기간에 맞춰 쇼핑하는 게 좋아요.",
+                      "english": "I like shopping during sales."
                     },
                     {
-                        "korean": "맛이 어때요?",
-                        "english": "How does it taste?"
+                      "korean": "온라인 쇼핑 자주 하세요?",
+                      "english": "Do you shop online often?"
                     },
                     {
-                        "korean": "이거 포장해 주세요.",
-                        "english": "Please pack this to go"
+                      "korean": "이 신발 사이즈가 맞나요?",
+                      "english": "Do these shoes fit?"
                     },
-                ]
+                    {
+                      "korean": "쇼핑을 하러 가고 싶어요.",
+                      "english": "I want to go shopping."
+                    },
+                    {
+                      "korean": "세일 중인 물건이 있나요?",
+                      "english": "Are there any items on sale?"
+                    },
+                    {
+                      "korean": "신상 옷을 구경해볼까요?",
+                      "english": "Shall we check out the new arrivals?"
+                    },
+                    {
+                      "korean": "어디에서 쇼핑을 많이 하세요?",
+                      "english": "Where do you shop the most?"
+                    },
+                    {
+                      "korean": "이 제품은 어떤 특징이 있어요?",
+                      "english": "What features does this product have?"
+                    }
+
+                  ]
             },
             {
-                "chapterName": "Chapter2",
-                "sentences": [
+                  "chapterName": "Chapter2",
+                  "sentences": [
                     {
-                        "korean": "안녕하세요",
-                        "english": "Hello"
+                      "korean": "다른 색상이 있나요?",
+                      "english": "Do you have this in another color?"
+                    },
+                    {
+                      "korean": "이 제품 환불할 수 있나요?",
+                      "english": "Can I return this item?"
+                    },
+                    {
+                      "korean": "현금으로 계산하시겠어요?",
+                      "english": "Would you like to pay in cash?"
+                    },
+                    {
+                      "korean": "이 물건은 무료 배송되나요?",
+                      "english": "Is this item eligible for free shipping?"
+                    },
+                    {
+                      "korean": "포인트를 사용할 수 있나요?",
+                      "english": "Can I use my points?"
+                    },
+                    {
+                      "korean": "요즘 쇼핑하는 게 즐거워요.",
+                      "english": "Shopping is fun these days."
+                    },
+                    {
+                      "korean": "가격이 너무 비싸요.",
+                      "english": "The price is too high."
+                    },
+                    {
+                      "korean": "이 가게의 고객 서비스는 좋아요.",
+                      "english": "The customer service at this store is good."
+                    },
+                    {
+                      "korean": "할인 행사에 대해 알고 계세요?",
+                      "english": "Do you know about the discount event?"
+                    },
+                    {
+                      "korean": "특별한 선물을 찾고 있어요.",
+                      "english": "I’m looking for a special gift."
                     }
-                ]
+
+                  ]
+            },
+            {
+                  "chapterName": "Chapter3",
+                  "sentences": [
+                    {
+                      "korean": "세일 언제까지 하나요?",
+                      "english": "When does the sale end?"
+                    },
+                    {
+                      "korean": "이 가게는 자주 방문해요.",
+                      "english": "I visit this store"
+                    },
+                    {
+                      "korean": "이 제품은 품절이에요.",
+                      "english": "This product is out of stock."
+                    },
+                    {
+                      "korean": "이 옷을 시착해도 될까요?",
+                      "english": "Can I try on this outfit?"
+                    },
+                    {
+                      "korean": "교환하려면 어떻게 해야 하나요?",
+                      "english": "How can I exchange this item?"
+                    },
+                    {
+                      "korean": "이 제품의 품질이 좋아요.",
+                      "english": "The quality of this product is good."
+                    },
+                    {
+                      "korean": "주말에 쇼핑하러 가는 게 좋아요.",
+                      "english": "I like going shopping on the weekend."
+                    },
+                    {
+                      "korean": "이 브랜드의 팬이에요.",
+                      "english": "I’m a fan of this brand."
+                    },
+                    {
+                      "korean": "쇼핑몰은 언제 열리나요?",
+                      "english": "When does the mall open?"
+                    },
+                    {
+                      "korean": "새로운 가게가 오픈했어요.",
+                      "english": "A new store has opened."
+                    }
+
+                  ]
+            },
+            {
+                  "chapterName": "Chapter4",
+                  "sentences": [
+                    {
+                      "korean": "이 제품은 어디에서 만들었나요?",
+                      "english": "Where was this product made?"
+                    },
+                    {
+                      "korean": "할인 쿠폰을 사용할 수 있나요?",
+                      "english": "Can I use a discount coupon?"
+                    },
+                    {
+                      "korean": "영수증을 주세요.",
+                      "english": "Can I have the receipt, please?"
+                    },
+                    {
+                      "korean": "특별 할인 상품을 보고 싶어요.",
+                      "english": "I’d like to see the special offers."
+                    },
+                    {
+                      "korean": "이 옷을 더 작은 사이즈로 교환할 수 있나요?",
+                      "english": "Can I exchange this outfit for a smaller size?"
+                    },
+                    {
+                      "korean": "이 물건은 품질이 가격에 비해 좋아요.",
+                      "english": "This item is good quality for the price."
+                    },
+                    {
+                      "korean": "리턴 정책에 대해 설명해줄 수 있나요?",
+                      "english": "Can you explain the return policy?"
+                    },
+                    {
+                      "korean": "이 가게의 추천 상품이 뭐예요?",
+                      "english": "What are the recommended items in this store?"
+                    },
+                    {
+                      "korean": "이 신발은 어떤 스타일이에요?",
+                      "english": "What style are these shoes?"
+                    },
+                    {
+                      "korean": "이 쿠폰은 언제까지 유효해요?",
+                      "english": "Until when is this coupon valid?"
+                    }
+
+                  ]
             }
         ]
     },
@@ -1239,38 +1684,188 @@
         "categoryName": "History & Culture",
         "chapters": [
             {
-                "chapterName": "Chapter1",
-                "sentences": [
+                  "chapterName": "Chapter1",
+                  "sentences": [
                     {
-                        "korean": "메뉴 추천해줄 수 있어?",
-                        "english": "Can you recommand a dish?"
+                      "korean": "이곳의 역사를 아세요?",
+                      "english": "Do you know the history of this place?"
                     },
                     {
-                        "korean": "이거 채식주의자도 먹을 수 있나요?",
-                        "english": "Is this suitable for vegetarians?"
+                      "korean": "이 건물은 19세기에 지어졌어요.",
+                      "english": "This building was built in the 19th century."
                     },
                     {
-                        "korean": "매운 음식 좋아하세요?",
-                        "english": "Do you like spicy food?"
+                      "korean": "어떤 문화적 차이가 있나요?",
+                      "english": "What are the cultural differences?"
                     },
                     {
-                        "korean": "맛이 어때요?",
-                        "english": "How does it taste?"
+                      "korean": "그 나라의 전통을 아시나요?",
+                      "english": "Do you know the traditions of that country?"
                     },
                     {
-                        "korean": "이거 포장해 주세요.",
-                        "english": "Please pack this to go"
+                      "korean": "이 기념물은 유명해요.",
+                      "english": "This monument is famous."
                     },
-                ]
+                    {
+                      "korean": "이 유적지는 정말 역사적이에요.",
+                      "english": "This site is really historical."
+                    },
+                    {
+                      "korean": "어떤 문화에 관심이 있나요?",
+                      "english": "What culture are you interested in?"
+                    },
+                    {
+                      "korean": "이 박물관에 가본 적 있어요?",
+                      "english": "Have you been to this museum?"
+                    },
+                    {
+                      "korean": "이 도시의 역사는 매우 흥미로워요.",
+                      "english": "The history of this city is very interesting."
+                    },
+                    {
+                      "korean": "전통 의상이 정말 아름다워요.",
+                      "english": "Traditional clothing is really beautiful."
+                    }
+
+                  ]
             },
             {
-                "chapterName": "Chapter2",
-                "sentences": [
+                  "chapterName": "Chapter2",
+                  "sentences": [
                     {
-                        "korean": "안녕하세요",
-                        "english": "Hello"
+                      "korean": "역사에 대해 관심이 많으세요?",
+                      "english": "Are you interested in history?"
+                    },
+                    {
+                      "korean": "이 박물관을 가본 적 있나요?",
+                      "english": "Have you ever been to this museum?"
+                    },
+                    {
+                      "korean": "전통 춤을 배워보고 싶어요.",
+                      "english": "I want to learn traditional dancing."
+                    },
+                    {
+                      "korean": "이곳의 문화가 너무 흥미로워요.",
+                      "english": "The culture of this place is fascinating."
+                    },
+                    {
+                      "korean": "이 행사는 매년 열려요.",
+                      "english": "This event is held every year."
+                    },
+                    {
+                      "korean": "역사적인 사건에 대해 어떻게 생각해요?",
+                      "english": "What do you think about historical events?"
+                    },
+                    {
+                      "korean": "이 지역의 문화는 다양해요.",
+                      "english": "The culture in this area is diverse."
+                    },
+                    {
+                      "korean": "과거에 대한 책을 읽는 것을 좋아해요.",
+                      "english": "I enjoy reading books about the past."
+                    },
+                    {
+                      "korean": "여기서 중요한 회의가 열렸어요.",
+                      "english": "An important meeting was held here."
+                    },
+                    {
+                      "korean": "전통 음식에 대해 알고 싶어요.",
+                      "english": "I want to know about traditional foods."
                     }
-                ]
+
+                  ]
+            },
+            {
+                  "chapterName": "Chapter3",
+                  "sentences": [
+                    {
+                      "korean": "이곳은 유네스코 세계유산이에요.",
+                      "english": "This place is a UNESCO World Heritage Site."
+                    },
+                    {
+                      "korean": "역사적인 순간을 기념해요.",
+                      "english": "We are celebrating a historical moment."
+                    },
+                    {
+                      "korean": "이 문화재는 복원 중이에요.",
+                      "english": "This cultural asset is under restoration."
+                    },
+                    {
+                      "korean": "그 지역의 축제에 가봤나요?",
+                      "english": "Have you been to the festival in that area?"
+                    },
+                    {
+                      "korean": "이곳의 전통 예술을 즐겨보세요.",
+                      "english": "Enjoy the traditional art of this place."
+                    },
+                    {
+                      "korean": "문화유산을 보호하는 것이 중요해요.",
+                      "english": "It is important to protect cultural heritage."
+                    },
+                    {
+                      "korean": "이곳의 축제는 정말 재미있어요.",
+                      "english": "The festival here is really fun."
+                    },
+                    {
+                      "korean": "역사를 배우는 것은 흥미로운 경험이에요.",
+                      "english": "Learning about history is an interesting experience."
+                    },
+                    {
+                      "korean": "미술관에서 전시회를 열었어요.",
+                      "english": "An exhibition was held at the art gallery."
+                    },
+                    {
+                      "korean": "세계의 다양한 문화에 대해 배우고 싶어요.",
+                      "english": "I want to learn about various cultures around the world."
+                    }
+
+                  ]
+            },
+            {
+                  "chapterName": "Chapter4",
+                  "sentences": [
+                    {
+                      "korean": "이 도시는 많은 역사를 가지고 있어요.",
+                      "english": "This city has a lot of history."
+                    },
+                    {
+                      "korean": "그 나라의 음식 문화가 흥미로워요.",
+                      "english": "The food culture of that country is interesting."
+                    },
+                    {
+                      "korean": "문화 유산을 보존하는 것이 중요해요.",
+                      "english": "It’s important to preserve cultural heritage."
+                    },
+                    {
+                      "korean": "이 나라의 역사는 정말 길어요.",
+                      "english": "The history of this country is really long."
+                    },
+                    {
+                      "korean": "이 문화재는 역사적 가치가 있어요.",
+                      "english": "This cultural property has historical value."
+                    },
+                    {
+                      "korean": "이 문화는 어떻게 발전했나요?",
+                      "english": "How has this culture developed?"
+                    },
+                    {
+                      "korean": "과거의 사건들이 현재에 미치는 영향은 크죠.",
+                      "english": "Past events have a big impact on the present."
+                    },
+                    {
+                      "korean": "전통 음악을 듣는 것을 좋아해요.",
+                      "english": "I enjoy listening to traditional music."
+                    },
+                    {
+                      "korean": "이 지역의 역사적인 건물들은 보호받고 있어요.",
+                      "english": "The historical buildings in this area are protected."
+                    },
+                    {
+                      "korean": "문화 교류가 중요하다고 생각해요.",
+                      "english": "I believe cultural exchange is important."
+                    }
+
+                  ]
             }
         ]
     }

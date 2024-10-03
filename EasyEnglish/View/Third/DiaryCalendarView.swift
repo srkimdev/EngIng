@@ -15,6 +15,7 @@ struct DiaryCalendarView: View {
     var body: some View {
         
         GeometryReader { geometry in
+            let _ = print(geometry.size)
             
             //MARK: Background
             Rectangle()
@@ -29,15 +30,11 @@ struct DiaryCalendarView: View {
                 RoundedRectangle(cornerRadius: 25)
                     .fill(Colors.backgroundColor)
                     .frame(height: geometry.size.height * 3 / 4)
-                    .overlay {
-                        ScrollView {
-                            //                            mainView(geometry: geometry)
-                        }
-                    }
                 
             }
             
             VStack {
+
                 RoundedRectangle(cornerRadius: 20)
                     .fill(.white)
                     .overlay {
@@ -45,19 +42,18 @@ struct DiaryCalendarView: View {
                             .environmentObject(viewModel)
                             .padding(20)
                     }
-                    .frame(height: geometry.size.height / 2.3)
+                    .frame(height: 300)
                     .padding(.bottom, 20)
                 
                 todayDiary
                 
                 DiaryRowView(diary: $viewModel.output.showDiary)
-                
+
                 Spacer()
                 
                 writeButtonView(geometry)
                     .frame(maxWidth: .infinity, alignment: .trailing)
-                    .padding(.bottom, 60)
-                    
+                    .padding(.bottom, 70)
             }
             .padding(30)
 
@@ -88,7 +84,7 @@ struct DiaryCalendarView: View {
                         .foregroundStyle(.white)
                 }
         }
-        .frame(width: geometry.size.width / 8, height: geometry.size.width / 8)
+        .frame(width: 40, height: 40)
 
     }
     
@@ -106,7 +102,7 @@ struct DiaryRowView: View {
             } label: {
                 RoundedRectangle(cornerRadius: 10)
                     .fill(.orange.opacity(0.2))
-                    .frame(width: Constants.screenWidth - 50, height: 100)
+                    .frame(height: 100)
                     .overlay {
                         HStack {
                             VStack(alignment: .leading) {
@@ -116,13 +112,12 @@ struct DiaryRowView: View {
                                 Text(diary.content)
                                     .foregroundStyle(.black)
                             }
-                            .padding(.leading, 20)
-                            .padding(.vertical, 30)
+                            .padding(.vertical, 20)
+                            .padding(.horizontal, 20)
                             
                             Spacer()
                             
                             RoundedRectangle(cornerRadius: 10)
-                                .frame(width: 80, height: 80)
                                 .overlay {
                                     if let uiImage = FilesManager.shared.loadImageToDocument(filename: DateFormatManager.shared.getyymmdd(diary.date)) {
                                         Image(uiImage: uiImage)
@@ -132,6 +127,7 @@ struct DiaryRowView: View {
                                             .clipShape(RoundedRectangle(cornerRadius: 10))
                                     }
                                 }
+                                .frame(width: 80, height: 80)
                             
                         }
                         .padding(.horizontal, 10)
@@ -140,7 +136,7 @@ struct DiaryRowView: View {
         } else {
             RoundedRectangle(cornerRadius: 10)
                 .fill(.orange.opacity(0.2))
-                .frame(width: Constants.screenWidth - 50, height: 100)
+                .frame(height: 100)
                 .overlay {
                     Text("일기가 없습니다.")
                 }

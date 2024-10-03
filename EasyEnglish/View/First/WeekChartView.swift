@@ -14,8 +14,6 @@ struct WeekChartView: View {
     
     var body: some View {
         
-//        let _ = print(repository.detectRealmURL())
-        
         Chart {
             ForEach(weekList ?? []) { posting in
                 LineMark(
@@ -25,6 +23,14 @@ struct WeekChartView: View {
                 .foregroundStyle(.red)
             }
         }
+        .chartYAxis {
+            AxisMarks(position: .leading, values: Array(stride(from: 0, to: 45, by: 5))) { value in
+                AxisValueLabel()
+                AxisTick()
+                AxisGridLine()
+            }
+        }
+        .chartYScale(domain: 0...45)
         
     }
 }

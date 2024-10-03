@@ -17,6 +17,8 @@ struct MainView: View {
         
         GeometryReader { geometry in
             
+            let _ = print(geometry.size)
+            
             //MARK: Profile
             Rectangle()
                 .fill(.orange.opacity(0.2))

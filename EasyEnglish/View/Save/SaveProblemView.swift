@@ -17,21 +17,29 @@ struct SaveProblemView: View {
             
             Colors.backgroundColor
             
-            ScrollView(.vertical) {
-                
-                Spacer()
-                    .frame(height: 20)
-                
-                LazyVStack(spacing: 20) {
-                    ForEach(viewModel.output.savedSentences) { value in
-                        sentenceRowView(value)
-                            .frame(height: geometry.size.height / 6)
-                            .padding(.horizontal)
+            if viewModel.output.savedSentences.isEmpty {
+                Text("저장한 문장이 없습니다.")
+                    .frame(width: geometry.size.width, height: geometry.size.height)
+                    .multilineTextAlignment(.center)
+                    .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+            } else {
+                ScrollView(.vertical) {
+                    
+                    Spacer()
+                        .frame(height: 20)
+                    
+                    LazyVStack(spacing: 20) {
+                        ForEach(viewModel.output.savedSentences) { value in
+                            sentenceRowView(value)
+                                .frame(height: geometry.size.height / 6)
+                                .padding(.horizontal)
+                        }
                     }
+                    
                 }
+                .scrollIndicators(.hidden)
             }
-            .scrollIndicators(.hidden)
-            
+ 
         }
         .navigationTitle("My Sentences")
         .onAppear {

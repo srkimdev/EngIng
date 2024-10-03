@@ -9,12 +9,12 @@ import SwiftUI
 import ShuffleDeck
 
 struct ProblemSentenceView: View {
+    
     private let repository = RealmRepository<ChapterTable>()
     
     var chapter: ChapterTable
     
     @State var currentPage: Int = 0
-    
     @StateObject private var viewModel = ProblemSentenceViewModel()
     
     let colors: [Color] = [.white, .white, .white, .white, .white, .white, .white, .white, .white, .white]

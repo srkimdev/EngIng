@@ -92,13 +92,13 @@ struct CustomTabView: View {
             
         }
         .padding()
-        .frame(height: 72)
+        .frame(height: 64)
         .background {
             RoundedRectangle(cornerRadius: 36)
                 .fill(Color.white)
                 .shadow(color: .black.opacity(0.15), radius: 8, y: 2)
         }
-        .padding(.horizontal)
+        .padding([.horizontal, .bottom])
         
     }
     

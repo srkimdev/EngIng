@@ -11,6 +11,7 @@ import CarouselStack
 struct DiaryReviseView: View {
     
     var diary: DiaryTable
+    private let viewModel = DiaryReviseViewModel()
     
     var body: some View {
         
@@ -25,8 +26,11 @@ struct DiaryReviseView: View {
                     Text(diary.title)
                         .font(.title.bold())
                     
-                    Image(systemName: "star")
+                    Image(uiImage: viewModel.output.showImage)
+                        .resizable()
                         .frame(width: abs(geometry.size.width - 50), height: 240)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .padding(.bottom)
                     
                     Text(diary.content)
                     
@@ -39,6 +43,9 @@ struct DiaryReviseView: View {
         }
         .navigationTitle("Diary")
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            viewModel.input.uploadImage.send(diary.date)
+        }
         
     }
 }

@@ -13,7 +13,7 @@ struct TranslateView: View {
     @StateObject private var viewModel = TranslateViewModel()
     
     var body: some View {
-
+        
         ZStack {
             
             VStack(spacing: 0) {
@@ -48,46 +48,41 @@ struct TranslateView: View {
     
     func middleItemView() -> some View {
         
-        HStack {
-            VStack {
+        VStack {
+            HStack {
                 Text("한국어")
-                    .foregroundStyle(.black)
+                        .foregroundStyle(.black)
+                
+                Spacer()
+                
                 Button(action: {
-                    viewModel.input.inputText.send(previousText) //
+                    viewModel.input.inputText.send(previousText)
                 }, label: {
-                    Circle()
-                        .fill(.blue)
-                        .frame(width: 40, height: 40)
-                        .overlay {
-                            Image(systemName: "star")
-                        }
+                    Text("번역하기")
                 })
-                .padding(.vertical, 10)
-                .padding(.horizontal, 16)
+            
+            }
+            .padding(24)
+            
+            HStack {
                 
                 Text("English")
                     .foregroundStyle(.black)
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            
-            Spacer()
-            
-            Button(action: {
-//                let text = "안녕하세요! 이것은 Google TTS의 예시입니다."
-//                fetchAudio(from: text)
                 
-                if !viewModel.output.translatedText.isEmpty {
-                    viewModel.input.ttsButtonTap.send(viewModel.output.translatedText)
-                }
-            }, label: {
-                Image(systemName: "speaker.wave.2")
-                    .foregroundStyle(.black)
-            })
-            .padding(.top, 100)
+                Spacer()
 
-        
+                Button(action: {
+                    if !viewModel.output.translatedText.isEmpty {
+                        viewModel.input.ttsButtonTap.send(viewModel.output.translatedText)
+                    }
+                }, label: {
+                    Image(systemName: "speaker.wave.2")
+                        .foregroundStyle(.black)
+                })
+            }
+            .padding(24)
+
         }
-        .padding(.horizontal, 20)
         
     }
     

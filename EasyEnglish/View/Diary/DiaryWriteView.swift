@@ -53,7 +53,7 @@ struct DiaryWriteView: View {
                 ZStack(alignment: .topLeading) {
                     
                     if viewModel.titleText.isEmpty {
-                        Text("제목을 입력해주세요.")
+                        Text("Write a title in English")
                             .padding(.vertical, 8)
                             .foregroundStyle(.gray)
                     }
@@ -69,7 +69,7 @@ struct DiaryWriteView: View {
                 
                 ZStack(alignment: .topLeading) {
                     if viewModel.storyText.isEmpty {
-                        Text("내용을 입력해주세요.")
+                        Text("Write a content in English")
                             .padding(.vertical, 8)
                             .foregroundStyle(.gray)
                     }
