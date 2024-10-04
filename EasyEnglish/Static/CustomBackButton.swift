@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-struct CustomBackButton {
+struct CustomBackButton: View {
     
     @Environment(\.dismiss) private var dismiss
     
-    func backButton() -> some View {
+    var body: some View {
         Button {
             print("dismiss")
             dismiss()
         } label: {
             Image(systemName: "chevron.left")
+                .foregroundStyle(.black)
         }
     }
-    
 }
 

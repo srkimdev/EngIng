@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ShuffleDeck
+import AlertToast
 
 struct ProblemSentenceView: View {
     
@@ -14,7 +15,8 @@ struct ProblemSentenceView: View {
     
     var chapter: ChapterTable
     
-    @State var currentPage: Int = 0
+    @State private var currentPage: Int = 0
+    @State private var showToast = false
     @StateObject private var viewModel = ProblemSentenceViewModel()
     
     let colors: [Color] = [.white, .white, .white, .white, .white, .white, .white, .white, .white, .white]
@@ -72,12 +74,13 @@ struct ProblemSentenceView: View {
                     Button(action: {
                         repository.updateItem(primaryKey: chapter.id) { value in
                             value.sentences[currentPage].isLike = true
+                            showToast.toggle()
                         }
                     }) {
                         RoundedRectangle(cornerRadius: 10)
                             .fill(.orange.opacity(0.2))
                             .overlay {
-                                Image(systemName: "square.and.arrow.up")
+                                Image(systemName: "folder")
                                     .foregroundStyle(.black)
                             }
                     }
@@ -129,6 +132,16 @@ struct ProblemSentenceView: View {
         }
         .navigationTitle(chapter.chapterName)
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                CustomBackButton()
+            }
+        }
+        .scrollIndicators(.hidden)
+        .toast(isPresenting: $showToast, duration: 1.5, tapToDismiss: true) {
+            AlertToast(displayMode: .banner(.slide), type: .regular, title: "저장되었습니다.")
+        }
         
     }
     

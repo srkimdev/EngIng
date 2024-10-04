@@ -116,12 +116,15 @@ struct DiaryWriteView: View {
             .padding(25)
             .navigationTitle("Write")
             .navigationBarTitleDisplayMode(.inline)
+            .onTapGesture {
+                hideKeyboard()
+            }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         viewModel.input.saveButtonTapped.send()
                         
-                        if viewModel.output.isAllowed {
+                        if viewModel.output.isAllowed && savedImage != nil {
                             FilesManager.shared.saveImageToDocument(image: savedImage!, filename: DateFormatManager.shared.getyymmdd(Date()))
                             dismiss()
                             viewModel.output.isAllowed = false

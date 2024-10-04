@@ -42,6 +42,12 @@ struct SaveProblemView: View {
  
         }
         .navigationTitle("My Sentences")
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                CustomBackButton()
+            }
+        }
         .onAppear {
             viewModel.input.showSavedSentences.send()
         }
