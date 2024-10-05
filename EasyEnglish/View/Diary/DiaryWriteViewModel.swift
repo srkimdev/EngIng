@@ -7,6 +7,8 @@
 
 import Foundation
 import Combine
+import PhotosUI
+import SwiftUI
 
 final class DiaryWriteViewModel: ObservableObject {
     
@@ -16,6 +18,8 @@ final class DiaryWriteViewModel: ObservableObject {
     
     @Published var titleText = ""
     @Published var storyText = ""
+    @Published var photosPickerItem: PhotosPickerItem? = nil
+    @Published var savedImage: UIImage? = nil
     
     let repository = RealmRepository<DiaryTable>()
     
@@ -41,13 +45,28 @@ final class DiaryWriteViewModel: ObservableObject {
     
     private func saveDiary() {
         
-        if titleText.isEmpty || storyText.isEmpty {
-            output.isAllowed = false
+        if titleText.isEmpty || storyText.isEmpty || savedImage == nil {
+            self.output.isAllowed = false
         } else {
+            FilesManager.shared.saveImageToDocument(image: savedImage!, filename: DateFormatManager.shared.getyymmdd(Date()))
             repository.createItem(DiaryTable(title: titleText, content: storyText))
-            output.isAllowed = true
+            self.output.isAllowed = true
         }
         
+    }
+    
+    func handlePickerItemChange() async {
+        if let photosPickerItem = photosPickerItem,
+           let data = try? await photosPickerItem.loadTransferable(type: Data.self) {
+            if let image = UIImage(data: data) {
+                DispatchQueue.main.async {
+                    self.savedImage = image
+                }
+            }
+        }
+        DispatchQueue.main.async {
+            self.photosPickerItem = nil
+        }
     }
     
 }

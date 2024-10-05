@@ -11,10 +11,6 @@ import PhotosUI
 struct DiaryWriteView: View {
     
     @StateObject private var viewModel = DiaryWriteViewModel()
-    
-    @State private var savedImage: UIImage?
-    @State private var photosPickerItem: PhotosPickerItem?
-    
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -26,7 +22,7 @@ struct DiaryWriteView: View {
                     .fill(.white)
                     .frame(width: abs(geometry.size.width - 50), height: abs(geometry.size.width - 50) * 0.618)
                     .overlay {
-                        if let savedImage = savedImage {
+                        if let savedImage = viewModel.savedImage {
                             Image(uiImage: savedImage)
                                 .resizable()
                                 .scaledToFill()
@@ -91,7 +87,7 @@ struct DiaryWriteView: View {
                     
                     Spacer()
                     
-                    PhotosPicker(selection: $photosPickerItem, matching: .images) {
+                    PhotosPicker(selection: $viewModel.photosPickerItem, matching: .images) {
                         Circle()
                             .fill(.orange.opacity(0.2))
                             .frame(width: 50, height: 50)
@@ -113,10 +109,10 @@ struct DiaryWriteView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
+                        
                         viewModel.input.saveButtonTapped.send()
                         
-                        if viewModel.output.isAllowed && savedImage != nil {
-                            FilesManager.shared.saveImageToDocument(image: savedImage!, filename: DateFormatManager.shared.getyymmdd(Date()))
+                        if viewModel.output.isAllowed {
                             dismiss()
                             viewModel.output.isAllowed = false
                         }
@@ -128,15 +124,9 @@ struct DiaryWriteView: View {
 
                 }
             }
-            .onChange(of: photosPickerItem) { _ in
+            .onChange(of: viewModel.photosPickerItem) { _ in
                 Task {
-                    if let photosPickerItem, let data = try? await photosPickerItem.loadTransferable(type: Data.self) {
-                        if let image = UIImage(data: data) {
-                            savedImage = image
-                        }
-                    }
-                    
-                    photosPickerItem = nil
+                    await viewModel.handlePickerItemChange()
                 }
             }
         }
