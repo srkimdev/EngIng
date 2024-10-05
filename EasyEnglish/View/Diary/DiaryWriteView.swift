@@ -49,19 +49,9 @@ struct DiaryWriteView: View {
                 Text("Title")
                     .font(.system(size: 24).bold())
                     .frame(maxWidth: .infinity, alignment: .leading)
-                
-                ZStack(alignment: .topLeading) {
                     
-                    if viewModel.titleText.isEmpty {
-                        Text("Write a title in English")
-                            .padding(.vertical, 8)
-                            .foregroundStyle(.gray)
-                    }
-                    
-                    TextEditor(text: $viewModel.titleText)
+                TextField("Write a title in English", text: $viewModel.titleText)
                         .frame(height: 50)
-                        .opacity(viewModel.titleText.isEmpty ? 0.5 : 1)
-                }
                 
                 Text("Story")
                     .font(.system(size: 24).bold())
@@ -76,6 +66,7 @@ struct DiaryWriteView: View {
                     
                     TextEditor(text: $viewModel.storyText)
                         .opacity(viewModel.storyText.isEmpty ? 0.5 : 1)
+                        .padding(.horizontal, -4)
                 }
                 
                 Spacer()
