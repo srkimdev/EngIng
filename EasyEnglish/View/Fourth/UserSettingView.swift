@@ -10,9 +10,14 @@ import Lottie
 
 struct UserSettingView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        LottieView(animation: .named("Animation - 1727267547779"))
-            .looping()
+        
+        GeometryReader { geometry in
+            let _ = print(geometry.size)
+            let _ = print(geometry.safeAreaInsets.top, "safearea")
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        }
+        .navigationTitle("dddd")
+        
     }
 }
 

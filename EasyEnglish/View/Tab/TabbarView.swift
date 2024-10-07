@@ -11,7 +11,7 @@ enum Tab {
     case main
     case problem
     case diary
-//    case user
+    case user
 }
 
 struct TabbarView: View {
@@ -35,8 +35,8 @@ struct TabbarView: View {
                         DiaryCalendarView()
                             .tag(Tab.diary)
                         
-//                        UserSettingView()
-//                            .tag(Tab.user)
+                        UserSettingView()
+                            .tag(Tab.user)
                     }
                     .toolbar(.hidden, for: .tabBar)
                 }

@@ -18,7 +18,6 @@ final class NetworkManager {
         
         do {
             let request = try router.asURLRequest()
-            print(request)
             
             let response = await AF.request(request)
                 .validate()
