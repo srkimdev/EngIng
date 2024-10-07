@@ -30,3 +30,18 @@
   - 각 카테고리 별 문장 학습 / 문장 저장 및 음성 듣기
 - Diary 화면
   - 영어 일기 작성 및 저장 기능 / 문장 번역 및 음성 듣기
+ 
+## 핵심 기술 구현 사항
+- network
+  - Alamofire의 URLRequestConvertible 프로토콜을 채택한 TargetType 프로토콜과 이를 사용한 라우터 패턴을 정의해 다양한 네트워크 통신을 처리
+  - Google TTS와 같이 시간이 오래 걸릴 수 있는 통신에 대응하기 위해 NetworkManager를 비동기로 구현
+ 
+- Google Text-To-Speech
+  - Google TTS에서 제공하는 여러 모델 중 Google 번역기에서 사용하고 다른 모델에 비해 인간의 음성에 더 가까운 WaveNet 모델을 채택
+  - 2.4kHz의 샘플링 주파수를 사용하여 높은 음질을 제공
+ 
+- Architecture
+  - Input/Output 패턴과 Combine을 사용하여 MVVM 패턴을 구현
+ 
+- Database
+  - 약 400개의 한국어 - 영어 문장 셋을 저장하고 카테고리-챕터-문장 테이블 간의 1대 다 구조 작업에 용이한 Realm을 사용
