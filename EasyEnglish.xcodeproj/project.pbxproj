@@ -174,10 +174,8 @@
 		DC0D9B852C930DE800AD91DC /* Second */ = {
 			isa = PBXGroup;
 			children = (
-				DC0D9B882C930E2900AD91DC /* ProblemListView.swift */,
-				DCFD54212C9FFB960000D2EC /* ProblemSentenceView.swift */,
-				DC113C932CA576540008F310 /* ProblemListViewModel.swift */,
-				DC7B96E02CAD741D000AD339 /* ProblemSentenceViewModel.swift */,
+				DCB470952CBCEA3700BE3020 /* View */,
+				DCB470962CBCEA3D00BE3020 /* ViewModel */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -185,10 +183,9 @@
 		DC0D9B862C930DEE00AD91DC /* Third */ = {
 			isa = PBXGroup;
 			children = (
-				DC0D9B932C931B3E00AD91DC /* DiaryCalendarView.swift */,
-				DC0D9B952C9323AB00AD91DC /* CalendarView.swift */,
+				DCB470972CBCEA5400BE3020 /* View */,
+				DCB470982CBCEA5A00BE3020 /* ViewModel */,
 				DC0D9B972C93F67800AD91DC /* CalendarView+Extension.swift */,
-				DC9983A92CA3F26700D54CCE /* DiaryCalendarViewModel.swift */,
 			);
 			path = Third;
 			sourceTree = "<group>";
@@ -196,8 +193,8 @@
 		DC0D9B872C930DF600AD91DC /* Save */ = {
 			isa = PBXGroup;
 			children = (
-				DC0D9BA52C9457FA00AD91DC /* SaveProblemView.swift */,
-				DC113C972CA6CBFD0008F310 /* SaveProblemViewModel.swift */,
+				DCB470992CBCEA7D00BE3020 /* View */,
+				DCB4709A2CBCEA8200BE3020 /* ViewModel */,
 			);
 			path = Save;
 			sourceTree = "<group>";
@@ -232,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				DC0D9BA12C94551400AD91DC /* Constants.swift */,
-				DCFF76CE2C996C9100D479E1 /* CustomBackButton.swift */,
 				DCFD541C2C9EA9E50000D2EC /* Categories.swift */,
 				DC113C912CA5547A0008F310 /* DateFormatManager.swift */,
 			);
@@ -277,8 +273,11 @@
 				DC0D9B8F2C9312FA00AD91DC /* Extension */,
 				DC0D9BA02C94550400AD91DC /* Static */,
 				DC5DBBA82C9072E9001687FC /* Protocol */,
+				DC6666DC2C9BE87F00251F82 /* Request */,
+				DC6666DD2C9BE88900251F82 /* Response */,
 				DC5DBBA92C9072FB001687FC /* Network */,
 				DC5DBBAA2C9073C1001687FC /* Database */,
+				DCB4709F2CBCEAC300BE3020 /* CustomView */,
 				DC0D9B842C930DAF00AD91DC /* View */,
 			);
 			path = EasyEnglish;
@@ -303,8 +302,6 @@
 		DC5DBBA92C9072FB001687FC /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				DC6666DC2C9BE87F00251F82 /* Request */,
-				DC6666DD2C9BE88900251F82 /* Response */,
 				DC6666D02C9AC5B300251F82 /* Router.swift */,
 				DC6666D22C9AC9B400251F82 /* Header.swift */,
 				DC6666E42C9BF5B400251F82 /* NetworkManager.swift */,
@@ -327,9 +324,8 @@
 		DC6666D42C9BDCA200251F82 /* Translate */ = {
 			isa = PBXGroup;
 			children = (
-				DC6666D52C9BE03C00251F82 /* TranslateView.swift */,
-				DC6666E22C9BF3A500251F82 /* TranslateViewModel.swift */,
-				DC6666EB2C9C3C7500251F82 /* CustomTextEditor.swift */,
+				DCB4709D2CBCEAAD00BE3020 /* View */,
+				DCB4709E2CBCEAB200BE3020 /* ViewModel */,
 			);
 			path = Translate;
 			sourceTree = "<group>";
@@ -360,13 +356,115 @@
 			path = Fourth;
 			sourceTree = "<group>";
 		};
-		DCFF76C72C96C35300D479E1 /* First */ = {
+		DCB470942CBCEA2700BE3020 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DC1C6AE82CA2C4710033666A /* ViewModel */,
 				DCFF76C82C96C36700D479E1 /* MainView.swift */,
 				DCFF76CC2C96D20D00D479E1 /* CircleChartView.swift */,
 				DCFF76CA2C96C7C800D479E1 /* WeekChartView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DCB470952CBCEA3700BE3020 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC0D9B882C930E2900AD91DC /* ProblemListView.swift */,
+				DCFD54212C9FFB960000D2EC /* ProblemSentenceView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DCB470962CBCEA3D00BE3020 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC113C932CA576540008F310 /* ProblemListViewModel.swift */,
+				DC7B96E02CAD741D000AD339 /* ProblemSentenceViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DCB470972CBCEA5400BE3020 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC0D9B932C931B3E00AD91DC /* DiaryCalendarView.swift */,
+				DC0D9B952C9323AB00AD91DC /* CalendarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DCB470982CBCEA5A00BE3020 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC9983A92CA3F26700D54CCE /* DiaryCalendarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DCB470992CBCEA7D00BE3020 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC0D9BA52C9457FA00AD91DC /* SaveProblemView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DCB4709A2CBCEA8200BE3020 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC113C972CA6CBFD0008F310 /* SaveProblemViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DCB4709B2CBCEA9200BE3020 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DCFF76D12C997A5400D479E1 /* DiaryWriteView.swift */,
+				DC6666CE2C9AB7E300251F82 /* DiaryReviseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DCB4709C2CBCEA9800BE3020 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC9983AB2CA4088800D54CCE /* DiaryWriteViewModel.swift */,
+				DC7B96E22CAE6BA3000AD339 /* DiaryReviseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DCB4709D2CBCEAAD00BE3020 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC6666D52C9BE03C00251F82 /* TranslateView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DCB4709E2CBCEAB200BE3020 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC6666E22C9BF3A500251F82 /* TranslateViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DCB4709F2CBCEAC300BE3020 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				DC6666EB2C9C3C7500251F82 /* CustomTextEditor.swift */,
+				DCFF76CE2C996C9100D479E1 /* CustomBackButton.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		DCFF76C72C96C35300D479E1 /* First */ = {
+			isa = PBXGroup;
+			children = (
+				DCB470942CBCEA2700BE3020 /* View */,
+				DC1C6AE82CA2C4710033666A /* ViewModel */,
 			);
 			path = First;
 			sourceTree = "<group>";
@@ -374,10 +472,8 @@
 		DCFF76D02C997A3D00D479E1 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
-				DCFF76D12C997A5400D479E1 /* DiaryWriteView.swift */,
-				DC6666CE2C9AB7E300251F82 /* DiaryReviseView.swift */,
-				DC9983AB2CA4088800D54CCE /* DiaryWriteViewModel.swift */,
-				DC7B96E22CAE6BA3000AD339 /* DiaryReviseViewModel.swift */,
+				DCB4709B2CBCEA9200BE3020 /* View */,
+				DCB4709C2CBCEA9800BE3020 /* ViewModel */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
