@@ -18,8 +18,6 @@ struct TabbarView: View {
     
     @State private var selected: Tab = .main
     
-    // configurewithtransparent
-    
     var body: some View {
         
         NavigationStack {

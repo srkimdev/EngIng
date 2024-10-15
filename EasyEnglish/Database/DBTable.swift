@@ -16,7 +16,7 @@ final class CategoryTable: Object, Identifiable {
     @Persisted var chapters = List<ChapterTable>()
 }
 
-final class ChapterTable: Object {
+final class ChapterTable: Object, Identifiable {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var chapterName: String = ""
     @Persisted var star: Bool = false
@@ -49,6 +49,7 @@ final class DiaryTable: Object {
     }
 }
 
+//MARK: DayCheck
 final class DayTable: Object, Identifiable {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var date: Date

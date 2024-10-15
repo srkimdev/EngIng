@@ -18,7 +18,6 @@ protocol TargetType: URLRequestConvertible {
 }
 
 extension TargetType {
-    
     func asURLRequest() throws -> URLRequest {
         let url = try baseURL.asURL()
         var request = try URLRequest(url: url.appending(path: path).appending(queryItems: queryItems ?? []), method: method)
@@ -26,7 +25,6 @@ extension TargetType {
         request.httpBody = body
         return request
     }
-    
 }
 
 

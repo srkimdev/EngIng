@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct TTSResponse: Codable {
+struct TTSResponse: Decodable {
     let audioContent: String
 }

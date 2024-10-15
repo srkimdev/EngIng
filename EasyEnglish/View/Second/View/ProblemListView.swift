@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import RealmSwift
 import CarouselStack
 
 struct ProblemListView: View {
@@ -19,32 +18,26 @@ struct ProblemListView: View {
         
             VStack {
                 CarouselStack(Categories.allCases, initialIndex: 0) { category in
-                    
                     bannerView(category, geometry)
                         .frame(width: geometry.size.width / 1.2, height: geometry.size.width / 1.96)
-                    }
-                    .carouselStyle(.infiniteScroll)
-                    .carouselScale(0.8)
-                    .carouselAnimation(.easeInOut)
-                    .onCarousel { value in
-                        viewModel.input.carouselTap.send(value.index)
-                    }
+                }
+                .carouselStyle(.infiniteScroll)
+                .carouselScale(0.8)
+                .carouselAnimation(.easeInOut)
+                .onCarousel { value in
+                    viewModel.input.carouselTap.send(value.index)
+                }
 
                 ScrollView {
-                        
                     VStack {
-                        
                         ForEach(viewModel.output.selectedCategory.chapters, id: \.self) { item in
                             categoryRowView(item)
                         }
                         .transition(.asymmetric(insertion: .move(edge: .bottom).combined(with: .opacity), removal: .move(edge: .top).combined(with: .opacity)))
                         .animation(.easeInOut, value: viewModel.output.selectedCategory.chapters)
-                        
                     }
                     .padding()
-                    
                 }
-                
             }
 
         }
@@ -98,7 +91,10 @@ struct ProblemListView: View {
                         viewModel.input.starButtonTap.send(chapter)
                     } label: {
                         Image(systemName: chapter.star ? "star.fill" : "star")
-                            .foregroundStyle(.blue.opacity(0.3))
+                            .foregroundStyle(.blue)
+                    }
+                    .onAppear() {
+                        print("dfdf",chapter.star)
                     }
                 }
                 Spacer()
@@ -115,6 +111,8 @@ struct ProblemListView: View {
     }
     
 }
+
+
 
 #Preview {
     ProblemListView()

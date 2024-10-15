@@ -199,14 +199,6 @@
 			path = Save;
 			sourceTree = "<group>";
 		};
-		DC0D9B8A2C93125C00AD91DC /* Secret */ = {
-			isa = PBXGroup;
-			children = (
-				DC0D9B8D2C93129300AD91DC /* APIKey.swift */,
-			);
-			path = Secret;
-			sourceTree = "<group>";
-		};
 		DC0D9B8F2C9312FA00AD91DC /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,7 +261,6 @@
 				DC5DBB9C2C9069F9001687FC /* Assets.xcassets */,
 				DC5DBB9E2C9069F9001687FC /* Preview Content */,
 				DC5DBBA62C906EC9001687FC /* Localizable.xcstrings */,
-				DC0D9B8A2C93125C00AD91DC /* Secret */,
 				DC0D9B8F2C9312FA00AD91DC /* Extension */,
 				DC0D9BA02C94550400AD91DC /* Static */,
 				DC5DBBA82C9072E9001687FC /* Protocol */,
@@ -302,6 +293,7 @@
 		DC5DBBA92C9072FB001687FC /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				DC0D9B8D2C93129300AD91DC /* APIKey.swift */,
 				DC6666D02C9AC5B300251F82 /* Router.swift */,
 				DC6666D22C9AC9B400251F82 /* Header.swift */,
 				DC6666E42C9BF5B400251F82 /* NetworkManager.swift */,
@@ -752,6 +744,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EasyEnglish/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EngIng;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = test;
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = test;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -788,6 +781,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EasyEnglish/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EngIng;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = test;
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = test;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -70,10 +70,6 @@ enum Router: TargetType {
             } catch {
                 return nil
             }
-            
-        default:
-            return nil
-            
         }
     }
     

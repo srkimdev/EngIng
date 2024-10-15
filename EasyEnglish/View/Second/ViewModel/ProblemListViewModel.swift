@@ -12,6 +12,7 @@ import RealmSwift
 final class ProblemListViewModel: ObservableObject {
     
     @ObservedResults(CategoryTable.self) var categories
+    
     var currentCategory = CategoryTable()
     
     private var cancellables = Set<AnyCancellable>()
@@ -35,14 +36,15 @@ final class ProblemListViewModel: ObservableObject {
     init() {
         
         input.progressCheck
-            .sink { _ in
-                print("here")
+            .sink { [weak self] _ in
+                guard let self else { return }
                 self.checkProgress(self.currentCategory)
             }
             .store(in: &cancellables)
         
         input.carouselTap
-            .sink { value in
+            .sink { [weak self] value in
+                guard let self else { return }
                 self.output.selectedCategory = self.categories[value]
                 self.currentCategory = self.categories[value]
             }
@@ -51,16 +53,17 @@ final class ProblemListViewModel: ObservableObject {
         input.starButtonTap
             .sink { [weak self] value in
                 guard let self else { return }
-                
                 repoChapter.updateItem(primaryKey: value.id) { value in
                     value.star.toggle()
                     self.output.rendering = value.star
                 }
-                
+                repoChapter.detectRealmURL()
             }
             .store(in: &cancellables)
         
     }
+    
+    let a = Array([1])
     
     private func checkProgress(_ category: CategoryTable) {
         for chapter in category.chapters {
