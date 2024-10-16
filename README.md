@@ -38,24 +38,26 @@
 ## 핵심 기술 구현 사항
 - Network
   - Alamofire의 URLRequestConvertible 프로토콜을 채택한 TargetType 프로토콜과 이를 사용한 라우터 패턴을 정의해 다양한 네트워크 통신을 처리
-  - Google TTS와 같이 시간이 오래 걸릴 수 있는 통신에 대응하기 위해 NetworkManager를 비동기로 구현
+  - NetworkManager를 비동기 함수로 처리하여 번역이나 TTS같이 여러 작업을 비동기적으로 동시에 실행하고, 각 작업이 완료될 때까지 기다린 후 결과를 처리하도록 설계
  
 - Database
   - 약 400개의 한국어/영어 문장 셋을 저장하고 카테고리-챕터-문장 테이블 간의 1대 다 구조 작업에 용이한 Realm을 사용
   - Realm Repository를 사용하여 여러 테이블에서 사용되는 데이터 처리 로직을 재사용
 
-- Charts
-  - ㅇㅇㅇ
-
 - Google Text-To-Speech
-iOS에는 AVFoundation 라이브러리를 통해 TTS기능을 제공해주고 있지만 기계음같은 부자연스러운 부분이 있어 사용자들에게 문장의 억양이나 속도등의 요소들을 정확하게 알려줄 수 없다.
-따라서 영어문장을 사람과 비슷한 자연스러운 음성 오디오 데이터를 제공하는 Google Text-To-Speech API를 이용하였다.
 
+  - iOS에는 AVFoundation 라이브러리를 통해 TTS기능을 제공해주고 있지만 기계음같은 부자연스러운 부분이 있어 사용자들에게 문장의 억양이나 속도등의 요소들을 정확하게 알려줄 수 없다.
+  - 영어문장을 사람과 비슷한 자연스러운 음성 오디오 데이터를 제공하는 Google Text-To-Speech API를 이용하였다.
 
+  <p align="center">
+  <img width="350" alt="스크린샷 2024-10-16 오후 6 34 16" src="https://github.com/user-attachments/assets/afee93a4-5271-4763-98d1-0bbbb5db31ff">
+  <br>
+  차트 y축 값은 각 음성의 자연스러움의 기준을 1 ∼ 5점을 척도로 Mean Opinion Score를 계산하여 나타낸다. 
+  </p>
 
+  - Google TTS에서 지원하는 여러 모델 중 MOS점수가 인간의 소리와 가장 비슷한 WaveNet 모델을 채택하였다.
+  - WaveNet모델은 초당 24kHz로 샘플링하여 더 높은 음질을 얻을 수 있다.
 
-  - 텍스트의 문맥을 고려하고 억양, 속도 등을 조절하여 자연스럽게 구현한 WaveNet 음성 모델을 채택
-  - 2.4kHz의 샘플링 주파수를 사용하여 높은 음질을 제공
   
 <br/>
 
@@ -78,7 +80,8 @@ iOS에는 AVFoundation 라이브러리를 통해 TTS기능을 제공해주고 �
               .foregroundStyle(.black)
       }
   ```
-  
+
+<br>
 
 ### 2. ViewModel에서 Realm의 데이터를 수정하였지만 View에서 @ObservedResults로 선언된 변수가 변경사항을 인지하지 못하는 문제
 - 상황
