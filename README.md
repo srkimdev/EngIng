@@ -48,20 +48,37 @@
   - ㅇㅇㅇ
 
 - Google Text-To-Speech
+iOS에는 AVFoundation 라이브러리를 통해 TTS기능을 제공해주고 있지만 기계음같은 부자연스러운 부분이 있어 사용자들에게 문장의 억양이나 속도등의 요소들을 정확하게 알려줄 수 없다.
+따라서 영어문장을 사람과 비슷한 자연스러운 음성 오디오 데이터를 제공하는 Google Text-To-Speech API를 이용하였다.
+
+
+
+
   - 텍스트의 문맥을 고려하고 억양, 속도 등을 조절하여 자연스럽게 구현한 WaveNet 음성 모델을 채택
   - 2.4kHz의 샘플링 주파수를 사용하여 높은 음질을 제공
   
 <br/>
 
 ## 트러블 슈팅
-### 1. borderWidth와 c
+### 1. RoundedRectangle과 border를 같이 쓸 때 모서리 부분에는 테두리가 반영되지 않는 문제
 - 상황
-  - 캘린더에서 날짜를 눌렀을 때 캘린더뷰에서는 눌린 날짜에 색을 다르게 하고 다이어리뷰에서는 해당 날짜의 일기를 Realm으로 부터 가져와서 보여주는 역할을 한다.
+  - 모서리가 둥글고 테두리가 있는 뷰를 만들 때, RoundedRectangle로 모서리가 둥근 사각형을 만든 후 border modifier로 테두리를 설정하면 모서리부분은 반영되지 않아 직사각형으로 보여진다.
 
 - 원인 분석
-  - 캘린더뷰와 다이어리뷰는 동일한 Input
+  - border modifier는 특정 모양의 경계에 적용되지 않고 view의 프레임 전체에 적용한다. 따라서 모양의 경계에 적용되는 modifier를 사용해 줄 필요가 있다.
 
 - 해결
+  - 모양의 경계선을 그리는 데 사용되는 stroke modifier를 이용하여 테두리를 구성해주었다.
+
+ ```swift
+  RoundedRectangle(cornerRadius: 10)
+      .stroke(.black, lineWidth: 1)
+      .overlay {
+          Image(systemName: "folder")
+              .foregroundStyle(.black)
+      }
+  ```
+  
 
 ### 2. ViewModel에서 Realm의 데이터를 수정하였지만 View에서 @ObservedResults로 선언된 변수가 변경사항을 인지하지 못하는 문제
 - 상황
@@ -82,7 +99,7 @@
       var rendering: Void = ()
   }
 
-  input.starButtonTap
+  input.likeButtonTap
       .sink { [weak self] value in
           guard let self else { return }
           repoChapter.updateItem(primaryKey: value.id) { value in
