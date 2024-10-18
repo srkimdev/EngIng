@@ -1,29 +1,35 @@
-## EngIng - 영어학습 및 일기
-기존의 읽기 중심 영어 학습에서 벗어나, 영어로 직접 말하고 글을 쓰며 배울 수 있는 앱입니다.
+# EngIng - 영어학습 및 일기
+> 기존의 읽기 중심 영어 학습에서 벗어나, 영어로 직접 말하고 글을 쓰며 배울 수 있는 앱입니다.
 <br/>
+
+## 스크린샷
+
+|![Simulator Screenshot - iPhone 15 Pro - 2024-10-18 at 21 03 28](https://github.com/user-attachments/assets/2225d170-84e8-4238-a71d-c3ae12810510)|![Simulator Screenshot - iPhone 15 Pro - 2024-10-18 at 21 03 36](https://github.com/user-attachments/assets/8e9a571b-119c-4548-aac2-0db09494d656)|![Simulator Screenshot - iPhone 15 Pro - 2024-10-18 at 21 05 26](https://github.com/user-attachments/assets/041054a8-95f2-4ea0-91fa-b77a0f5a365a)|![Simulator Screenshot - iPhone 15 Pro - 2024-10-18 at 21 05 16](https://github.com/user-attachments/assets/6a3488b3-4485-4eec-9d33-783a6ef5a7f9)|
+|--|--|--|--|
+
+<br>
 
 ## 프로젝트 환경
 - 개발 인원:
   - 1명
 - 개발 기간:
   - 24.09.12 - 24.10.02 (약 3주)
-- 최소 버전:
-  - iOS 16.0
+- 개발 환경:
+
+  | iOS version | <img src="https://img.shields.io/badge/iOS-16.0+-black?logo=apple"/> |
+  |:-:|:-:|
+  | Framework | SwiftUI |
+  | Architecture | MVVM |
+  | Reactive | Combine |
+
 <br/>
 
 ## 기술 스택 및 라이브러리
-- UI:
-  - SwiftUI, Shufflelt, Lottie
-- Architecture:
-  - MVVM / InOut
-- Reactive:
-  - Combine
-- Network:
-  - Alamofire
-- Database:
-  - Realm
-- Audio:
-  - AvFoundation, Google Text-to-Speech  
+- UI: `Shufflelt`, `Lottie`
+- Network: `Alamofire`
+- Database: `Realm`
+- Audio: `AvFoundation`, `Google Text-to-Speech`
+  
 <br/>
 
 ## 핵심 기능
@@ -33,18 +39,20 @@
 - 문장 저장 / 음성 듣기
 - 영어 일기 작성 / 저장 기능
 - 문장 번역 및 음성 듣기
+
 <br/>
  
 ## 핵심 기술 구현 사항
-- Network
+
+- ### Network
   - Alamofire의 URLRequestConvertible 프로토콜을 채택한 TargetType 프로토콜과 이를 사용한 라우터 패턴을 정의해 다양한 네트워크 통신을 처리
   - NetworkManager를 비동기 함수로 처리하여 번역이나 TTS같이 여러 작업을 비동기적으로 동시에 실행하고, 각 작업이 완료될 때까지 기다린 후 결과를 처리하도록 설계
  
-- Database
+- ### Database
   - 약 400개의 한국어/영어 문장 셋을 저장하고 카테고리-챕터-문장 테이블 간의 1대 다 구조 작업에 용이한 Realm을 사용
   - Realm Repository를 사용하여 여러 테이블에서 사용되는 데이터 처리 로직을 재사용
 
-- Google Text-To-Speech
+- ### Google Text-To-Speech
 
   - iOS에는 AVFoundation 라이브러리를 통해 TTS기능을 제공해주고 있지만 기계음같은 부자연스러운 부분이 있어 사용자들에게 문장의 억양이나 속도등의 요소들을 정확하게 알려줄 수 없다.
   - 영어문장을 사람과 비슷한 자연스러운 음성 오디오 데이터를 제공하는 Google Text-To-Speech API를 이용하였다.
@@ -52,13 +60,13 @@
   <p align="center">
   <img width="350" alt="스크린샷 2024-10-16 오후 6 34 16" src="https://github.com/user-attachments/assets/afee93a4-5271-4763-98d1-0bbbb5db31ff">
   <br>
+  x축  
   차트 y축 값은 각 음성의 자연스러움의 기준을 1 ∼ 5점을 척도로 Mean Opinion Score를 계산하여 나타낸다. 
   </p>
 
   - Google TTS에서 지원하는 여러 모델 중 MOS점수가 인간의 소리와 가장 비슷한 WaveNet 모델을 채택하였다.
   - WaveNet모델은 초당 24kHz로 샘플링하여 더 높은 음질을 얻을 수 있다.
 
-  
 <br/>
 
 ## 트러블 슈팅
