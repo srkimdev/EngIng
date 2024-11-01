@@ -11,14 +11,13 @@ import RealmSwift
 
 final class ProblemListViewModel: ObservableObject {
     
-    @ObservedResults(CategoryTable.self) var categories
-    
-    var currentCategory = CategoryTable()
+    private var currentCategory = CategoryTable()
     
     private var cancellables = Set<AnyCancellable>()
     var input = Input()
     @Published var output = Output()
 
+    private let repoCategory = RealmRepository<CategoryTable>()
     private let repoChapter = RealmRepository<ChapterTable>()
     private let repoSentence = RealmRepository<SentenceTable>()
     
@@ -30,7 +29,7 @@ final class ProblemListViewModel: ObservableObject {
     
     struct Output {
         var selectedCategory = CategoryTable()
-        var rendering = false
+        var rendering: Void = ()
     }
     
     init() {
@@ -45,8 +44,9 @@ final class ProblemListViewModel: ObservableObject {
         input.carouselTap
             .sink { [weak self] value in
                 guard let self else { return }
-                self.output.selectedCategory = self.categories[value]
-                self.currentCategory = self.categories[value]
+                let categories = repoCategory.readAllItem()[value]
+                self.output.selectedCategory = categories
+                self.currentCategory = categories
             }
             .store(in: &cancellables)
         
@@ -55,15 +55,12 @@ final class ProblemListViewModel: ObservableObject {
                 guard let self else { return }
                 repoChapter.updateItem(primaryKey: value.id) { value in
                     value.star.toggle()
-                    self.output.rendering = value.star
+                    self.output.rendering = ()
                 }
-                repoChapter.detectRealmURL()
             }
             .store(in: &cancellables)
         
     }
-    
-    let a = Array([1])
     
     private func checkProgress(_ category: CategoryTable) {
         for chapter in category.chapters {
@@ -75,12 +72,12 @@ final class ProblemListViewModel: ObservableObject {
         let totalSentences = chapter.sentences.count
         let checkedSentences = chapter.sentences.filter { $0.isCheck }.count
         
-        if totalSentences > 0 {
+        if totalSentences != 0 {
             repoChapter.updateItem(primaryKey: chapter.id) { value in
                 let progress = String(format: "%.2f", Double(checkedSentences) / Double(totalSentences) * 100)
                 value.progress = Double(progress) ?? 0
             }
-            output.rendering.toggle()
+            output.rendering = ()
         }
     }
     

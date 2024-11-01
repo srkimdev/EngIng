@@ -19,12 +19,10 @@ struct CalendarView: View {
     }
     
     var body: some View {
-        
         VStack {
             headerView
             calendarGridView
         }
-        
     }
     
     //MARK: Month + Day
@@ -53,17 +51,17 @@ struct CalendarView: View {
         
         HStack(alignment: .center) {
             
-            Button(action: {
+            Button {
                 changeMonth(by: -1)
-            }, label: {
+            } label: {
                 Image(systemName: "chevron.left")
                     .font(.title2)
-                    .foregroundStyle(.black) // change
-            })
+                    .foregroundStyle(.black)
+            }
             
             Spacer()
             
-            Text(month.getMonth) // change
+            Text(month.getMonth)
                 .font(.title2.bold())
             
             Spacer()
@@ -73,7 +71,7 @@ struct CalendarView: View {
             }, label: {
                 Image(systemName: "chevron.right")
                     .font(.title2)
-                    .foregroundStyle(.black) // change
+                    .foregroundStyle(.black)
             })
             
         }

@@ -13,11 +13,9 @@ struct ProblemSentenceView: View {
     
     private let repository = RealmRepository<ChapterTable>()
     
-    var chapter: ChapterTable
-    
     @State private var currentPage: Int = 0
     @State private var showToast = false
-    @StateObject private var viewModel = ProblemSentenceViewModel()
+    @StateObject var viewModel: ProblemSentenceViewModel
     
     let colors: [Color] = [.white, .white, .white, .white, .white, .white, .white, .white, .white, .white]
     
@@ -31,6 +29,7 @@ struct ProblemSentenceView: View {
                     initialIndex: 0
                 ) { color in
                     color
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
                         .border(.black, width: 1)
                         .frame(width: abs(geometry.size.width - 60), height: abs(geometry.size.height / 1.4))
                         .overlay {
@@ -39,7 +38,7 @@ struct ProblemSentenceView: View {
                                 
                                 Spacer()
                                 
-                                Text(chapter.sentences[currentPage].korean)
+                                Text(viewModel.chapter.sentences[currentPage].korean)
                                 
                                 Spacer()
                                 
@@ -49,7 +48,7 @@ struct ProblemSentenceView: View {
                                 Spacer()
                                 
                                 if viewModel.output.answerButtonStatus {
-                                    Text(chapter.sentences[currentPage].english)
+                                    Text(viewModel.chapter.sentences[currentPage].english)
                                 } else {
                                     Text("")
                                 }
@@ -72,7 +71,7 @@ struct ProblemSentenceView: View {
                     Spacer()
                     
                     Button(action: {
-                        repository.updateItem(primaryKey: chapter.id) { value in
+                        repository.updateItem(primaryKey: viewModel.chapter.id) { value in
                             value.sentences[currentPage].isLike = true
                             showToast.toggle()
                         }
@@ -83,6 +82,7 @@ struct ProblemSentenceView: View {
                                 Image(systemName: "folder")
                                     .foregroundStyle(.black)
                             }
+                            
                     }
                     .frame(width: geometry.size.width / 8, height: geometry.size.width / 8)
                     
@@ -90,7 +90,7 @@ struct ProblemSentenceView: View {
                     
                     Button(action: {
                         viewModel.input.answerButtonTap.send()
-                        repository.updateItem(primaryKey: chapter.id) { value in
+                        repository.updateItem(primaryKey: viewModel.chapter.id) { value in
                             value.sentences[currentPage].isCheck = true
                             value.sentences[currentPage].whenSolved = DateFormatManager.shared.getyymmdd(Date())
                         }
@@ -108,7 +108,7 @@ struct ProblemSentenceView: View {
                     
                     Button(action: {
                         if viewModel.output.answerButtonStatus {
-                            viewModel.input.soundButtonTap.send(chapter.sentences[currentPage].english)
+                            viewModel.input.soundButtonTap.send(viewModel.chapter.sentences[currentPage].english)
                         }
                     }) {
                         RoundedRectangle(cornerRadius: 10)
@@ -130,7 +130,7 @@ struct ProblemSentenceView: View {
             }
             
         }
-        .navigationTitle(chapter.chapterName)
+        .navigationTitle(viewModel.chapter.chapterName)
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
         .toolbar {

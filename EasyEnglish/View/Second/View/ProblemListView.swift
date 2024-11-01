@@ -75,7 +75,7 @@ struct ProblemListView: View {
         ZStack {
             
             NavigationLink {
-                ProblemSentenceView(chapter: chapter)
+                ProblemSentenceView(viewModel: ProblemSentenceViewModel(chapter: chapter))
             } label: {
                 RoundedRectangle(cornerRadius: 8)
                     .fill(.gray.opacity(0.1))
@@ -93,9 +93,6 @@ struct ProblemListView: View {
                         Image(systemName: chapter.star ? "star.fill" : "star")
                             .foregroundStyle(.blue)
                     }
-                    .onAppear() {
-                        print("dfdf",chapter.star)
-                    }
                 }
                 Spacer()
                 Text("Your completed \(Int(chapter.progress))%")
@@ -111,8 +108,6 @@ struct ProblemListView: View {
     }
     
 }
-
-
 
 #Preview {
     ProblemListView()

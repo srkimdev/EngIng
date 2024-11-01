@@ -17,7 +17,6 @@ struct DiaryWriteView: View {
         
         GeometryReader { geometry in
             VStack {
-                
                 RoundedRectangle(cornerRadius: 10)
                     .fill(.white)
                     .frame(width: abs(geometry.size.width - 50), height: abs(geometry.size.width - 50) * 0.618)

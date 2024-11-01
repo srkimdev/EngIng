@@ -26,13 +26,11 @@ final class DiaryCalendarViewModel: ObservableObject {
     }
     
     init() {
-        
         input.selectedDate
             .sink { value in
                 self.output.showDiary = self.readDiary(for: value)
             }
             .store(in: &cancellables)
-        
     }
     
     func readDiary(for date: Date) -> DiaryTable? {

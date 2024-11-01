@@ -71,8 +71,6 @@ struct CustomTabView: View {
             
             Spacer()
             
-            Spacer()
-            
             Button {
                 selected = .user
             } label: {
@@ -88,6 +86,8 @@ struct CustomTabView: View {
                 }
             }
             .foregroundStyle(selected == .user ? Color.accentColor : Color.primary)
+            
+            Spacer()
             
             
         }

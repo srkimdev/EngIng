@@ -10,7 +10,6 @@ import SwiftUI
 struct DiaryCalendarView: View {
     
     @StateObject private var viewModel = DiaryCalendarViewModel()
-    @State var date: Date = Date()
     
     var body: some View {
         
@@ -35,6 +34,7 @@ struct DiaryCalendarView: View {
             
             VStack {
 
+                //MARK: calendar
                 RoundedRectangle(cornerRadius: 20)
                     .fill(.white)
                     .overlay {
@@ -45,13 +45,16 @@ struct DiaryCalendarView: View {
                     .frame(height: 300)
                     .padding(.bottom, 20)
                 
+                //MARK: Today's Diary
                 todayDiary
                 
+                //MARK: Diary
                 DiaryRowView(diary: $viewModel.output.showDiary)
 
                 Spacer()
                 
-                writeButtonView(geometry)
+                //MARK: Add Button
+                writeButtonView()
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     .padding(.bottom, 70)
             }
@@ -65,15 +68,12 @@ struct DiaryCalendarView: View {
     }
     
     private var todayDiary: some View {
-        
         Text("Today's Diary")
             .font(.title2.bold())
             .frame(maxWidth: .infinity, alignment: .leading)
-        
     }
     
-    func writeButtonView(_ geometry: GeometryProxy) -> some View {
-        
+    func writeButtonView() -> some View {
         NavigationLink {
             DiaryWriteView()
         } label: {
@@ -85,7 +85,6 @@ struct DiaryCalendarView: View {
                 }
         }
         .frame(width: 40, height: 40)
-
     }
     
 }

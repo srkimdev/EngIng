@@ -11,8 +11,9 @@ import AVFoundation
 
 final class ProblemSentenceViewModel: ObservableObject {
     
-    var cancellables = Set<AnyCancellable>()
-    var audioPlayer: AVAudioPlayer?
+    var chapter: ChapterTable
+    private var cancellables = Set<AnyCancellable>()
+    private var audioPlayer: AVAudioPlayer?
     
     let input = Input()
     @Published
@@ -27,7 +28,9 @@ final class ProblemSentenceViewModel: ObservableObject {
         var answerButtonStatus = false
     }
     
-    init() {
+    init(chapter: ChapterTable) {
+        
+        self.chapter = chapter
         
         input.answerButtonTap
             .sink { value in
@@ -52,7 +55,7 @@ final class ProblemSentenceViewModel: ObservableObject {
         let audioConfig = AudioConfig()
         
         let query = TTSInput(input: input, voice: voiceSelectionParams, audioConfig: audioConfig)
-        let result = await NetworkManager.shared.requestAPI(router: Router.tts(query: query), type: TTSResponse.self)
+        let result = try await NetworkManager.shared.requestAPI(router: Router.tts(query: query), type: TTSResponse.self)
         
         switch result {
         case .success(let response):
