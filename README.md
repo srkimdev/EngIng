@@ -97,7 +97,7 @@
   - like값이 변경될 때 마다 view에서 변화를 감지하고 렌더링하기 위해 ObservedResults로 선언해 주었지만 업데이트가 되지 않음
 
 - 원인 분석
-  - @ObservedResults는 ViewModel에서 Realm에 저장된 데이터가 수정된 것을 관찰하지 못한다. 그렇기 때문에 view에도 렌더링이 일어나지 않는다.
+  - @ObservedResults는 ViewModel에서 Realm에 저장된 데이터가 수정된 것을 관찰하지 못한다. 그렇기 때문에 view에도 렌더링이 일어나지 않음.
 
 - 해결
   - ViewModel에 @Published로 선언되어 있는 Output 구조체를 이용하여 새로운 프로퍼티를 만들어 주었다.
