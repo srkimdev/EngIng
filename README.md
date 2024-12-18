@@ -55,7 +55,7 @@
 - ### Google Text-To-Speech
 
   - iOS에는 AVFoundation 라이브러리를 통해 TTS기능을 제공해주고 있지만 기계음같은 부자연스러운 부분이 있어 사용자들에게 문장의 억양이나 속도등의 요소들을 정확하게 알려줄 수 없음
-  - 영어문장을 사람과 비슷한 자연스러운 음성 오디오 데이터를 제공하는 Google Text-To-Speech API를 이용하였다.
+  - 영어문장을 사람과 비슷한 자연스러운 음성 오디오 데이터를 제공하는 Google Text-To-Speech API를 이용함
 
   <p align="center">
   <img width="350" alt="스크린샷 2024-10-16 오후 6 34 16" src="https://github.com/user-attachments/assets/afee93a4-5271-4763-98d1-0bbbb5db31ff">
