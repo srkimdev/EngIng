@@ -100,8 +100,8 @@
   - @ObservedResults는 ViewModel에서 Realm에 저장된 데이터가 수정된 것을 관찰하지 못한다. 그렇기 때문에 view에도 렌더링이 일어나지 않음.
 
 - 해결
-  - ViewModel에 @Published로 선언되어 있는 Output 구조체를 이용하여 새로운 프로퍼티를 만들어 주었다.
-  - ChapterTable의 like값이 바뀔 때 마다 rendering 변수에 트리거를 주어 뷰에 업데이트가 되도록 만들어 주었다.
+  - ViewModel에 @Published로 선언되어 있는 Output 구조체를 이용하여 새로운 프로퍼티를 만듦.
+  - ChapterTable의 like값이 바뀔 때 마다 rendering 변수에 트리거를 주어 뷰에 업데이트가 되도록 만듦.
   <br/>
 
   ```swift
