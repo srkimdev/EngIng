@@ -93,7 +93,7 @@
 
 ### 2. ViewModel에서 Realm의 데이터를 수정하였지만 View에서 @ObservedResults로 선언된 변수가 변경사항을 인지하지 못하는 문제
 - 상황
-  - 각 chapter에는 좋아요 기능이 있고 좋아요 버튼을 누를 때 마다 ChapterTable의 like값이 true, false로 바뀐다.
+  - 각 chapter에는 좋아요 기능이 있고 좋아요 버튼을 누를 때 마다 ChapterTable의 like값이 true, false로 바뀜.
   - like값이 변경될 때 마다 view에서 변화를 감지하고 렌더링하기 위해 ObservedResults로 선언해 주었지만 업데이트가 되지 않음
 
 - 원인 분석
