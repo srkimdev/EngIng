@@ -64,7 +64,7 @@
   차트 y축 값은 각 음성의 자연스러움의 기준을 1 ∼ 5점을 척도로 Mean Opinion Score를 계산하여 나타낸다. 
   </p>
 
-  - Google TTS에서 지원하는 여러 모델 중 MOS점수가 인간의 소리와 가장 비슷한 WaveNet 모델을 채택하였다.
+  - Google TTS에서 지원하는 여러 모델 중 MOS점수가 인간의 소리와 가장 비슷한 WaveNet 모델을 채택.
   - WaveNet모델은 초당 24kHz로 샘플링하여 더 높은 음질을 얻을 수 있다.
 
 <br/>
