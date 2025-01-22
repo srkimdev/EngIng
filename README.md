@@ -61,7 +61,7 @@
   <img width="350" alt="스크린샷 2024-10-16 오후 6 34 16" src="https://github.com/user-attachments/assets/afee93a4-5271-4763-98d1-0bbbb5db31ff">
   <br>
   x축  
-  차트 y축 값은 각 음성의 자연스러움의 기준을 1 ∼ 5점을 척도로 Mean Opinion Score를 계산하여 나타낸다. 
+  차트 y축 값은 각 음성의 자연스러움의 기준을 1 ∼ 5점을 척도로 Mean Opinion Score를 계산하여 나타낸다
   </p>
 
   - Google TTS에서 지원하는 여러 모델 중 MOS점수가 인간의 소리와 가장 비슷한 WaveNet 모델을 채택
